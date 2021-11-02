@@ -1,22 +1,19 @@
+import "./app.scss";
+import "bootstrap";
+import Header from "./components/Header/Header";
+import Food from "./pages/home/organisms/Food/Food";
+import Banner from "./pages/home/molecules/Banner/Banner";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Header />
+            <div className="wrapper">
+                <Banner />
+                <Food />
+            </div>
+        </>
+    );
 }
 
 export default App;
