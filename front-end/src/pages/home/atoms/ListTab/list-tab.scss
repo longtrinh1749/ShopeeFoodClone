@@ -1,0 +1,18 @@
+.list-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.list_tabs {
+    display: flex;
+    a {
+        font-size: 16px;
+        margin-right: 40px;
+    }
+
+    &-active a{
+        color: #0288d1;
+    }
+}

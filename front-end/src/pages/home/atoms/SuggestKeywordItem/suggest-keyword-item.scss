@@ -1,0 +1,20 @@
+.suggest_item {
+    margin: 10px;
+    padding: 7px 21px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.2s;
+
+    a{
+        color: #fff;
+    }
+
+    &:hover {
+        background-color: #fff;
+        cursor: pointer;
+        a {
+            color: #333;
+        }
+    }
+}

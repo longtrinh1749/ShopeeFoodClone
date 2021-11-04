@@ -12,9 +12,9 @@ const Logo = () => {
 
 const Dropdown = () => {
     return (
-        <div class="dropdown">
+        <div className="dropdown">
             <button
-                class="btn dropdown-toggle header_dropdown"
+                className="btn dropdown-toggle header_dropdown"
                 type="button"
                 id="location"
                 data-bs-toggle="dropdown"
@@ -23,27 +23,27 @@ const Dropdown = () => {
                 Hà Nội
             </button>
             <ul
-                class="dropdown-menu"
+                className="dropdown-menu"
                 aria-labelledby="location"
             >
                 <li>
-                    <a class="dropdown-item" href="/">
+                    <a className="dropdown-item" href="/">
                         Action
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item" href="/">
+                    <a className="dropdown-item" href="/">
                         Another action
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item" href="/">
+                    <a className="dropdown-item" href="/">
                         Something else here
                     </a>
                 </li>
-                <li><hr class="dropdown-divider" /></li>
+                <li><hr className="dropdown-divider" /></li>
                 <li>
-                    <a class="dropdown-item" href="/">
+                    <a className="dropdown-item" href="/">
                         Separated link
                     </a>
                 </li>

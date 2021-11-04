@@ -1,17 +1,17 @@
 import "./app.scss";
 import "bootstrap";
 import Header from "./components/Header/Header";
-import Food from "./pages/home/organisms/Food/Food";
-import Banner from "./pages/home/molecules/Banner/Banner";
+import Home from "./pages/home/templates/Home/Home";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
         <>
             <Header />
             <div className="wrapper">
-                <Banner />
-                <Food />
+                <Home />
             </div>
+            <Footer />
         </>
     );
 }

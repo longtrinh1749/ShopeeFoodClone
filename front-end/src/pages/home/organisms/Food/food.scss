@@ -1,4 +1,48 @@
 .main {
     position: relative;
     z-index: 10;
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-wrapper {
+        width: 670px;
+    }
+
+    &-left {
+        position: relative;
+    }
+
+    &-banner {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+
+        img{
+            width: 100%;
+        }
+    }
+    .search {
+        position: sticky;
+        width: 470px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        z-index: 1000;
+        h1 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        &_subtitle {
+            color: #fff;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+        }
+    }
+   
 }

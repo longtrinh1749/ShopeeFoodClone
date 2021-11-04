@@ -1,0 +1,16 @@
+.list {
+    padding: 13px 40px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    &_more {
+        margin-top: 10px;
+        text-align: center;
+        color: #187caa;
+        font-weight: 700;
+        
+        i{
+            font-size: 12px;
+        }
+    }
+}
