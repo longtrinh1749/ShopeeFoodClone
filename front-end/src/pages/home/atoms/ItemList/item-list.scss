@@ -31,8 +31,16 @@
         }
 
         .info_title {
+            display: flex;
+            align-items: center;
             font-size: 16px;
             font-weight: 700;
+
+            img {
+                width: 17px;
+                margin-bottom: 3px;
+                margin-right: 5px;
+            }
         }
 
         .info_address {

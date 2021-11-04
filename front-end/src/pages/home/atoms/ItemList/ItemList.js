@@ -9,7 +9,7 @@ const ItemList = ({ item }) => {
                 </div>
                 <div className="item-list_info">
                     <div className="info_title">
-                        <i className="fas fa-shield-alt"></i>
+                    <img src="/images/shield.png" alt="" />
                         {item.title}
                     </div>
                     <div className="info_address">{item.address}</div>

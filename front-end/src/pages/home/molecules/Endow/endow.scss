@@ -32,6 +32,10 @@
         .item {
             width: calc(100% / 3 );
             padding: 8px;
+
+            &_info img {
+                display: none;
+            }
         }
     }
 

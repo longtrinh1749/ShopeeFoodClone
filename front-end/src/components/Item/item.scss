@@ -5,7 +5,7 @@
         position: relative;
         display: block;
         border-radius: 5px;
-        border: 1px solid #eee;
+        border: 1px solid #ddd;
     }
     
     &:hover {
@@ -25,7 +25,7 @@
 
     &_info {
         padding: 5px 8px;
-        border-bottom: 1px solid #ebebeb;
+        border-bottom: 1px solid #ddd;
 
         &-title, &-address {
             white-space: nowrap;
@@ -35,7 +35,6 @@
         }
 
         &-title {
-            font-size: 16px;
             font-weight: 700;
         }
 
