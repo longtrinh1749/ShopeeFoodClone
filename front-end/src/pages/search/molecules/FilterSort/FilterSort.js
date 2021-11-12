@@ -4,7 +4,7 @@ const FilterSort = () => {
     return (
         <div className="filter_sort">
             <p className="filter_sort-result">200 kết quả</p>
-            <p className="filter_sort-dropdown">
+            <div className="filter_sort-dropdown">
             <button
                 className="btn dropdown-toggle header_dropdown"
                 type="button"
@@ -33,14 +33,13 @@ const FilterSort = () => {
                         Something else here
                     </a>
                 </li>
-                <li><hr className="dropdown-divider" /></li>
                 <li>
                     <a className="dropdown-item" href="/">
                         Separated link
                     </a>
                 </li>
             </ul>
-            </p>
+            </div>
         </div>
     );
 }

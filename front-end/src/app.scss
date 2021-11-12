@@ -4,6 +4,7 @@
 
 body {
     background-color: #f2f2f2;
+    overflow-y: scroll;
 }
 
 ul,li {
@@ -37,4 +38,10 @@ a{
 
 .container {
     max-width: 1200px;
+}
+
+.modal-open {
+    .header, .banner {
+        width:calc(100% - 13px);
+    }
 }
