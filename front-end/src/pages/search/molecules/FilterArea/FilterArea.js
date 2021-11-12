@@ -1,5 +1,5 @@
 import React from 'react';
-import AreaListItem from '../../atoms/AreaListItem/AreaListItem';
+import AreaListItem from '../../atoms/FilterListItem/FilterListItem';
 
 const FilterArea = () => {
     return (

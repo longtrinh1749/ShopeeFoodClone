@@ -4,7 +4,7 @@
     height: 70px;
     width: 100%;
     background-color: white;
-    z-index: 20;
+    z-index: 1060;
 
     .container {
         position: relative;
@@ -65,15 +65,6 @@
             border-bottom: 3px solid #ee4d2d;
             color: #ee4d2d;
             font-weight: 700;
-        }
-    }
-
-    &_search {
-        i {
-            margin-top: 8px;
-            font-size: 24px;
-            color: #666;
-            transform: rotate(-90deg);
         }
     }
 

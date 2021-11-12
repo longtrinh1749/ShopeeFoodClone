@@ -5,6 +5,7 @@
     padding-top: 15px;
     padding-bottom: 8px;
     border-bottom: 1px solid #ccc;
+    z-index: 10;
 
     &_left {
         display: flex;
@@ -13,13 +14,47 @@
     &_item {
         position: relative;
         margin-right: 20px;
-        
+
         &-list {
             position: absolute;
-            top: 25px;
+            top: 35px;
             display: none;
+            height: 180px;
+            width: 867px;
+            padding: 15px;
             background-color: #fff;
+            z-index: 10;
+        }
+        
+        &-btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            z-index: 10;
+        }
+
+        &-btn-active {
+            background-color: #ffff;
+        }
+
+        &-active {
+            display: block;
+            box-shadow: 1px 1px 5px 0 rgba(50, 50 ,50, 0.4);
+            border-radius: 5px;
+
+            .area-list_item {
+                display: flex;
+                align-items: center;
+                float: left;
+                width: calc(100% / 3);
+                margin-bottom: 5px;
+
+                input {
+                    margin-right: 5px;
+                    margin-bottom: 2px;
+                }
+            }
         }
     }
-
 }
