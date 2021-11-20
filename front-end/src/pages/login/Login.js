@@ -14,7 +14,7 @@ const Login = () => {
                     <div className="item google">
                         <span>
                             <i className="fab fa-google-plus-g" aria-hidden="true"></i>
-                            GOOGLE
+                            GOOGLE cai ri
                         </span>
                     </div>
                 </div>
