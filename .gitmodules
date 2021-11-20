@@ -1,0 +1,6 @@
+[submodule "back-end-2/Code"]
+	path = back-end-2/Code
+	url = https://github.com/tubean/MSA-springboot-eureka
+[submodule "back-end/Code"]
+	path = back-end/Code
+	url = https://github.com/longtrinh1749/MSA-springboot-eureka
