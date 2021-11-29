@@ -4,7 +4,7 @@ use order_service;
 
 create table `status` (
     `id` int auto_increment primary key,
-    `name` nvarchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null
+    `name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null
 )
 
 create table `order` (

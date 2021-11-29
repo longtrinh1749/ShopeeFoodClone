@@ -13,9 +13,9 @@ create table app_user (
 
 create table `profile` (
     `user_id` int primary key,
-    `address` nvarchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-    `district` nvarchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-    `city` nvarchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    `address` nvarchar(255),
+    `district` nvarchar(20),
+    `city` nvarchar(20),
     `email` nvarchar(500),
     `phone` nvarchar(20),
     foreign key (`user_id`) references `app_user`(`id`)
