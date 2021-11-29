@@ -30,22 +30,22 @@ create table `section` (
     `shop_id` int,
     `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     foreign key (`shop_id`) references `shop`(`id`)
-)
+);
 
 create table `item` (
     `id` int auto_increment primary key,
     `section_id` int not null,
     `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     `img_url` varchar(255),
-    `description` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci varchar(500),
+    `description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `price` decimal(16,0) not null,
     `sale` int not null,
     `status` bit(1) not null
-)
+);
 
 create table `item_audit` (
     `id` int auto_increment primary key,
     `update_at` datetime not null,
     `price` int not null,
     `sale` int not null
-)
+);
