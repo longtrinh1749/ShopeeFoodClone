@@ -46,6 +46,6 @@ create table `item` (
 create table `item_audit` (
     `id` int auto_increment primary key,
     `update_at` datetime not null,
-    `price` int not null,
+    `price` decimal(16,0) not null,
     `sale` int not null
 );
