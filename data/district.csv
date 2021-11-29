@@ -1,122 +1,122 @@
-district,shop id,shop name
- Ba Đình,1,Xôi Hiệp Hòa - Đê La Thành
- Ba Đình,55,Góc Bếp Nhỏ - Bún Giả Cầy - Đội Cấn
- Ba Đình,64,Phở Cuốn - La Thành
- Ba Đình,68,Bánh Tráng Trộn Siêu Ngon - Shop Online - 62 Cửa Bắc
- Ba Đình,89,Tanka Quán - Chân Gà & Cánh Gà Nướng - Nguyên Hồng
- Ba Đình,98,Sushi Barr - Đào Tấn
- Ba Đình,101,Kotetsu Ramen
- Ba Đình,103,Nhà Hàng Nhật Bản MANTEN - Linh Lang
- Ba Đình,106,Let's Sushi - Trần Huy Liệu
- Đống Đa,2,Mì Trộn Indomie 158 - Thái Thịnh
- Đống Đa,7,Hoàng Huệ - Cơm Rang & Bún Bò Trộn - Đường Láng
- Đống Đa,8,Chân Gà Nướng Thịnh Vượng
- Đống Đa,9,Xuân Food - Mì Trộn Indomie
- Đống Đa,25,Eatwell - Ngon Khỏe Cả Tuần
- Đống Đa,29,An Nhiên Chay - Cơm Chay Văn Phòng
- Đống Đa,40,Paris Gato - Tam Khương
- Đống Đa,41,Trà Sữa Tocotoco - Tây Sơn
- Đống Đa,42,Trà Sữa Tocotoco - Ngã Tư Sở
- Đống Đa,43,Xôi Sườn Cay - 628 Trường Chinh
- Đống Đa,49,Chè Ngon 73 - Khâm Thiên
- Đống Đa,54,Maple Bakery - Bánh Heathy - Đặng Tiến Đông
- Đống Đa,69,Bố Nhím - Bánh Tráng Trộn & Bánh Tráng Nướng
- Đống Đa,72,Thái Hạnh - Huy Mai - Thiên Đường Ăn Vặt
- Đống Đa,75,Quán Ăn Quý - Mì Ý & Đồ Ăn Vặt Online
- Đống Đa,78,Pizza Friends - Thái Thịnh
- Đống Đa,88,Gà Luộc - Chùa Láng - Shop Online
- Đống Đa,97,Hanoi Sushi - Shop Online
- Đống Đa,108,Duy Food - Mì Trộn Indomie Online
- Đống Đa,109,Hoàng Huệ - Cơm Rang & Bún Bò Trộn - Chùa Láng
- Đống Đa,115,Tiệm Gà Luộc - Đường Láng - Shop Online
- Đống Đa,116,"Gà Ủ Muối, Gà Hun Khói & Gà Luộc - Shop Online"
- Đống Đa,117,Vua Gà Luộc - Đường Láng
- Đống Đa,118,Gà Lộc - Gà Ủ Muối Hoa Tiêu - Shop Online
- Cầu Giấy,3,Gà Rán & Gà Ủ Muối Hoa Tiêu - Hoàng Ngân
- Cầu Giấy,5,Gà Rán & Gà Ủ Muối Hoa Tiêu - Trần Thái Tông
- Cầu Giấy,6,Anh Béo - Bún Miến Ngan - Trần Quốc Vượng
- Cầu Giấy,21,Thế Giới Ăn Vặt - Ăn Vặt - Trần Thái Tông
- Cầu Giấy,47,ANDU - Chân Gà Nướng - Lê Đức Thọ
- Cầu Giấy,79,ANDU - Chân Gà Nướng - Nguyễn Khánh Toàn
- Cầu Giấy,82,Chân Gà Ngự Lâm - Chân Gà Sả Ớt - Dịch Vọng Hậu - Shop Online
- Cầu Giấy,102,Mì Ramen Marukin - Cơm Rang - Trần Duy Hưng
- Cầu Giấy,105,Sushi Việt - Tô Hiệu
- Cầu Giấy,121,Hưng Xôi Quán
- Hai Bà Trưng,4,Hoàng Huệ - Cơm Rang & Bún Bò Trộn - Ngõ Tự Do
- Hai Bà Trưng,13,Nước Ép Trái Cây Bốn Mùa - Phố Vọng
- Hai Bà Trưng,16,"Family Chicken - Gà Rán, Bánh Gà & Đồ Ăn Vặt - Chùa Quỳnh"
- Hai Bà Trưng,17,Royaltea - Trà Sữa Hồng Kông - Trại Găng
- Hai Bà Trưng,18,Tmore - Tiệm Trà Chanh - Bách Khoa
- Hai Bà Trưng,20,Thảo Mập - Ăn Đêm & Nước Ép Trái Cây - Shop Online
- Hai Bà Trưng,33,"Quán 152 - Xôi, Dừa Dầm & Bánh Mì Que Hải Phòng"
- Hai Bà Trưng,36,Lê Tú Anh - Bông Lan Trứng Muối Siêu Sốt Online
- Hai Bà Trưng,37,CoLy Kookie - Tiramisu - Ngõ Quỳnh
- Hai Bà Trưng,39,Tiến Phương Bakery - Shop Online
- Hai Bà Trưng,62,Thanh Tâm - Ốc & Hải Sản
- Hai Bà Trưng,73,Cuti House - Đồ Ăn Online - Lĩnh Nam
- Hai Bà Trưng,85,Bếp Vị Uyển - Ăn Vặt Các Món
- Hai Bà Trưng,94,Tanka Quán - Chân Gà & Cánh Gà Nướng - Đại Cồ Việt
- Hai Bà Trưng,95,Tú Gà - Chân Gà Rang Muối - Trần Khát Chân
- Hoàn Kiếm,10,Xôi Yến - Nguyễn Hữu Huân
- Hoàn Kiếm,31,"Bếp Mẹ Pun - Bánh Sinh Nhật, Bánh Gato, Bánh Kem & Bakery"
- Hoàn Kiếm,34,Cá Péo Nè Bakery - Bánh Sinh Nhật - Hồng Hà
- Hoàn Kiếm,45,Bánh Tráng Trộn Sài Gòn - Nguyễn Siêu
- Hoàn Kiếm,48,Nem Chua Rán - 36 Tạm Thương
- Hoàn Kiếm,50,Anh Tú Bakery & Roti Mexico - Ăn Vặt - 54 Lương Văn Can
- Hoàn Kiếm,56,Xáo & Mướt Vị Ngon Xứ Nghệ - Bánh Mướt - Hàng Chĩnh
- Hoàn Kiếm,60,Nem Chua Phượng
- Hoàn Kiếm,61,Phở Rán Lòng Xào Nguyễn Siêu
- Hoàn Kiếm,65,Tùng Vẩu - Mỳ Trộn & Nước Ép - Hàng Bồ - Shop Online
- Hoàn Kiếm,66,Thanh Sơn - Nem Chua Rán
- Hoàn Kiếm,83,Mì Gà Tần - 23 Hàng Bồ
- Hoàn Kiếm,87,"Gà Luộc, Gà Ủ Muối & Xông Khói - Tràng Thi"
- Hoàn Kiếm,90,Cơm Rang Dưa Bò Bà Dung
- Hoàn Kiếm,91,Cơm Rang Dưa Bò Đức Hạnh
- Hoàn Kiếm,96,Tú Gà - Chân Gà Rang Muối - Hàng Thùng
- Hoàn Kiếm,99,Bà Lan - Bánh Bạch Tuộc Nướng Takoyaki
- Hoàn Kiếm,110,Bếp Quán Zì - Mì Trộn Indomie Siêu Sốt Mĩ Vị
- Hoàng Mai,11,Trà Chanh 1988 - Nguyễn An Ninh
- Hoàng Mai,14,Quán Ngan Lệ Béo 83 Nguyễn An Ninh - Ngan - Nguyễn An Ninh
- Hoàng Mai,19,Tiệm Trà Bánh Misu - Bánh Ngọt Đồ Uống - Định Công
- Hoàng Mai,24,"Ngọc Ngà Chay - Chuyên Món Ăn Chay, Thực Phẩm Chay - Trương Định"
- Hoàng Mai,26,Bếp Của Ni - Đồ Ăn Healthy & Eat Clean - Shop Online
- Hoàng Mai,27,Mai Liên - Cơm Chay Ruốc Nấm
- Hoàng Mai,28,Chay Phúc Duyên - Shop Online
- Hoàng Mai,30,Cơm Chay Thiên Hương - Trần Điền
- Hoàng Mai,35,Tiệm Bánh Rapha - Shop Online - Giáp Bát
- Hoàng Mai,52,Bánh Đúc Bà Loan - Bánh Đúc Nóng - Linh Đàm
- Hoàng Mai,63,Tiệm Ăn Vặt - Thế giới Đồ Chiên - Kim Giang
- Hoàng Mai,74,Pizza 247 - Hoàng Mai - Shop Online
- Hoàng Mai,80,Xôi Quán - Bánh Mì & Xôi
- Hoàng Mai,84,Đàm Nhung - Cháo & Mỳ Gà Tần - Trương Định
- Hoàng Mai,93,Tiệm Mỳ Mẹ Bốp - Mỳ Cay Và Lẩu Cốc
- Hoàng Mai,100,Family Food - Đồ Trộn & Đồ Ăn Nhanh Online - Tân Mai
- Hoàng Mai,111,Gà Tần Gia Bảo - Hoàng Mai
- Thanh Xuân,12,Tanya Tea - Trường Chinh
- Thanh Xuân,15,Hợp Tác Xã - Trà Chanh
- Thanh Xuân,23,Thiện Duyên - Cơm Chay
- Thanh Xuân,51,Bánh Sinh Nhật Thanh Tùng - Bánh Kem & Bánh Sinh Nhật - Triều Khúc
- Thanh Xuân,57,Thảo Tiên - Bánh Mỳ - Khương Đình
- Thanh Xuân,70,Tâm An - Tiệm Ăn Vặt Online
- Thanh Xuân,71,Chick & Go - Gà Rán & Pizza - Triều Khúc
- Thanh Xuân,81,Thúy An - Xoài Cóc Bao Tử & Đồ Ăn Vặt Online - Quan Nhân
- Thanh Xuân,92,A Lẩu - Cháo Lòng
- Thanh Xuân,104,Sushi Garden
- Thanh Xuân,107,Tùng Vẩu - Mỳ Trộn & Nước Ép - Thanh Xuân
- Thanh Xuân,112,LQS - Chuyên Bún Bò Huế & Cơm Rang Giòn Online
- Tây Hồ,22,Cơm Chay & Ruốc Nấm Thúy Nga - Shop Online
- Tây Hồ,76,Paolo & Chi - Pizza & Mì Ý
- Tây Hồ,77,Daluva - Ẩm Thực Âu & Ý
- Nam Từ Liêm,32,Bánh Sinh Nhật Thảo My - Shop Online
- Nam Từ Liêm,38,Bánh Sinh Nhật Nhất Linh
- Nam Từ Liêm,53,Đức Trang Bakery - Bánh Kem - Nguyễn Cơ Thạch
- Nam Từ Liêm,58,AN TÂM - NEM NƯỚNG NHA TRANG - LÊ ĐỨC THỌ
- Nam Từ Liêm,86,Tiệm Gà Luộc - Trung Văn
- Nam Từ Liêm,113,"Đạt Béo - Cơm Rang, Cơm Gà - Mễ Trì Hạ"
- Nam Từ Liêm,114,Cơm Rang Trọng Tín
- Nam Từ Liêm,119,Bếp Nhà Quỳnh Khánh - Lương Thế Vinh - Shop Online
- Nam Từ Liêm,120,Lan Anh - Cơm Văn Phòng Online
- Hà Đông,44,Chè Ngon Hà Đông - Quán Ăn Vặt
- Hà Đông,67,Xôi Ngon - Bánh Mì Since 1984
- Bắc Từ Liêm,46,Hadu Y - Gà & Pizza
- Long Biên,59,Quán Lê Thương - Bánh Cuốn Nóng & Đồ Ăn Chín Sẵn - Tư Đình
+district,shop id,shop name
+ Ba Đình,1,Xôi Hiệp Hòa - Đê La Thành
+ Đống Đa,2,Mì Trộn Indomie 158 - Thái Thịnh
+ Cầu Giấy,3,Gà Rán & Gà Ủ Muối Hoa Tiêu - Hoàng Ngân
+ Hai Bà Trưng,4,Hoàng Huệ - Cơm Rang & Bún Bò Trộn - Ngõ Tự Do
+ Cầu Giấy,5,Gà Rán & Gà Ủ Muối Hoa Tiêu - Trần Thái Tông
+ Cầu Giấy,6,Anh Béo - Bún Miến Ngan - Trần Quốc Vượng
+ Đống Đa,7,Hoàng Huệ - Cơm Rang & Bún Bò Trộn - Đường Láng
+ Đống Đa,8,Chân Gà Nướng Thịnh Vượng
+ Đống Đa,9,Xuân Food - Mì Trộn Indomie
+ Hoàn Kiếm,10,Xôi Yến - Nguyễn Hữu Huân
+ Hoàng Mai,11,Trà Chanh 1988 - Nguyễn An Ninh
+ Thanh Xuân,12,Tanya Tea - Trường Chinh
+ Hai Bà Trưng,13,Nước Ép Trái Cây Bốn Mùa - Phố Vọng
+ Hoàng Mai,14,Quán Ngan Lệ Béo 83 Nguyễn An Ninh - Ngan - Nguyễn An Ninh
+ Thanh Xuân,15,Hợp Tác Xã - Trà Chanh
+ Hai Bà Trưng,16,"Family Chicken - Gà Rán, Bánh Gà & Đồ Ăn Vặt - Chùa Quỳnh"
+ Hai Bà Trưng,17,Royaltea - Trà Sữa Hồng Kông - Trại Găng
+ Hai Bà Trưng,18,Tmore - Tiệm Trà Chanh - Bách Khoa
+ Hoàng Mai,19,Tiệm Trà Bánh Misu - Bánh Ngọt Đồ Uống - Định Công
+ Hai Bà Trưng,20,Thảo Mập - Ăn Đêm & Nước Ép Trái Cây - Shop Online
+ Cầu Giấy,21,Thế Giới Ăn Vặt - Ăn Vặt - Trần Thái Tông
+ Tây Hồ,22,Cơm Chay & Ruốc Nấm Thúy Nga - Shop Online
+ Thanh Xuân,23,Thiện Duyên - Cơm Chay
+ Hoàng Mai,24,"Ngọc Ngà Chay - Chuyên Món Ăn Chay, Thực Phẩm Chay - Trương Định"
+ Đống Đa,25,Eatwell - Ngon Khỏe Cả Tuần
+ Hoàng Mai,26,Bếp Của Ni - Đồ Ăn Healthy & Eat Clean - Shop Online
+ Hoàng Mai,27,Mai Liên - Cơm Chay Ruốc Nấm
+ Hoàng Mai,28,Chay Phúc Duyên - Shop Online
+ Đống Đa,29,An Nhiên Chay - Cơm Chay Văn Phòng
+ Hoàng Mai,30,Cơm Chay Thiên Hương - Trần Điền
+ Hoàn Kiếm,31,"Bếp Mẹ Pun - Bánh Sinh Nhật, Bánh Gato, Bánh Kem & Bakery"
+ Nam Từ Liêm,32,Bánh Sinh Nhật Thảo My - Shop Online
+ Hai Bà Trưng,33,"Quán 152 - Xôi, Dừa Dầm & Bánh Mì Que Hải Phòng"
+ Hoàn Kiếm,34,Cá Péo Nè Bakery - Bánh Sinh Nhật - Hồng Hà
+ Hoàng Mai,35,Tiệm Bánh Rapha - Shop Online - Giáp Bát
+ Hai Bà Trưng,36,Lê Tú Anh - Bông Lan Trứng Muối Siêu Sốt Online
+ Hai Bà Trưng,37,CoLy Kookie - Tiramisu - Ngõ Quỳnh
+ Nam Từ Liêm,38,Bánh Sinh Nhật Nhất Linh
+ Hai Bà Trưng,39,Tiến Phương Bakery - Shop Online
+ Đống Đa,40,Paris Gato - Tam Khương
+ Đống Đa,41,Trà Sữa Tocotoco - Tây Sơn
+ Đống Đa,42,Trà Sữa Tocotoco - Ngã Tư Sở
+ Đống Đa,43,Xôi Sườn Cay - 628 Trường Chinh
+ Hà Đông,44,Chè Ngon Hà Đông - Quán Ăn Vặt
+ Hoàn Kiếm,45,Bánh Tráng Trộn Sài Gòn - Nguyễn Siêu
+ Bắc Từ Liêm,46,Hadu Y - Gà & Pizza
+ Cầu Giấy,47,ANDU - Chân Gà Nướng - Lê Đức Thọ
+ Hoàn Kiếm,48,Nem Chua Rán - 36 Tạm Thương
+ Đống Đa,49,Chè Ngon 73 - Khâm Thiên
+ Hoàn Kiếm,50,Anh Tú Bakery & Roti Mexico - Ăn Vặt - 54 Lương Văn Can
+ Thanh Xuân,51,Bánh Sinh Nhật Thanh Tùng - Bánh Kem & Bánh Sinh Nhật - Triều Khúc
+ Hoàng Mai,52,Bánh Đúc Bà Loan - Bánh Đúc Nóng - Linh Đàm
+ Nam Từ Liêm,53,Đức Trang Bakery - Bánh Kem - Nguyễn Cơ Thạch
+ Đống Đa,54,Maple Bakery - Bánh Heathy - Đặng Tiến Đông
+ Ba Đình,55,Góc Bếp Nhỏ - Bún Giả Cầy - Đội Cấn
+ Hoàn Kiếm,56,Xáo & Mướt Vị Ngon Xứ Nghệ - Bánh Mướt - Hàng Chĩnh
+ Thanh Xuân,57,Thảo Tiên - Bánh Mỳ - Khương Đình
+ Nam Từ Liêm,58,AN TÂM - NEM NƯỚNG NHA TRANG - LÊ ĐỨC THỌ
+ Long Biên,59,Quán Lê Thương - Bánh Cuốn Nóng & Đồ Ăn Chín Sẵn - Tư Đình
+ Hoàn Kiếm,60,Nem Chua Phượng
+ Hoàn Kiếm,61,Phở Rán Lòng Xào Nguyễn Siêu
+ Hai Bà Trưng,62,Thanh Tâm - Ốc & Hải Sản
+ Hoàng Mai,63,Tiệm Ăn Vặt - Thế giới Đồ Chiên - Kim Giang
+ Ba Đình,64,Phở Cuốn - La Thành
+ Hoàn Kiếm,65,Tùng Vẩu - Mỳ Trộn & Nước Ép - Hàng Bồ - Shop Online
+ Hoàn Kiếm,66,Thanh Sơn - Nem Chua Rán
+ Hà Đông,67,Xôi Ngon - Bánh Mì Since 1984
+ Ba Đình,68,Bánh Tráng Trộn Siêu Ngon - Shop Online - 62 Cửa Bắc
+ Đống Đa,69,Bố Nhím - Bánh Tráng Trộn & Bánh Tráng Nướng
+ Thanh Xuân,70,Tâm An - Tiệm Ăn Vặt Online
+ Thanh Xuân,71,Chick & Go - Gà Rán & Pizza - Triều Khúc
+ Đống Đa,72,Thái Hạnh - Huy Mai - Thiên Đường Ăn Vặt
+ Hai Bà Trưng,73,Cuti House - Đồ Ăn Online - Lĩnh Nam
+ Hoàng Mai,74,Pizza 247 - Hoàng Mai - Shop Online
+ Đống Đa,75,Quán Ăn Quý - Mì Ý & Đồ Ăn Vặt Online
+ Tây Hồ,76,Paolo & Chi - Pizza & Mì Ý
+ Tây Hồ,77,Daluva - Ẩm Thực Âu & Ý
+ Đống Đa,78,Pizza Friends - Thái Thịnh
+ Cầu Giấy,79,ANDU - Chân Gà Nướng - Nguyễn Khánh Toàn
+ Hoàng Mai,80,Xôi Quán - Bánh Mì & Xôi
+ Thanh Xuân,81,Thúy An - Xoài Cóc Bao Tử & Đồ Ăn Vặt Online - Quan Nhân
+ Cầu Giấy,82,Chân Gà Ngự Lâm - Chân Gà Sả Ớt - Dịch Vọng Hậu - Shop Online
+ Hoàn Kiếm,83,Mì Gà Tần - 23 Hàng Bồ
+ Hoàng Mai,84,Đàm Nhung - Cháo & Mỳ Gà Tần - Trương Định
+ Hai Bà Trưng,85,Bếp Vị Uyển - Ăn Vặt Các Món
+ Nam Từ Liêm,86,Tiệm Gà Luộc - Trung Văn
+ Hoàn Kiếm,87,"Gà Luộc, Gà Ủ Muối & Xông Khói - Tràng Thi"
+ Đống Đa,88,Gà Luộc - Chùa Láng - Shop Online
+ Ba Đình,89,Tanka Quán - Chân Gà & Cánh Gà Nướng - Nguyên Hồng
+ Hoàn Kiếm,90,Cơm Rang Dưa Bò Bà Dung
+ Hoàn Kiếm,91,Cơm Rang Dưa Bò Đức Hạnh
+ Thanh Xuân,92,A Lẩu - Cháo Lòng
+ Hoàng Mai,93,Tiệm Mỳ Mẹ Bốp - Mỳ Cay Và Lẩu Cốc
+ Hai Bà Trưng,94,Tanka Quán - Chân Gà & Cánh Gà Nướng - Đại Cồ Việt
+ Hai Bà Trưng,95,Tú Gà - Chân Gà Rang Muối - Trần Khát Chân
+ Hoàn Kiếm,96,Tú Gà - Chân Gà Rang Muối - Hàng Thùng
+ Đống Đa,97,Hanoi Sushi - Shop Online
+ Ba Đình,98,Sushi Barr - Đào Tấn
+ Hoàn Kiếm,99,Bà Lan - Bánh Bạch Tuộc Nướng Takoyaki
+ Hoàng Mai,100,Family Food - Đồ Trộn & Đồ Ăn Nhanh Online - Tân Mai
+ Ba Đình,101,Kotetsu Ramen
+ Cầu Giấy,102,Mì Ramen Marukin - Cơm Rang - Trần Duy Hưng
+ Ba Đình,103,Nhà Hàng Nhật Bản MANTEN - Linh Lang
+ Thanh Xuân,104,Sushi Garden
+ Cầu Giấy,105,Sushi Việt - Tô Hiệu
+ Ba Đình,106,Let's Sushi - Trần Huy Liệu
+ Thanh Xuân,107,Tùng Vẩu - Mỳ Trộn & Nước Ép - Thanh Xuân
+ Đống Đa,108,Duy Food - Mì Trộn Indomie Online
+ Đống Đa,109,Hoàng Huệ - Cơm Rang & Bún Bò Trộn - Chùa Láng
+ Hoàn Kiếm,110,Bếp Quán Zì - Mì Trộn Indomie Siêu Sốt Mĩ Vị
+ Hoàng Mai,111,Gà Tần Gia Bảo - Hoàng Mai
+ Thanh Xuân,112,LQS - Chuyên Bún Bò Huế & Cơm Rang Giòn Online
+ Nam Từ Liêm,113,"Đạt Béo - Cơm Rang, Cơm Gà - Mễ Trì Hạ"
+ Nam Từ Liêm,114,Cơm Rang Trọng Tín
+ Đống Đa,115,Tiệm Gà Luộc - Đường Láng - Shop Online
+ Đống Đa,116,"Gà Ủ Muối, Gà Hun Khói & Gà Luộc - Shop Online"
+ Đống Đa,117,Vua Gà Luộc - Đường Láng
+ Đống Đa,118,Gà Lộc - Gà Ủ Muối Hoa Tiêu - Shop Online
+ Nam Từ Liêm,119,Bếp Nhà Quỳnh Khánh - Lương Thế Vinh - Shop Online
+ Nam Từ Liêm,120,Lan Anh - Cơm Văn Phòng Online
+ Cầu Giấy,121,Hưng Xôi Quán
