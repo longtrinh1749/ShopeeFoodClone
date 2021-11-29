@@ -2676,4 +2676,4 @@ insert into `shop_category` (`shop_id`, `category_id`) values (13, 120);
 insert into `shop_category` (`shop_id`, `category_id`) values (13, 121);
 
 -- item_audit
--- insert into `item_audit` (`)
+insert into `item_audit` (`item_id`, `update_at`, `price`, `sale`) select i.id, NOW(), i.price, i.sale from item i;
