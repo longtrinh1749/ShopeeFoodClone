@@ -45,9 +45,10 @@ create table `item` (
 );
 
 create table `item_audit` (
-    `id` int primary key,
+    `id` int auto_increment primary key,
+    `item_id` int not null,
     `update_at` datetime not null,
     `price` decimal(16,0) not null,
     `sale` int not null,
-    foreign key (`id`) references `item`(`id`)
+    foreign key (`item_id`) references `item`(`id`)
 );
