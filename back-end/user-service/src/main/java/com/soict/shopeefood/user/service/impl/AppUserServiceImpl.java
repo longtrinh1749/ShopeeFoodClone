@@ -5,6 +5,7 @@ import com.soict.shopeefood.user.payload.RegisterForm;
 import com.soict.shopeefood.user.repository.AppUserRepository;
 import com.soict.shopeefood.user.service.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
