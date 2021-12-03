@@ -1,7 +1,7 @@
-use shopeefoodclone;
+use user_service;
 
 insert into
-    appuser (`username`, `password`, `role`)
+    app_user (`username`, `password`, `role`)
 values
     (
         'tubean',

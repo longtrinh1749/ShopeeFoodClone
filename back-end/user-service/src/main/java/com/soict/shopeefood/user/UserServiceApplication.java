@@ -2,10 +2,8 @@ package com.soict.shopeefood.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaClient
 public class UserServiceApplication {
 
 	public static void main(String[] args) {
@@ -14,3 +12,13 @@ public class UserServiceApplication {
 
 }
 
+//@Configuration
+//class RestTemplateConfig {
+//
+//	// Create a bean for restTemplate to call services
+//	@Bean
+//	@LoadBalanced        // Load balance between service instances running at different ports.
+//	public RestTemplate restTemplate() {
+//		return new RestTemplate();
+//	}
+//}
