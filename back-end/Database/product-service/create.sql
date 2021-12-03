@@ -40,7 +40,7 @@ create table `item` (
     `description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     `price` decimal(16,0) not null,
     `sale` int not null,
-    `status` bit(1) not null,
+    `deleted` bit(1) not null,
     foreign key (`section_id`) references `section`(`id`)
 );
 
