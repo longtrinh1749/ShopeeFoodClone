@@ -24,6 +24,9 @@ public class Section {
     @Column(name = "name")
     private String sectionName;
 
+    @Column(name = "deleted")
+    private Boolean deleted;
+
     @ManyToOne
     @JoinColumn(name = "shop_id")
     private Shop shop;

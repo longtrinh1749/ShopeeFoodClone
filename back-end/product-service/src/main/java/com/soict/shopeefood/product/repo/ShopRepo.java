@@ -17,17 +17,14 @@ public interface ShopRepo extends JpaRepository<Shop, Integer> {
     @Query(value = "select s from Shop s where s.shopId = ?1")
     Optional<Shop> findById(Integer shopId);
 
-    @Query(value = "select s from Shop s order by s.shopName asc")
+    @Query(value = "select s from Shop s order by s.shopId desc ")
     List<Shop> findAll();
 
-    @Query(value = "select s from Shop s order by s.shopName asc")
+    @Query(value = "select s from Shop s order by s.shopId desc ")
     Page<Shop> findAllByPage(Pageable pageable);
 
-    @Query(value = "select s from Shop s where s.shopName like %:name% order by s.shopName asc")
-    Page<Shop> findByShopName(@Param("name") String name, Pageable pageable);
-
-    @Query(value = "select s from Shop s where s.address like %:address% order by s.shopName asc")
-    Page<Shop> findByShopAddress(@Param("address") String address, Pageable pageable);
+    @Query(value = "select s from Shop s where s.shopName like %:name% or s.address like %:name% order by s.shopName asc")
+    Page<Shop> findByShopNameAndAddress(@Param("name") String name, Pageable pageable);
 
     @Query(value = "select s from Shop s where s.district like %:district% order by s.shopName asc")
     Page<Shop> findByShopDistrict(@Param("district") String district, Pageable pageable);

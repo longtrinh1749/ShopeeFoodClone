@@ -1,4 +1,4 @@
-package com.soict.shopeefood.product.entity.json;
+package com.soict.shopeefood.product.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

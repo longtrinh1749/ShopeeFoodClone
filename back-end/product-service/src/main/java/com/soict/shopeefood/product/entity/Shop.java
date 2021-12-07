@@ -39,7 +39,6 @@ public class Shop {
     @Column(name = "price_range")
     private String priceRange;
 
-//    @Transient
-    @OneToMany(mappedBy = "shop")
+    @Transient
     private List<ShopCategory> shopCategoryList = new ArrayList<>();
 }

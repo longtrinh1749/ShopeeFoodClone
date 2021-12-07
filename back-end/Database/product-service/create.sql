@@ -29,6 +29,7 @@ create table `section` (
     `id` int auto_increment primary key,
     `shop_id` int,
     `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
+    `deleted` bit(1) not null,
     foreign key (`shop_id`) references `shop`(`id`)
 );
 

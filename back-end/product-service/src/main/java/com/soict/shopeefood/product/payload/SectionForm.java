@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 public class SectionForm {
     private Integer sectionId;
     private String sectionName;
+    private Boolean deleted;
     private Integer shopId;
 }
