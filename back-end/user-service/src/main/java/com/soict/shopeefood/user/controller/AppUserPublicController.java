@@ -36,5 +36,4 @@ public class AppUserPublicController {
         }
         return ResponseEntity.badRequest().build();
     }
-
 }

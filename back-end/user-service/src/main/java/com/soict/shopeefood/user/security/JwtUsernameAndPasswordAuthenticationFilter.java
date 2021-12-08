@@ -93,6 +93,11 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
         response.getWriter().write(body);
     }
 
+//    @Override
+//    protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
+//
+//    }
+
     // A (temporary) class just to represent the user credentials
     private static class UserCredentials {
         private String username, password;
