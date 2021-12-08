@@ -3,10 +3,10 @@ spring:
     hibernate:
       ddl-auto: none
   datasource:
-    url: jdbc:mysql://localhost:3306/user_service?serverTimezone=UTC
+    url: jdbc:mysql://localhost:9306/user_service?serverTimezone=UTC
     username: root
-    password: a2131999
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
 
 server:
   port: 10000
