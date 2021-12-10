@@ -1,4 +1,4 @@
-import Search from "./components/Search";
+import SearchModal from "../SearchModal";
 import "./header.scss";
 
 const Logo = () => {
@@ -56,15 +56,22 @@ const Navbar = () => {
     return (
         <div className="header_navbar">
             <ul>
-                <li className="active">Đồ ăn</li>
-                <li>Thực phẩm</li>
-                <li>Hoa</li>
-                <li>Thuốc</li>
+                <li className="active">
+                    <a href="/">Đồ ăn</a>
+                </li>
+                <li>
+                    <a href="/">Thực phẩm</a>
+                </li>
+                <li>
+                    <a href="/">Hoa</a>
+                </li>
+                <li>
+                    <a href="/">Thuốc</a>
+                </li>
             </ul>
         </div>
     );
 };
-
 
 const User = () => {
     return (
@@ -76,16 +83,22 @@ const User = () => {
 
 const Header = () => {
     return (
-        <div className="header">
-            <div className="container">
-                <Logo />
-                <Dropdown />
-                <Navbar />
-                <Search/>
-                <User />
+        <>
+            <div className="header">
+                <div className="container">
+                    <Logo />
+                    <Dropdown />
+                    <Navbar />
+                    <div className="header_search">
+                        <span data-bs-toggle="modal" data-bs-target="#search-modal">
+                            <i className="las la-search"></i>
+                        </span>
+                    </div>
+                    <User />
+                </div>
             </div>
-            
-        </div>
+            <SearchModal />
+        </>
     );
 };
 
