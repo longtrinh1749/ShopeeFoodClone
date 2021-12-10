@@ -2,8 +2,6 @@ package com.soict.shopeefood.product.service;
 
 import com.soict.shopeefood.product.entity.Category;
 import com.soict.shopeefood.product.payload.CategoryForm;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;

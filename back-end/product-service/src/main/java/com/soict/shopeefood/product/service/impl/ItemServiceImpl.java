@@ -43,9 +43,9 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public Page<Item> findAll(Pageable pageable) {
+    public List<Item> findAll() {
         try {
-            return itemRepo.findAll(pageable);
+            return itemRepo.findAll();
         } catch (Exception ex) {
             LOGGER.error("findAll error", ex);
             ex.printStackTrace();

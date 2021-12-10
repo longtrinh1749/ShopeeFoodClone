@@ -17,7 +17,7 @@ import java.util.Optional;
 public interface ItemRepo extends JpaRepository<Item, Integer>{
 
     @Query(value = "select i from Item i ")
-    Page<Item> findAll(Pageable pageable);
+    List<Item> findAll();
 
     @Query(value = "select i from Item i where i.itemId = ?1")
     Optional<Item> findById(Integer itemId);
