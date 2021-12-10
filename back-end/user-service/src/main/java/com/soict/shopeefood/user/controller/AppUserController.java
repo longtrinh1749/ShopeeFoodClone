@@ -32,7 +32,8 @@ public class AppUserController {
         log.info("Get account info");
 
         AppUser appUser = appUserService.getUserByToken(authenToken);
-        Profile profile = profileService.getProfile(appUser.getId());
+        Profile profile = null;
+        if(appUser != null) profile = profileService.getProfile(appUser.getId());
         if(profile != null) {
             profile.setUser(null);
             return ResponseEntity.ok(JsonResult.build("Succeed", profile));
