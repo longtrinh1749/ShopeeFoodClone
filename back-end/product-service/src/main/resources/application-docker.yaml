@@ -4,8 +4,8 @@ spring:
       ddl-auto: none
   datasource:
     url: jdbc:mysql://database:3306/product_service?serverTimezone=UTC
-    username: shopeefood
-    password: shopeefood
+    username: root
+    password: root
     driver-class-name: org.mariadb.jdbc.Driver
 
 server:
