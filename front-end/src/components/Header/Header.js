@@ -1,3 +1,4 @@
+import Search from "./components/Search";
 import "./header.scss";
 
 const Logo = () => {
@@ -22,10 +23,7 @@ const Dropdown = () => {
             >
                 Hà Nội
             </button>
-            <ul
-                className="dropdown-menu"
-                aria-labelledby="location"
-            >
+            <ul className="dropdown-menu" aria-labelledby="location">
                 <li>
                     <a className="dropdown-item" href="/">
                         Action
@@ -41,7 +39,9 @@ const Dropdown = () => {
                         Something else here
                     </a>
                 </li>
-                <li><hr className="dropdown-divider" /></li>
+                <li>
+                    <hr className="dropdown-divider" />
+                </li>
                 <li>
                     <a className="dropdown-item" href="/">
                         Separated link
@@ -62,26 +62,17 @@ const Navbar = () => {
                 <li>Thuốc</li>
             </ul>
         </div>
-    )
-}
+    );
+};
 
-const Search = () => {
-    return (
-        <div className="header_search">
-            <i className="las la-search"></i>
-        </div>
-    )
-}
 
 const User = () => {
     return (
         <div className="header_user">
-            <p className="btn">
-                Đăng nhập
-            </p>
+            <p className="btn">Đăng nhập</p>
         </div>
-    )
-}
+    );
+};
 
 const Header = () => {
     return (
@@ -90,9 +81,10 @@ const Header = () => {
                 <Logo />
                 <Dropdown />
                 <Navbar />
-                <Search />
+                <Search/>
                 <User />
             </div>
+            
         </div>
     );
 };

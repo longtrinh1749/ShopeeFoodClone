@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AreaListItem = ({title}) => {
+const FilterListItem = ({title}) => {
     return (
         <div className="area-list_item">
             <input type="checkbox" id="item" />
@@ -9,4 +9,4 @@ const AreaListItem = ({title}) => {
     );
 }
 
-export default AreaListItem;
+export default FilterListItem;
