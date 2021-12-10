@@ -22,4 +22,7 @@ public interface CategoryRepo extends JpaRepository<Category, Integer> {
     @Query(value = "select c from Category c where c.catName like %:name%")
     List<Category> findByName(@Param("name") String name);
 
+    @Query(value = "select c from Category c where c.catId in :catList")
+    List<Category> findByCatList(@Param("catList") List<Integer> catList);
+
 }

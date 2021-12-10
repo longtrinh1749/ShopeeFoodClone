@@ -12,7 +12,7 @@ public interface ItemService {
 
     Optional<Item> findById(Integer itemId);
 
-    Page<Item> findAll(Pageable pageable);
+    List<Item> findAll();
 
     List<Item> findByName(Integer shopId, String name);
 

@@ -12,17 +12,26 @@ public interface ShopService {
 
     Optional<Shop> findById(Integer shopId);
 
-    Page<Shop> findAll(Pageable pageable);
+    List<Shop> findAll();
 
-    List<Shop> findByName(Integer shopId, String name);
+    Page<Shop> findAllByPage(Pageable pageable);
 
-    List<Shop> findBySection(Integer sectionId);
+    Page<Shop> findByNameAndAddress(String name, Pageable pageable);
 
-    List<Shop> findByShop(Integer shopId);
+    Page<Shop> findByDistrict(List<Integer> districtList, Pageable pageable);
 
-    Optional<Shop> upload(ShopForm ShopForm);
+    Page<Shop> findByCategory(List<Integer> categoryList, Pageable pageable);
 
-    Optional<Shop> update(ShopForm ShopForm);
+    Page<Shop> findByNameAndCategory(List<Integer> categoryList, String name, Pageable pageable);
 
-    boolean deleteById(Integer idProd);
+    Page<Shop> findByNameAndDistrict(List<Integer> districtList, String name, Pageable pageable);
+
+    Page<Shop> findByDistrictAndCategory(List<Integer> districtList, List<Integer> categoryList, Pageable pageable);
+
+    Page<Shop> findByNameAndFilter(List<Integer> districtList, List<Integer> categoryList, String name, Pageable pageable);
+
+    Optional<Shop> upload(ShopForm shopForm);
+
+    Optional<Shop> update(ShopForm shopForm);
+
 }

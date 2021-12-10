@@ -16,15 +16,6 @@ spring:
     open-in-view: true
 
 
-
 server:
   port: 10200
 
-
-feign:
-  client:
-    config:
-      default:
-        connectTimeout: 5000
-        readTimeout: 5000
-        loggerLevel: basic

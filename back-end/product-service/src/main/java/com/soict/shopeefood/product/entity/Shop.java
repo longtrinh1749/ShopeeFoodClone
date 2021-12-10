@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -30,15 +29,10 @@ public class Shop {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "district")
-    private String district;
-
-    @Column(name = "city")
-    private String city;
-
     @Column(name = "price_range")
     private String priceRange;
 
-    @Transient
-    private List<ShopCategory> shopCategoryList = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "district_id")
+    private District district;
 }

@@ -12,11 +12,10 @@ import java.util.List;
 @AllArgsConstructor
 public class ShopForm {
     private Integer shopId;
+    private Integer districtId;
     private String shopName;
     private String imgUrl;
     private String address;
-    private String district;
-    private String city;
     private String priceRange;
-    private List<CategoryForm> categoryList;
+    private List<Integer> categoryList;
 }

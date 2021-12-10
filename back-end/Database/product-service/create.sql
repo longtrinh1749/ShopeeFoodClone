@@ -2,13 +2,18 @@ create database `product_service`;
 
 use `product_service`;
 
+create table `district` (
+	`id` int auto_increment primary key,
+    `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
+    `city` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null
+);
+
 create table `shop` (
     `id` int auto_increment primary key,
+    `district_id` int not null,
     `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     `img_url` varchar(500) not null,
     `address` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
-    `district` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
-    `city` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     `price_range` varchar(100)
 );
 
@@ -27,7 +32,7 @@ create table `shop_category` (
 
 create table `section` (
     `id` int auto_increment primary key,
-    `shop_id` int,
+    `shop_id` int not null,
     `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     `deleted` bit(1) not null,
     foreign key (`shop_id`) references `shop`(`id`)

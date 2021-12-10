@@ -34,10 +34,10 @@ public class CategoryPublicController {
     public ResponseEntity<JsonResult> findBySection(@RequestParam("name") String name) {
         if(name.isEmpty()) {
             return Optional.ofNullable(categoryService.findAll())
-                    .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("Product not found"))
+                    .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("category not found"))
                     .orElse(JsonResult.serverError("Internal Server Error"));
         } else return Optional.ofNullable(categoryService.findByName(name))
-                .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("Product not found"))
+                .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("category not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
 

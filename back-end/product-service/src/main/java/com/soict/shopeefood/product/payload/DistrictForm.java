@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ShopCategoryForm {
-    private Integer catId;
-    private Integer shopId;
+public class DistrictForm {
+    private Integer districtId;
+    private String districtName;
+    private String city;
+
 }

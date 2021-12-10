@@ -31,10 +31,8 @@ public class ItemPublicController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<JsonResult> findAllByPage(@RequestParam("page") Integer page,
-                                                    @RequestParam("size") Integer size) {
-        Pageable pageable = PageRequest.of(page, size);
-        return Optional.ofNullable(itemService.findAll(pageable))
+    public ResponseEntity<JsonResult> findAll() {
+        return Optional.ofNullable(itemService.findAll())
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("Item not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
