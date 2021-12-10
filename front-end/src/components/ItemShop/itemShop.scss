@@ -31,6 +31,7 @@
 
     &_info_shop {
         padding: 5px 8px;
+        margin-left: -10px !important;
 
         &-title, &-address {
             white-space: nowrap;
@@ -54,6 +55,7 @@
         display: flex;
         align-items: center;
         padding: 5px 8px;
+        margin-left: -10px !important;
 
         i{
             color: #cf2127;
