@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Search from "./pages/search/Search";
 import Shipper from "./pages/shipper/Shipper";
 
+import Login from "./pages/login/Login";
 function App() {
     return (
         <>
@@ -14,6 +15,7 @@ function App() {
                 {/* <Home /> */}
                 {/* <Search /> */}
                 <Shipper />
+                <Login />
             </div>
             <Footer />
         </>

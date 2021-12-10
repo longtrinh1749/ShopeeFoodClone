@@ -1,0 +1,20 @@
+version: "3"
+services:
+  database:
+    image: mariadb:latest
+    ports:
+      - "9306:3306"
+    networks:
+      - microservice-net
+    environment:
+      MARIADB_USER: shopeefood
+      MARIADB_PASSWORD: shopeefood
+      MARIADB_ROOT_PASSWORD: root
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+networks:
+  microservice-net:
+    external: true
