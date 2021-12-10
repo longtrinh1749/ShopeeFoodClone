@@ -10,6 +10,8 @@ services:
       MARIADB_USER: shopeefood
       MARIADB_PASSWORD: shopeefood
       MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - 'database-volume:/var/lib/mysql'
     deploy:
       replicas: 1
       restart_policy:
@@ -17,4 +19,7 @@ services:
 
 networks:
   microservice-net:
+    external: true
+volumes:
+  database-volume:
     external: true
