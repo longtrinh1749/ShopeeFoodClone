@@ -9,4 +9,4 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
 
 server:
-  port: 10000
+  port: 8400

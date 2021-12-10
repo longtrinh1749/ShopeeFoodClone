@@ -3,7 +3,7 @@ spring:
     hibernate:
       ddl-auto: none
   datasource:
-    url: jdbc:mysql://database:9306/product_service?serverTimezone=UTC
+    url: jdbc:mysql://database:3306/product_service?serverTimezone=UTC
     username: shopeefood
     password: shopeefood
     driver-class-name: org.mariadb.jdbc.Driver
