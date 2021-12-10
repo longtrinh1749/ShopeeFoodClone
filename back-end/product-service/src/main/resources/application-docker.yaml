@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://database:9306/product_service?serverTimezone=UTC
+    username: shopeefood
+    password: shopeefood
+    driver-class-name: org.mariadb.jdbc.Driver
+
+server:
+  port: 8500

@@ -17,5 +17,5 @@ spring:
 
 
 server:
-  port: 10200
+  port: 8500
 
