@@ -2,7 +2,6 @@
 # git pull
 mvn clean package
 docker stack rm shopee-ms
-docker stack rm shopee-database
 # before run the following command, make sure that an external overlay network, named 'food-shop-net' already created
 # docker network create -d overlay --attachable microservice-net
 # build gallery-service image
