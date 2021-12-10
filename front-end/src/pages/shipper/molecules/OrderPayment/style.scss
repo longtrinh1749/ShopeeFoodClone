@@ -1,0 +1,29 @@
+.order_payment {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: white;
+
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    &-note {
+        margin-top: 15px;
+    }
+
+    &-total {
+        .item-left {
+            font-weight: 700;
+        }
+
+        .item-right {
+            color: #ee4d2d;
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+    }
+}
