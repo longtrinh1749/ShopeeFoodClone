@@ -28,6 +28,10 @@ public class AppUser {
     @Column(name = "role")
     private String role;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Profile profile;
+
     public Long getId() {
         return id;
     }

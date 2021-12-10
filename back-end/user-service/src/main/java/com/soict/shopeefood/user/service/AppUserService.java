@@ -8,4 +8,6 @@ public interface AppUserService {
     AppUser register(RegisterForm registerForm);
 
     Boolean checkUsernameExisted(String username);
+
+    AppUser getUserByToken(String authenToken);
 }
