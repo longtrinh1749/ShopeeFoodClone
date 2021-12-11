@@ -12,10 +12,10 @@ function App() {
         <>
             <Header />
             <div className="wrapper">
-                {/* <Home /> */}
+                <Home />
                 {/* <Search /> */}
-                <Shipper />
-                <Login />
+                {/* <Shipper /> */}
+                {/* <Login /> */}
             </div>
             <Footer />
         </>
