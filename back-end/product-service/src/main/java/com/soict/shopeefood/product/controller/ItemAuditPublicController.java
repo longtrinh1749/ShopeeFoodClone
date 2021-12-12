@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/public/item-audit")
+@CrossOrigin("*")
 public class ItemAuditPublicController {
 
     @Autowired
