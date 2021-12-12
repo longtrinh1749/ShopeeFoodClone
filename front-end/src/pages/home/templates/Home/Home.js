@@ -1,19 +1,9 @@
 import React, { useEffect } from "react";
-import { useListItem } from "api/home";
 import Corporation from "../../molecules/Corporation/Corporation";
 import Banner from "../../organisms/Banner/Banner";
 import Food from "../../organisms/Food/Food";
 
 const Home = () => {
-    const { execute, isLoading, response, error } = useListItem();
-    useEffect(() => {
-        execute({
-            cbSuccess: (res) => {
-                console.log(res);
-            },
-        });
-    }, []);
-
     useEffect(() => {
         window.onscroll = () => {
             if (
@@ -24,7 +14,7 @@ const Home = () => {
                     .querySelector(".banner")
                     .setAttribute(
                         "style",
-                        `position:absolute; top: ${
+                        `position: absolute; top: ${
                             document.querySelector(".main").clientHeight -
                             (window.innerHeight < 1050
                                 ? window.innerHeight * 0.85
