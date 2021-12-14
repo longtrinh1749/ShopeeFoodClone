@@ -2,22 +2,19 @@ import './Login.css'
 import axios from 'axios'
 const Login = () => {
     function getAuthenInfo(){
-        let config = {
-            headers: {
-                Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGltZWFyYTQiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImlhdCI6MTYzOTQwOTM4NywiZXhwIjoxNjM5NDk1Nzg3fQ.BGBclGWtCMGr2pZEcgE7PomX6jwgVoXV-nB337kjFV7lAXnJ94MW971scQZLemaWKWEE2yZBJCQ9kMKzFVNL4w",
-            }
-          }
-        // let username = document.getElementById("username");
-        // let password = document.getElementById("password");
-        // let authenInfo = {
-        //     "username" : username,
-        //     "password" : password
+        // let config = {
+        //     headers: {
+        //         Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGltZWFyYTQiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImlhdCI6MTYzOTQwOTM4NywiZXhwIjoxNjM5NDk1Nzg3fQ.BGBclGWtCMGr2pZEcgE7PomX6jwgVoXV-nB337kjFV7lAXnJ94MW971scQZLemaWKWEE2yZBJCQ9kMKzFVNL4w",
+        //     }
         // }
-        axios.post('http://localhost:8400/v1/user', 
-        {
-            username: 'admin',
-            password: '12345'
-        }, config)
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        let authenInfo = {
+            "username" : username,
+            "password" : password
+        }
+        console.log(authenInfo)
+        axios.post('http://localhost:8400/auth', authenInfo)
           .then( (response)=>{
             console.log(response);
           })
