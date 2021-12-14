@@ -2,24 +2,28 @@ import './Login.css'
 import axios from 'axios'
 const Login = () => {
     function getAuthenInfo(){
+        let config = {
+            headers: {
+                Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGltZWFyYTQiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImlhdCI6MTYzOTQwOTM4NywiZXhwIjoxNjM5NDk1Nzg3fQ.BGBclGWtCMGr2pZEcgE7PomX6jwgVoXV-nB337kjFV7lAXnJ94MW971scQZLemaWKWEE2yZBJCQ9kMKzFVNL4w",
+            }
+          }
         // let username = document.getElementById("username");
         // let password = document.getElementById("password");
         // let authenInfo = {
         //     "username" : username,
         //     "password" : password
         // }
-        axios.post('http://localhost:8762/user/auth', 
+        axios.post('http://localhost:8400/v1/user', 
         {
             username: 'admin',
             password: '12345'
-        })
+        }, config)
           .then( (response)=>{
             console.log(response);
           })
           .catch(function (error) {
             console.log(error);
           });
-          console.log("hi");
     }
     function sendAuthenInfo(){
         
