@@ -106,3 +106,7 @@ i{
     text-decoration: underline;
     font-size: 15PX;
 }
+.alert-danger{
+    display: none;
+    padding: 10px;
+}

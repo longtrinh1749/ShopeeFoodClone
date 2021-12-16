@@ -1,7 +1,9 @@
 import './Login.css'
 import axios from 'axios'
-const Login = () => {
-    function getAuthenInfo(){
+import { useNavigate } from 'react-router-dom';
+const Login = (props) => {
+    const navigate = useNavigate();
+    function sendAuthenInfo(){
         // let config = {
         //     headers: {
         //         Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGltZWFyYTQiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImlhdCI6MTYzOTQwOTM4NywiZXhwIjoxNjM5NDk1Nzg3fQ.BGBclGWtCMGr2pZEcgE7PomX6jwgVoXV-nB337kjFV7lAXnJ94MW971scQZLemaWKWEE2yZBJCQ9kMKzFVNL4w",
@@ -17,13 +19,14 @@ const Login = () => {
         axios.post('http://localhost:8400/auth', authenInfo)
           .then( (response)=>{
             console.log(response);
+            document.getElementsByClassName("alert-danger")[0].style.display = "none";
+            props.setUser(username);
+            navigate('/home');
           })
           .catch(function (error) {
-            console.log(error);
+              console.log(error)
+            document.getElementsByClassName("alert-danger")[0].style.display = "block";
           });
-    }
-    function sendAuthenInfo(){
-        
     }
     return (
         <div className="wrapper">
@@ -43,6 +46,7 @@ const Login = () => {
                         </span>
                     </div>
                 </div>
+                <div className="alert-danger">Tên đăng nhập hoặc mật khẩu không chính xác</div>
                 <div>Hoặc đăng nhập bằng tài khoản của bạn</div>
                 <div className="form-login-input">
                     <div className="field-group">
@@ -62,7 +66,7 @@ const Login = () => {
                         </div>
                     <span className="float-right"><a href="">Quên mật khẩu?</a></span>
                     </div>
-                    <button className="btn btn-block btn-submit" onClick={getAuthenInfo}>ĐĂNG NHẬP</button>
+                    <button className="btn btn-block btn-submit" onClick={sendAuthenInfo}>ĐĂNG NHẬP</button>
                     <div className="login-mess-policy">
                         Chúng tôi không sử dụng thông tin của bạn với bất kỳ mục đích nào. Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với 
                         <a target="_blank" href="https://shopeefood.vn/gioi-thieu#footer-bottom">  Chính sách quy định của Foody</a>

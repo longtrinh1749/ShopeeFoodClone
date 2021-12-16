@@ -66,15 +66,60 @@ const Navbar = () => {
 };
 
 
-const User = () => {
+const Login = () => {
     return (
         <div className="header_user">
-            <p className="btn">Đăng nhập</p>
+            <p className="btn">
+            <a href="/login">Đăng nhập</a>
+            </p>
         </div>
     );
 };
 
-const Header = () => {
+const User = (props) => { 
+    function logout() {
+        props.setUser('');
+    }
+    return (
+        <div className="dropdown">
+            <button
+                className="btn dropdown-toggle header_user-dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+            >
+                {props.username}
+            </button>
+            <ul className="dropdown-menu">
+                <li>
+                    <a className="dropdown-item" href="/">
+                        <i className="fa fa-shopping-cart" aria-hidden="true"></i>Lịch sử đơn hàng
+                    </a>
+                </li>
+                <li>
+                    <a className="dropdown-item" href="/">
+                        <i class="fa fa-gift" aria-hidden="true"></i>Ví voucher
+                    </a>
+                </li>
+                <li>
+                    <a className="dropdown-item" href="/">
+                        <i class="fa fa-user" aria-hidden="true"></i>Cập nhật tài khoản
+                    </a>
+                </li>
+                <li>
+                    <hr className="dropdown-divider" />
+                </li>
+                <li>
+                    <a className="dropdown-item" href="/" onClick={logout}>
+                        <i class="fa fa-power-off" aria-hidden="true"></i>Đăng xuất
+                    </a>
+                </li>
+            </ul>
+        </div>
+    );
+}
+
+const Header = (props) => {
+    if ( props.user ===  '')
     return (
         <div className="header">
             <div className="container">
@@ -82,11 +127,25 @@ const Header = () => {
                 <Dropdown />
                 <Navbar />
                 <Search/>
-                <User />
+                <Login />
             </div>
             
         </div>
     );
+    else return (
+        <div className="header">
+            <div className="container">
+                <Logo />
+                <Dropdown />
+                <Navbar />
+                <Search/>
+                <User 
+                    username = {props.user}
+                    setUser = {props.setUser}/>
+            </div>
+            
+        </div>
+    )
 };
 
 export default Header;
