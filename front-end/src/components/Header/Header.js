@@ -97,12 +97,12 @@ const User = (props) => {
                 </li>
                 <li>
                     <a className="dropdown-item" href="/">
-                        <i class="fa fa-gift" aria-hidden="true"></i>Ví voucher
+                        <i className="fa fa-gift" aria-hidden="true"></i>Ví voucher
                     </a>
                 </li>
                 <li>
                     <a className="dropdown-item" href="/">
-                        <i class="fa fa-user" aria-hidden="true"></i>Cập nhật tài khoản
+                        <i className="fa fa-user" aria-hidden="true"></i>Cập nhật tài khoản
                     </a>
                 </li>
                 <li>
@@ -110,7 +110,7 @@ const User = (props) => {
                 </li>
                 <li>
                     <a className="dropdown-item" href="/" onClick={logout}>
-                        <i class="fa fa-power-off" aria-hidden="true"></i>Đăng xuất
+                        <i className="fa fa-power-off" aria-hidden="true"></i>Đăng xuất
                     </a>
                 </li>
             </ul>

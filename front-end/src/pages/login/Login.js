@@ -28,6 +28,9 @@ const Login = (props) => {
             document.getElementsByClassName("alert-danger")[0].style.display = "block";
           });
     }
+    function signupClickHandler() {
+        navigate('/signup');
+    }
     return (
         <div className="wrapper">
             <div className="content-container">
@@ -39,10 +42,9 @@ const Login = (props) => {
                     <div className="item facebook">
                         <span><i className="fab fa-facebook-f"></i>FACEBOOK</span>
                     </div>
-                    <div className="item google">
+                    <div className="item google" onClick={signupClickHandler}>
                         <span>
-                            <i className="fab fa-google-plus-g" aria-hidden="true"></i>
-                            GOOGLE
+                        ĐĂNG KÝ NGAY
                         </span>
                     </div>
                 </div>
@@ -64,12 +66,12 @@ const Login = (props) => {
                             <input type="checkbox" id="RememberMe"></input>
                             <label>Lưu thông tin đăng nhập</label>
                         </div>
-                    <span className="float-right"><a href="">Quên mật khẩu?</a></span>
+                    <span className="float-right"><a href="/login">Quên mật khẩu?</a></span>
                     </div>
                     <button className="btn btn-block btn-submit" onClick={sendAuthenInfo}>ĐĂNG NHẬP</button>
                     <div className="login-mess-policy">
                         Chúng tôi không sử dụng thông tin của bạn với bất kỳ mục đích nào. Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với 
-                        <a target="_blank" href="https://shopeefood.vn/gioi-thieu#footer-bottom">  Chính sách quy định của Foody</a>
+                        <a target="_blank" rel="noreferrer" href="https://shopeefood.vn/gioi-thieu#footer-bottom">  Chính sách quy định của Foody</a>
                     </div>
                 </div>
             </div>
