@@ -40,7 +40,7 @@ const Signup = (props) => {
             document.getElementsByClassName("alert-danger")[0].style.display =
                 "block";
         } else {
-            axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}/v1/public/register`, registerInfo)
+            axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/v1/public/register`, registerInfo)
           .then( (response)=>{
             console.log(response);
               if( response.data.result === "Register failed") {

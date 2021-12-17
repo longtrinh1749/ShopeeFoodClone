@@ -17,7 +17,7 @@ const Login = (props) => {
         }
         console.log(authenInfo)
         console.log(process.env.REACT_APP_SERVER_ADDRESS)
-        axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}/auth`, authenInfo)
+        axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/auth`, authenInfo)
           .then( (response)=>{
             console.log(response);
             document.getElementsByClassName("alert-danger")[0].style.display = "none";
