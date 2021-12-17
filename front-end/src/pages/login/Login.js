@@ -1,28 +1,36 @@
 import './Login.css'
 import axios from 'axios'
-const Login = () => {
-    function getAuthenInfo(){
-        // let username = document.getElementById("username");
-        // let password = document.getElementById("password");
-        // let authenInfo = {
-        //     "username" : username,
-        //     "password" : password
+import { useNavigate } from 'react-router-dom';
+const Login = (props) => {
+    const navigate = useNavigate();
+    function sendAuthenInfo(){
+        // let config = {
+        //     headers: {
+        //         Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGltZWFyYTQiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImlhdCI6MTYzOTQwOTM4NywiZXhwIjoxNjM5NDk1Nzg3fQ.BGBclGWtCMGr2pZEcgE7PomX6jwgVoXV-nB337kjFV7lAXnJ94MW971scQZLemaWKWEE2yZBJCQ9kMKzFVNL4w",
+        //     }
         // }
-        axios.post('http://localhost:8762/user/auth', 
-        {
-            username: 'admin',
-            password: '12345'
-        })
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        let authenInfo = {
+            "username" : username,
+            "password" : password
+        }
+        console.log(authenInfo)
+        console.log(process.env.REACT_APP_SERVER_ADDRESS)
+        axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}/auth`, authenInfo)
           .then( (response)=>{
             console.log(response);
+            document.getElementsByClassName("alert-danger")[0].style.display = "none";
+            props.setUser(username);
+            navigate('/home');
           })
           .catch(function (error) {
-            console.log(error);
+              console.log(error)
+            document.getElementsByClassName("alert-danger")[0].style.display = "block";
           });
-          console.log("hi");
     }
-    function sendAuthenInfo(){
-        
+    function signupClickHandler() {
+        navigate('/signup');
     }
     return (
         <div className="wrapper">
@@ -35,13 +43,13 @@ const Login = () => {
                     <div className="item facebook">
                         <span><i className="fab fa-facebook-f"></i>FACEBOOK</span>
                     </div>
-                    <div className="item google">
+                    <div className="item google" onClick={signupClickHandler}>
                         <span>
-                            <i className="fab fa-google-plus-g" aria-hidden="true"></i>
-                            GOOGLE
+                        ĐĂNG KÝ NGAY
                         </span>
                     </div>
                 </div>
+                <div className="alert-danger">Tên đăng nhập hoặc mật khẩu không chính xác</div>
                 <div>Hoặc đăng nhập bằng tài khoản của bạn</div>
                 <div className="form-login-input">
                     <div className="field-group">
@@ -59,12 +67,12 @@ const Login = () => {
                             <input type="checkbox" id="RememberMe"></input>
                             <label>Lưu thông tin đăng nhập</label>
                         </div>
-                    <span className="float-right"><a href="">Quên mật khẩu?</a></span>
+                    <span className="float-right"><a href="/login">Quên mật khẩu?</a></span>
                     </div>
-                    <button className="btn btn-block btn-submit" onClick={getAuthenInfo}>ĐĂNG NHẬP</button>
+                    <button className="btn btn-block btn-submit" onClick={sendAuthenInfo}>ĐĂNG NHẬP</button>
                     <div className="login-mess-policy">
                         Chúng tôi không sử dụng thông tin của bạn với bất kỳ mục đích nào. Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với 
-                        <a target="_blank" href="https://shopeefood.vn/gioi-thieu#footer-bottom">  Chính sách quy định của Foody</a>
+                        <a target="_blank" rel="noreferrer" href="https://shopeefood.vn/gioi-thieu#footer-bottom">  Chính sách quy định của Foody</a>
                     </div>
                 </div>
             </div>

@@ -51,7 +51,7 @@ i{
     /* margin-bottom: 15px; */
     border: 1px solid grey;
     border-collapse: collapse;
-    font-size: large;
+    font-size: 15px;
 }
 .input-group i{
     padding: 10px;
@@ -109,4 +109,9 @@ i{
 .alert-danger{
     display: none;
     padding: 10px;
+}
+select{
+    border: none;
+    border-color: transparent;
+    outline: none;
 }
