@@ -1,0 +1,52 @@
+.order_detail {
+    background-color: white;
+    padding: 15px;
+    padding-bottom: 0;
+
+    &-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-weight: 700;
+        }
+
+        i{
+            color: #666;
+        }
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+    .user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fbf9d8;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+
+        &_info {
+            display: flex;
+            align-items: center;
+
+            &-img {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                margin-right: 10px;
+                border-radius: 50%;
+                background-color: #eee;
+                text-align: center;
+
+                i{
+                    font-size: 18px;
+                    color: #999;
+                }
+            }
+        }
+    }
+}

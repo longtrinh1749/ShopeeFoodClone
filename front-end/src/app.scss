@@ -24,10 +24,6 @@ p {
     margin-bottom: 0;
 }
 
-.wrapper {
-    margin-top: 70px;
-}
-
 a{
     text-decoration: none;
     color: #333;
@@ -41,7 +37,15 @@ a{
 }
 
 .modal-open {
-    .header, .banner {
+    .banner {
         width:calc(100% - 13px);
     }
 }
+
+// .fade {
+//     transition: opacity 0.1s ease-in-out;
+// }
+
+// .modal-backdrop {
+//     transition: opacity 0s ease-in-out;
+// }

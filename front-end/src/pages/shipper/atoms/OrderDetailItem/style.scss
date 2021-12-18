@@ -1,0 +1,25 @@
+.order_detail-item {
+    display: flex;
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+
+    .item_number {
+        margin-right: 15px;
+        color: #cf2127;
+    }
+
+    .item_infor {
+        &-name {
+            display: flex;
+            p {
+                font-weight: 700;
+            }
+
+            span {
+                margin-left: 15px;
+                font-size: 12px;
+                color: #666;
+            }
+        }
+    }
+}

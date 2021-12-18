@@ -1,8 +1,8 @@
-import Endow from "../../molecules/Endow/Endow";
-import List from "../../molecules/List/List";
-import LocationShip from "../../molecules/LocationShip/LocationShip";
-import Search from "../../molecules/Search/Search";
-import SuggestKeyword from "../../molecules/SuggestKeyword/SuggestKeyword";
+import Deal from "pages/home/molecules/Deal/Deal";
+import List from "pages/home/molecules/List/List";
+import LocationShip from "pages/home/molecules/LocationShip/LocationShip";
+import Search from "pages/home/molecules/Search/Search";
+import SuggestKeyword from "pages/home/molecules/SuggestKeyword/SuggestKeyword";
 import "./food.scss";
 
 const Food = () => {
@@ -20,8 +20,8 @@ const Food = () => {
                     </div>
                 </div>
                 <div className="main-wrapper">
-                    <LocationShip />
-                    <Endow />
+                    {/* <LocationShip /> */}
+                    <Deal />
                     <List />
                 </div>
             </div>

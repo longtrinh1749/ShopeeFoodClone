@@ -1,10 +1,12 @@
+import { stringToSlug } from 'helpers/function/buildSlug';
 import React from 'react';
 
-const FilterListItem = ({title}) => {
+const FilterListItem = ({id , label}) => {
+    id = stringToSlug(`${label} ${id}`);
     return (
         <div className="area-list_item">
-            <input type="checkbox" id="item" />
-            <label htmlFor="item">{title}</label>
+            <input type="checkbox" id={id} />
+            <label htmlFor={id}>{label}</label>
         </div>
     );
 }
