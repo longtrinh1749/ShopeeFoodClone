@@ -134,11 +134,11 @@ const Header = (props) => {
                 <Logo />
                 <Dropdown />
                 <Navbar />
-                <Search/>
+                {/* <Search/> */}
                 <Login />
             </div>
             <SearchModal />
-        </>
+        </div>
     );
     else return (
         <div className="header">
@@ -146,7 +146,7 @@ const Header = (props) => {
                 <Logo />
                 <Dropdown />
                 <Navbar />
-                <Search/>
+                {/* <Search/> */}
                 <User 
                     username = {props.user}
                     setUser = {props.setUser}/>
