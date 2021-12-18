@@ -24,14 +24,14 @@
 .google{
     background-color: #ff5252;
 }
-.login-via i{
+i{
     float: left;
     padding: 5px 0px 0px 10px;
 }
 .login-via{
     padding-bottom: 30px;
 }
-.login-wrapper{
+.wrapper{
     justify-content: center;
     margin-top: 100px;
 }
@@ -51,7 +51,7 @@
     /* margin-bottom: 15px; */
     border: 1px solid grey;
     border-collapse: collapse;
-    font-size: large;
+    font-size: 15px;
 }
 .input-group i{
     padding: 10px;
@@ -109,4 +109,9 @@
 .alert-danger{
     display: none;
     padding: 10px;
+}
+select{
+    border: none;
+    border-color: transparent;
+    outline: none;
 }

@@ -16,7 +16,7 @@
     }
 
     &_img {
-        position: absolute;
+        // position: absolute;
         right: 100%;
         display: flex;
         height: 100%;
@@ -35,6 +35,17 @@
         padding: 10px;
         margin-right: 10px;
 
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &_user-dropdown {
+        background-color: white;
+        padding: 10px;
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 14px;
         &:focus {
             box-shadow: none;
         }
@@ -98,4 +109,24 @@
             cursor: pointer;
         }
     }
+}
+.fa{
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.fa-shopping-cart{
+    color: #6cc942;
+}
+.fa-gift{
+    color: rgb(54, 115, 196);
+}
+.fa-user{
+    color:sandybrown
+}
+.fa-power-off{
+    color: slategray;
+}
+.dropdown-menu{
+    min-width: 180px
 }
