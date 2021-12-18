@@ -38,11 +38,9 @@ public interface ShopRepo extends JpaRepository<Shop, Integer> {
                                          @Param("catList") List<Integer> catList,
                                          Pageable pageable);
 
-    @Query(nativeQuery = true,
-            value = "select distinct (`id`), `district_id`, `name`, `img_url`, `address`, `price_range` from product_service.shop as s inner join product_service.shop_category as c \n" +
-                    "on s.id = c.shop_id \n" +
-                    "where c.category_id in :catList \n" +
-                    "order by s.id desc ")
+    @Query(value = "select distinct s from Shop s join fetch ShopCategory c on s.shopId = c.shopCategoryId.shopId \n" +
+                    "where c.shopCategoryId.catId in :catList \n" +
+                    "order by s.shopId desc ")
     Page<Shop> findByCategory(@Param("catList") List<Integer> catList, Pageable pageable);
 
     @Query(nativeQuery = true,
