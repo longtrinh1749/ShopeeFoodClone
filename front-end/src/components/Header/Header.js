@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import SearchModal from "../SearchModal";
 import "./header.scss";
 
 const Logo = () => {
     return (
         <div className="header_img">
-            <a href="/">
+            <Link to="/">
                 <img src="/images/shopeefoodvn.png" alt="" />
-            </a>
+            </Link>
         </div>
     );
 };
@@ -132,7 +133,7 @@ const Header = (props) => {
         <div className="header">
             <div className="container">
                 <Logo />
-                <Dropdown />
+                {/* <Dropdown /> */}
                 <Navbar />
                 {/* <Search/> */}
                 <Login />
@@ -151,7 +152,6 @@ const Header = (props) => {
                     username = {props.user}
                     setUser = {props.setUser}/>
             </div>
-            
         </div>
     )
 };

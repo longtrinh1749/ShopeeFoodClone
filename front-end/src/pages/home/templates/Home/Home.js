@@ -6,10 +6,9 @@ import Food from "../../organisms/Food/Food";
 const Home = () => {
     useEffect(() => {
         window.onscroll = () => {
-            if (
-                document.querySelector(".main").getBoundingClientRect().bottom <
-                window.innerHeight
-            ) {
+            let main = document.querySelector(".main");
+            if (!main) return;
+            if (main.getBoundingClientRect().bottom < window.innerHeight) {
                 document
                     .querySelector(".banner")
                     .setAttribute(

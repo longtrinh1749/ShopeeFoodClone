@@ -9,3 +9,13 @@ export const useListShop = buildXHR({
     url: "/api/v1/public/shop",
     method: "GET",
 });
+
+export const useListShopByFilter = buildXHR({
+    url: "/api/v1/public/shop/filter",
+    method: "GET",
+});
+
+export const useListCategory = buildXHR({
+    url: "/api/v1/public/category/all",
+    method: "GET",
+});

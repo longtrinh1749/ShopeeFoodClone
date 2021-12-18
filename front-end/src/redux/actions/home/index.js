@@ -13,3 +13,10 @@ export function setShopList(payload) {
         payload,
     };
 }
+
+export function getCategoryList(payload) {
+    return {
+        type: HOME_LABELS.LOAD_CATEGORY,
+        payload,
+    };
+}
