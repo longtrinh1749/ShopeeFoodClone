@@ -13,17 +13,19 @@ function App() {
   const [user, setUser] = useState('');
   return (
     <>
-      <Header 
+      <BrowserRouter>
+      <Header
         user = {user}
         setUser = {setUser}
         />
-      <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" exact element={<Home />} />
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Login setUser={setUser}/>} />
             <Route path="search" element={<Search />} />
             <Route path="signup" element = {<Signup/>} />
+            <Route path="danh-sach/:categoryId" element={<Search/>} />
+            <Route path="danh-sach" element={<Search/>} />
         </Routes>
       </BrowserRouter>
       <Footer />

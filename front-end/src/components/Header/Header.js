@@ -1,12 +1,13 @@
-import Search from "./components/Search";
+import { Link } from "react-router-dom";
+import SearchModal from "../SearchModal";
 import "./header.scss";
 
 const Logo = () => {
     return (
         <div className="header_img">
-            <a href="/">
+            <Link to="/">
                 <img src="/images/shopeefoodvn.png" alt="" />
-            </a>
+            </Link>
         </div>
     );
 };
@@ -56,10 +57,18 @@ const Navbar = () => {
     return (
         <div className="header_navbar">
             <ul>
-                <li className="active">Đồ ăn</li>
-                <li>Thực phẩm</li>
-                <li>Hoa</li>
-                <li>Thuốc</li>
+                <li className="active">
+                    <a href="/">Đồ ăn</a>
+                </li>
+                <li>
+                    <a href="/">Thực phẩm</a>
+                </li>
+                <li>
+                    <a href="/">Hoa</a>
+                </li>
+                <li>
+                    <a href="/">Thuốc</a>
+                </li>
             </ul>
         </div>
     );
@@ -124,12 +133,12 @@ const Header = (props) => {
         <div className="header">
             <div className="container">
                 <Logo />
-                <Dropdown />
+                {/* <Dropdown /> */}
                 <Navbar />
-                <Search/>
+                {/* <Search/> */}
                 <Login />
             </div>
-            
+            <SearchModal />
         </div>
     );
     else return (
@@ -138,12 +147,11 @@ const Header = (props) => {
                 <Logo />
                 <Dropdown />
                 <Navbar />
-                <Search/>
+                {/* <Search/> */}
                 <User 
                     username = {props.user}
                     setUser = {props.setUser}/>
             </div>
-            
         </div>
     )
 };

@@ -1,0 +1,13 @@
+.order_btn {
+    display: flex;
+    background-color: white;
+    
+    & > div {
+        width: 50%;
+    }
+
+    button {
+        width: 100%;
+        border-radius: 0;
+    }
+}

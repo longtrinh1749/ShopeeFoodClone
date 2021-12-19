@@ -1,0 +1,29 @@
+.order_list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+
+    .item-info {
+        display: flex;
+        align-items: center;
+
+        &_number {
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            margin-right: 10px;
+            background: #0288d1;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        &_name {
+            margin-right: 10px;
+            font-weight: 700;
+        }
+    }
+}
