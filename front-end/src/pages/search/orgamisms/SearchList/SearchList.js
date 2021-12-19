@@ -44,8 +44,6 @@ const SearchList = () => {
         }
     }
 
-    
-
     const [totalPage, setTotalPage] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -58,7 +56,8 @@ const SearchList = () => {
             cbSuccess: (res) => {
                 // console.log(res);
                 // setTotalPage(res.)
-                dispatch(setShopList({ shopList: res.data.content }));
+                let shopList = res.data.content ?? []
+                dispatch(setShopList({ shopList }));
             },
         });
     }, []);
