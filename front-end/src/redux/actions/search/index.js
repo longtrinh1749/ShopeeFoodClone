@@ -9,7 +9,14 @@ export function getDistrictList(payload) {
 
 export function updateFilterStatus(payload) {
     return {
-        type: SEARCH_LABELS.UPDATE_FILTER,
+        type: SEARCH_LABELS.DROPDOWN_STATUS,
+        payload,
+    };
+}
+
+export function updateFilterList(payload) {
+    return {
+        type: SEARCH_LABELS.FILTER_LIST,
         payload,
     };
 }

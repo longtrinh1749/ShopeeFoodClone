@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 const FilterCategory = () => {
      const dispatch = useDispatch();
-    const { filterDistrict, filterCategory } = useStore("Search", "filterReducer");
+    const { filterDistrict, filterCategory } = useStore("Search", "dropdownReducer");
     const { categoryList } = useStore("Home", "categoryReducer");
     const { execute, isLoading, response, error } = useListCategory();
     useEffect(() => {

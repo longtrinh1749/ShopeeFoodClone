@@ -1,16 +1,16 @@
 import { SEARCH_LABELS } from "redux/actionLabels";
 
 const initialState = {
-    filterCategoryList: [],
-    filterDistrictList: [],
+    filterDistrict: false,
+    filterCategory: false,
 };
 
-export function filterReducer(
+export function dropdownReducer(
     state = initialState,
     { type, payload }
 ) {
     switch (type) {
-        case SEARCH_LABELS.FILTER_LIST: {
+        case SEARCH_LABELS.DROPDOWN_STATUS: {
             return {
                 ...state,
                 ...payload,

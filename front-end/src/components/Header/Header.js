@@ -74,20 +74,19 @@ const Navbar = () => {
     );
 };
 
-
 const Login = () => {
     return (
         <div className="header_user">
             <p className="btn">
-            <a href="/login">Đăng nhập</a>
+                <a href="/login">Đăng nhập</a>
             </p>
         </div>
     );
 };
 
-const User = (props) => { 
+const User = (props) => {
     function logout() {
-        props.setUser('');
+        props.setUser("");
     }
     return (
         <div className="dropdown">
@@ -101,17 +100,23 @@ const User = (props) => {
             <ul className="dropdown-menu">
                 <li>
                     <a className="dropdown-item" href="/">
-                        <i className="fa fa-shopping-cart" aria-hidden="true"></i>Lịch sử đơn hàng
+                        <i
+                            className="fa fa-shopping-cart"
+                            aria-hidden="true"
+                        ></i>
+                        Lịch sử đơn hàng
                     </a>
                 </li>
                 <li>
                     <a className="dropdown-item" href="/">
-                        <i className="fa fa-gift" aria-hidden="true"></i>Ví voucher
+                        <i className="fa fa-gift" aria-hidden="true"></i>Ví
+                        voucher
                     </a>
                 </li>
                 <li>
                     <a className="dropdown-item" href="/">
-                        <i className="fa fa-user" aria-hidden="true"></i>Cập nhật tài khoản
+                        <i className="fa fa-user" aria-hidden="true"></i>Cập
+                        nhật tài khoản
                     </a>
                 </li>
                 <li>
@@ -119,41 +124,45 @@ const User = (props) => {
                 </li>
                 <li>
                     <a className="dropdown-item" href="/" onClick={logout}>
-                        <i className="fa fa-power-off" aria-hidden="true"></i>Đăng xuất
+                        <i className="fa fa-power-off" aria-hidden="true"></i>
+                        Đăng xuất
                     </a>
                 </li>
             </ul>
         </div>
     );
-}
+};
 
-const Header = (props) => {
-    if ( props.user ===  '')
+const SearchButton = () => {
+    
     return (
-        <div className="header">
-            <div className="container">
-                <Logo />
-                {/* <Dropdown /> */}
-                <Navbar />
-                {/* <Search/> */}
-                <Login />
-            </div>
-            <SearchModal />
+        <div className="header_search">
+            <span data-bs-toggle="modal" data-bs-target="#search-modal">
+                <i className="las la-search"></i>
+            </span>
         </div>
     );
-    else return (
-        <div className="header">
-            <div className="container">
-                <Logo />
-                <Dropdown />
-                <Navbar />
-                {/* <Search/> */}
-                <User 
-                    username = {props.user}
-                    setUser = {props.setUser}/>
+};
+
+const Header = (props) => {
+    return (
+        <>
+            <div className="header">
+                <div className="container">
+                    <Logo />
+                    {/* <Dropdown /> */}
+                    <Navbar />
+                    <SearchButton />
+                    {props.user === "" ? (
+                        <Login />
+                    ) : (
+                        <User username={props.user} setUser={props.setUser} />
+                    )}
+                </div>
             </div>
-        </div>
-    )
+            <SearchModal />
+        </>
+    );
 };
 
 export default Header;
