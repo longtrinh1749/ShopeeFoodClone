@@ -29,43 +29,37 @@ public interface ShopRepo extends JpaRepository<Shop, Integer> {
     @Query(value = "select s from Shop s where s.district.districtId in :districtList order by s.shopId desc ")
     Page<Shop> findByDistrict(@Param("districtList") List<Integer> districtList, Pageable pageable);
 
-    @Query(nativeQuery = true,
-            value = "select distinct (`id`), `district_id`, `name`, `img_url`, `address`, `price_range` from product_service.shop as s inner join product_service.shop_category as c \n" +
-            "on s.id = c.shop_id \n" +
-            "where s.district_id in :districtList and c.category_id in :catList \n" +
-            "order by s.id desc ")
+    @Query(value = "select distinct s from Shop s join fetch ShopCategory c on s.shopId = c.shopCategoryId.shopId \n" +
+                    "where s.district.districtId in :districtList and c.shopCategoryId.catId in :catList \n" +
+                    "order by s.shopId desc ")
     Page<Shop> findByDistrictAndCategory(@Param("districtList")List<Integer> districtList,
                                          @Param("catList") List<Integer> catList,
                                          Pageable pageable);
 
-    @Query(nativeQuery = true,
-            value = "select distinct (`id`), `district_id`, `name`, `img_url`, `address`, `price_range` from product_service.shop as s inner join product_service.shop_category as c \n" +
-                    "on s.id = c.shop_id \n" +
-                    "where c.category_id in :catList \n" +
-                    "order by s.id desc ")
+    @Query(value = "select distinct s from Shop s join fetch ShopCategory c on s.shopId = c.shopCategoryId.shopId \n" +
+                    "where c.shopCategoryId.catId in :catList \n" +
+                    "order by s.shopId desc ")
     Page<Shop> findByCategory(@Param("catList") List<Integer> catList, Pageable pageable);
 
-    @Query(nativeQuery = true,
-            value = "select distinct (`id`), `district_id`, `name`, `img_url`, `address`, `price_range` from product_service.shop as s inner join product_service.shop_category as c \n" +
-                    "on s.id = c.shop_id \n" +
-                    "where c.category_id in :catList " +
-                    "and (s.name like %:name% or s.address like %:name% ) \n" +
-                    "order by s.id desc ")
+    @Query(value = "select distinct s from Shop s join fetch ShopCategory c on s.shopId = c.shopCategoryId.shopId \n" +
+                    "where c.shopCategoryId.catId in :catList " +
+                    "and (s.shopName like %:name% or s.address like %:name%) \n" +
+                    "order by s.shopId desc ")
     Page<Shop> findByNameAndCategory(@Param("catList") List<Integer> catList,
                                      @Param("name") String name,
                                      Pageable pageable);
 
-    @Query(value = "select s from Shop s where s.district.districtId in :districtList and (s.shopName like %:name% or s.address like %:name%) order by s.shopId desc" )
+    @Query(value = "select s from Shop s where s.district.districtId in :districtList " +
+            "and (s.shopName like %:name% or s.address like %:name%) " +
+            "order by s.shopId desc ")
     Page<Shop> findByNameAndDistrict(@Param("districtList") List<Integer> districtList,
                                      @Param("name") String name,
                                      Pageable pageable);
 
-    @Query(nativeQuery = true,
-            value = "select distinct (`id`), `district_id`, `name`, `img_url`, `address`, `price_range` from product_service.shop as s inner join product_service.shop_category as c \n" +
-                    "on s.id = c.shop_id \n" +
-                    "where s.district_id in :districtList and c.category_id in :catList " +
-                    "and (s.name like %:name% or s.address like %:name% ) \n" +
-                    "order by s.id desc ")
+    @Query(value = "select distinct s from Shop s join fetch ShopCategory c on s.shopId = c.shopCategoryId.shopId \n" +
+                    "where s.district.districtId in :districtList and c.shopCategoryId.catId in :catList " +
+                    "and (s.shopName like %:name% or s.address like %:name%) \n" +
+                    "order by s.shopId desc ")
     Page<Shop> findByNameAndFilter(@Param("districtList")List<Integer> districtList,
                                    @Param("catList") List<Integer> catList,
                                    @Param("name") String name,

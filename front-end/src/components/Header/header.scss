@@ -1,10 +1,10 @@
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     height: 70px;
     width: 100%;
     background-color: white;
-    z-index: 1060;
+    z-index: 20;
 
     .container {
         position: relative;
@@ -16,7 +16,7 @@
     }
 
     &_img {
-        position: absolute;
+        // position: absolute;
         right: 100%;
         display: flex;
         height: 100%;
@@ -40,6 +40,17 @@
         }
     }
 
+    &_user-dropdown {
+        background-color: white;
+        padding: 10px;
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
     &_navbar {
         display: flex;
         align-items: center;
@@ -58,10 +69,21 @@
                 height: 100%;
                 padding: 0 15px;
                 font-size: 14px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    border-bottom: 3px solid #fff;
+
+                    &:hover {
+                        border-bottom: 3px solid #ee4d2d;
+                    }
+                }
             }
         }
-        
-        .active {
+
+        .active a {
             border-bottom: 3px solid #ee4d2d;
             color: #ee4d2d;
             font-weight: 700;
@@ -74,7 +96,37 @@
             padding: 8px 10px;
             white-space: nowrap;
             border: 1px solid #ee4d2d;
-            color: #ee4d2d
+            color: #ee4d2d;
         }
     }
+
+    &_search {
+        .la-search {
+            margin-top: 8px;
+            font-size: 24px;
+            color: #666;
+            transform: rotate(-90deg);
+            cursor: pointer;
+        }
+    }
+}
+.fa{
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.fa-shopping-cart{
+    color: #6cc942;
+}
+.fa-gift{
+    color: rgb(54, 115, 196);
+}
+.fa-user{
+    color:sandybrown
+}
+.fa-power-off{
+    color: slategray;
+}
+.dropdown-menu{
+    min-width: 180px
 }

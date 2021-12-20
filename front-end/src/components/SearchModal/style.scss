@@ -1,0 +1,114 @@
+#search-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .modal-dialog {
+        width: 70%;
+        max-width: 1140px;
+        margin-top: 5%;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: transparent;
+        border:  none;
+    }
+
+    .modal_img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal_title {
+        margin-top: 15px;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .modal_input {
+        margin-top: 30px;
+        form,
+        input {
+            width: 100%;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #ccc;
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+
+    .modal_list {
+        display: none;
+        .list_item {
+            max-width: 940px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0px;
+            background-color: white;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                padding: 0px 10px 10px;
+
+                .item_imgs img{
+                    width: 80px;
+                    height: 50px;
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .list_btn {
+            padding: 15px;
+            background-color: #eee;
+
+            a{
+                display: flex;
+                align-items: center;
+            }
+
+            .text-search {
+                color: red;
+                margin-left: 5px;
+            }
+
+            .btn-search {
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: red;
+                color: white;
+            }
+            i{
+                float: none;
+                padding: 0;
+            }
+        }
+    }
+
+    .modal_list-show {
+        display: block;
+    }
+
+    .modal_exit {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1070;
+        i {
+            font-size: 24px;
+        }
+    }
+}

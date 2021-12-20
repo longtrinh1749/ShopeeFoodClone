@@ -1,9 +1,12 @@
+import { stringToSlug } from 'helpers/function/buildSlug';
+import { Link } from 'react-router-dom';
 import './suggest-keyword-item.scss';
 
-const SuggestKeywordItem = ({title = '', url = '/'}) => {
+const SuggestKeywordItem = ({item}) => {
+    let url = "danh-sach/" + stringToSlug(`${item.catName} ${item.catId}`);
     return (
         <div className="suggest_item">
-            <a href={url}>{title}</a>
+            <Link to={url}>{item.catName}</Link>
         </div>
     );
 }

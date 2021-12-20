@@ -3,6 +3,7 @@ package com.soict.shopeefood.product.controller;
 import com.soict.shopeefood.product.payload.SectionForm;
 import com.soict.shopeefood.product.response.JsonResult;
 import com.soict.shopeefood.product.service.SectionService;
+import com.soict.shopeefood.product.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +15,8 @@ import java.util.Optional;
 @CrossOrigin("*")
 public class SectionPublicController {
 
-//    @Autowired
-//    private ShopService shopService;
+    @Autowired
+    private ShopService shopService;
 
     @Autowired
     private SectionService sectionService;
@@ -42,16 +43,16 @@ public class SectionPublicController {
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
 
-//    @PostMapping("/upload")
-//    public ResponseEntity<JsonResult> upload(@RequestBody SectionForm sectionForm) {
-//        return shopService.findById(sectionForm.getShopId())
-//                .map(section -> {
-//                    return sectionService.upload(sectionForm)
-//                            .map(JsonResult::uploaded)
-//                            .orElse(JsonResult.saveError("Internal Server Error"));
-//                })
-//                .orElse(JsonResult.parentNotFound("Shop doesn't exist"));
-//    }
+    @PostMapping("/upload")
+    public ResponseEntity<JsonResult> upload(@RequestBody SectionForm sectionForm) {
+        return shopService.findById(sectionForm.getShopId())
+                .map(section -> {
+                    return sectionService.upload(sectionForm)
+                            .map(JsonResult::uploaded)
+                            .orElse(JsonResult.saveError("Internal Server Error"));
+                })
+                .orElse(JsonResult.parentNotFound("Shop doesn't exist"));
+    }
 
     @PutMapping("/update")
     public ResponseEntity<JsonResult> update(@RequestBody SectionForm sectionForm) {

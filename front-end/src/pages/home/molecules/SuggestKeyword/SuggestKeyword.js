@@ -1,12 +1,26 @@
 import SuggestKeywordItem from "../../atoms/SuggestKeywordItem/SuggestKeywordItem";
-import { suggestKeywordList } from "../../../../data/suggest-keyword";
 import './suggest-keyword.scss';
+import { useDispatch } from "react-redux";
+import { useStore } from "hook/useStore";
+import { useListCategory } from "api/home";
+import { useEffect } from "react";
+import { getCategoryList } from "redux/actions/home";
 
 const SuggestKeyword = () => {
+    const dispatch = useDispatch();
+    const { categoryList } = useStore("Home", "categoryReducer");
+    const { execute, isLoading, response, error } = useListCategory();
+    useEffect(() => {
+        execute({
+            cbSuccess: (res) => {
+                dispatch(getCategoryList({ categoryList: res.data }));
+            },
+        });
+    }, []);
     return (
         <div className="suggest">
-            {suggestKeywordList.map((e, k) => (
-                <SuggestKeywordItem key={k} title={e.title} url={e.url} />
+            {categoryList.map((e, k) => (
+                <SuggestKeywordItem key={e.catId} item={e} />
             ))}
         </div>
     );

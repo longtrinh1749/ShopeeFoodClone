@@ -24,14 +24,14 @@
 .google{
     background-color: #ff5252;
 }
-i{
+.login-via i{
     float: left;
     padding: 5px 0px 0px 10px;
 }
 .login-via{
     padding-bottom: 30px;
 }
-.wrapper{
+.login-wrapper{
     justify-content: center;
     margin-top: 100px;
 }
@@ -105,4 +105,8 @@ i{
     color: #0288d1;
     text-decoration: underline;
     font-size: 15PX;
+}
+.alert-danger{
+    display: none;
+    padding: 10px;
 }
