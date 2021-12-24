@@ -8,6 +8,7 @@ import Login from "./pages/login/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
 import Signup from "./pages/signup/Signup";
+import Shop from "./pages/shop/shop";
 
 function App() {
   const [user, setUser] = useState('');
@@ -26,6 +27,7 @@ function App() {
             <Route path="signup" element = {<Signup/>} />
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
+            <Route path="shop" element = {<Shop/>} />
         </Routes>
       </BrowserRouter>
       <Footer />

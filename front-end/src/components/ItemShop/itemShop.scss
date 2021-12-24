@@ -1,0 +1,43 @@
+.item-shop {
+    padding-right: 0px;
+    .item-shop-name {
+        margin-left: 10px;
+        .item-shop-itemname {
+            color: #464646;
+            font-size: 17px;
+            cursor: pointer;
+            line-height: 1.3em;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+    .item-shop-price {
+        .old-price {
+            font-size: 13px;
+            text-decoration: line-through;
+            color: #6d6f71;
+        }
+        .new-price {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0288d1;
+        }
+    }
+    .item-shop-add-btn {
+        text-align: right!important;
+        span {
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            line-height: 20px;
+            width: 22px;
+            height: 22px;
+            background-color: #ee4d2d;
+            text-align: center;
+            color: #fff;
+            display: inline-block;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    }
+}
