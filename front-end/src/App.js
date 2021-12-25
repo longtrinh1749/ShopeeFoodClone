@@ -27,7 +27,7 @@ function App() {
             <Route path="signup" element = {<Signup/>} />
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
-            <Route path="shop" element = {<Shop/>} />
+            <Route path="shop/:shopUrl" element = {<Shop/>} />
         </Routes>
       </BrowserRouter>
       <Footer />
