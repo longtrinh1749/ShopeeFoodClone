@@ -49,6 +49,8 @@ public class AppUserController {
         AppUser appUser = appUserService.getUserByToken(authenToken);
         Profile profile = profileService.getProfile(appUser.getId());
         if(profile != null) {
+            if(updateProfileForm.getName() != null) profile.setName(updateProfileForm.getName());
+            if(updateProfileForm.getGender() != null) profile.setGender(updateProfileForm.getGender());
             if(updateProfileForm.getPhone() != null) profile.setPhone(updateProfileForm.getPhone());
             if(updateProfileForm.getAddress() != null) profile.setAddress(updateProfileForm.getAddress());
             if(updateProfileForm.getCity() != null) profile.setCity(updateProfileForm.getCity());

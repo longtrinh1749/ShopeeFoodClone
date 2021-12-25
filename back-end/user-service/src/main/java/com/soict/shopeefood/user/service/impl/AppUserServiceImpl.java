@@ -32,6 +32,9 @@ public class AppUserServiceImpl implements AppUserService {
             appUser.setPassword(encoder.encode(registerForm.getPassword()));
             appUser.setRole(registerForm.getRole());
             Profile profile = new Profile();
+            profile.setName(registerForm.getName());
+            profile.setGender(registerForm.getGender());
+            profile.setAvatarImgUrl(registerForm.getAvatarImg());
             profile.setAddress(registerForm.getAddress());
             profile.setCity(registerForm.getCity());
             profile.setDistrict(registerForm.getDistrict());
