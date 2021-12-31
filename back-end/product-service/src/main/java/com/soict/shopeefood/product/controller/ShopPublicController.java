@@ -8,8 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,6 +27,12 @@ public class ShopPublicController {
     @Autowired
     private DistrictService districtService;
 
+    @GetMapping("/role")
+    public ResponseEntity<JsonResult> testRole() {
+        Collection<SimpleGrantedAuthority> authorities = (Collection<SimpleGrantedAuthority>)    SecurityContextHolder.getContext().getAuthentication().getAuthorities();
+
+        return JsonResult.serverError("Current user role: " + authorities);
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<JsonResult> findById(@PathVariable("id") Integer shopId) {

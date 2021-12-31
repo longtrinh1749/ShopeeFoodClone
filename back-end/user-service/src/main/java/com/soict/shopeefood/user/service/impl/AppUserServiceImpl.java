@@ -12,6 +12,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AppUserServiceImpl implements AppUserService {
 
@@ -68,4 +70,25 @@ public class AppUserServiceImpl implements AppUserService {
             return null;
         }
     }
+
+    @Override
+    public List<AppUser> getUsers() {
+        try {
+            return appUserRepository.findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<AppUser> getUsersByRole(String role) {
+        try {
+            return appUserRepository.findAllByRole(role);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

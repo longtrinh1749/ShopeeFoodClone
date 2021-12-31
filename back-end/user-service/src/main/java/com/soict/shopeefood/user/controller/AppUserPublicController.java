@@ -10,10 +10,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1/public")
@@ -43,5 +43,33 @@ public class AppUserPublicController {
         return ResponseEntity.badRequest().build();
     }
 
-    // TODO: password recover
+    @GetMapping(value = "/users")
+    public ResponseEntity<JsonResult> getUsers() {
+        log.info("Get all users");
+        List<AppUser> users = appUserService.getUsers();
+        for (AppUser u: users) {
+            u.setAuthenToken(null);
+            u.setPassword(null);
+            u.getProfile().setUser(null);
+        }
+        if (users != null) {
+            return ResponseEntity.ok(JsonResult.build("Found", users));
+        }
+        return ResponseEntity.badRequest().build();
+    }
+
+    @GetMapping(value = "/users-with-role")
+    public ResponseEntity<JsonResult> getUsersByRole(@RequestParam("role") String role) {
+        log.info("Get all users");
+        List<AppUser> users = appUserService.getUsersByRole(role);
+        for (AppUser u: users) {
+            u.setAuthenToken(null);
+            u.setPassword(null);
+            u.getProfile().setUser(null);
+        }
+        if (users != null) {
+            return ResponseEntity.ok(JsonResult.build("Found", users));
+        }
+        return ResponseEntity.badRequest().build();
+    }
 }
