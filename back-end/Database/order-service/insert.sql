@@ -5773,6 +5773,11 @@ VALUES
 insert into
     `order_item` (`order_id`, `item_id`, `quantity`)
 values
+    (1, 1921, 1);
+
+insert into
+    `order_item` (`order_id`, `item_id`, `quantity`)
+values
     (2, 2087, 1);
 
 insert into
