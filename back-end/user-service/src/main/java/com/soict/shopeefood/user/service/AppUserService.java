@@ -4,6 +4,7 @@ import com.soict.shopeefood.user.entity.AppUser;
 import com.soict.shopeefood.user.payload.RegisterForm;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface AppUserService {
 
@@ -15,7 +16,7 @@ public interface AppUserService {
 
     List<AppUser> getUsers();
 
-    List<AppUser> getUsersByRole(String role);
+    List<AppUser> findByRole(String role);
 
-    AppUser getUserById(int id);
+    AppUser findById(int id);
 }

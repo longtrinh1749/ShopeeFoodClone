@@ -1,16 +1,15 @@
-package com.soict.shopeefood.product.payload;
+package com.soict.shopeefood.order.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ShopForm {
+public class VoucherApplianceForm {
     private Integer shopId;
     private Integer shopOwnerId;
     private Integer districtId;

@@ -1,22 +1,6 @@
 use order_service;
------------- VOUCHER
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU20K', 20000, 60000, 'Giảm giá 20k, ăn thỏa ga', '2022-05-06 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU20K', 20000, 60000, 'Giảm giá 20k, ăn thỏa ga', '2022-09-17 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU20K', 20000, 60000, 'Giảm giá 20k, ăn thỏa ga', '2022-02-08 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU50K', 50000, 150000, 'Giảm giá 50k, ăn thỏa ga', '2022-02-13 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU50K', 50000, 150000, 'Giảm giá 50k, ăn thỏa ga', '2022-02-01 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU50K', 50000, 150000, 'Giảm giá 50k, ăn thỏa ga', '2022-11-08 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU70K', 70000, 210000, 'Giảm giá 70k, ăn thỏa ga', '2022-07-09 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU70K', 70000, 210000, 'Giảm giá 70k, ăn thỏa ga', '2022-08-09 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU70K', 70000, 210000, 'Giảm giá 70k, ăn thỏa ga', '2022-08-16 00:00:00');
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU100K', 100000, 300000, 'Giảm giá 100k, ăn thỏa ga', '2022-08-19 00:00:00');        
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU100K', 100000, 300000, 'Giảm giá 100k, ăn thỏa ga', '2022-08-07 00:00:00');        
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU100K', 100000, 300000, 'Giảm giá 100k, ăn thỏa ga', '2022-08-13 00:00:00');        
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU200K', 200000, 600000, 'Giảm giá 200k, ăn thỏa ga', '2022-11-14 00:00:00');        
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU200K', 200000, 600000, 'Giảm giá 200k, ăn thỏa ga', '2022-08-13 00:00:00');        
-insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU200K', 200000, 600000, 'Giảm giá 200k, ăn thỏa ga', '2022-01-07 00:00:00');
 
--------------voucher
+-- voucher
 insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU20K', 20000, 60000, 'Giảm giá 20k, ăn thỏa ga', '2022-05-06 00:00:00');
 insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU20K', 20000, 60000, 'Giảm giá 20k, ăn thỏa ga', '2022-09-17 00:00:00');
 insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SIEU20K', 20000, 60000, 'Giảm giá 20k, ăn thỏa ga', '2022-02-08 00:00:00');
@@ -38,7 +22,7 @@ insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expire
 insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('CLONEXINHONBANCHINH', 15000, 0, 'Giảm 15k trên phí vận chuyển', '2022-08-16 00:00:00');
 insert into `voucher` (`code`, `discount`, `limit_price`, `description`, `expired`) values ('SPFCGIAM15', 15000, 125000, 'Giảm 15k, đơn tối thiểu 125k', '2022-08-16 00:00:00');
 
----------------- OWNER IS SHOP
+-- OWNER IS SHOP
 insert into `voucher_appliance` values (1, 'SHOP', 35);
 insert into `voucher_appliance` values (1, 'SHOP', 68);
 insert into `voucher_appliance` values (1, 'SHOP', 15);
@@ -403,7 +387,7 @@ insert into `voucher_appliance` values (15, 'SHOP', 12);
 insert into `voucher_appliance` values (15, 'SHOP', 26);
 insert into `voucher_appliance` values (15, 'SHOP', 92);
 
-------- OWNER IS USER
+-- OWNER IS USER
 insert into `voucher_appliance` values (16, 'USER', 39);
 insert into `voucher_appliance` values (16, 'USER', 37);
 insert into `voucher_appliance` values (16, 'USER', 48);
@@ -513,7 +497,7 @@ insert into `voucher_appliance` values (20, 'USER', 3);
 insert into `voucher_appliance` values (20, 'USER', 22);
 
 
--------------STATUS
+-- STATUS
 insert into `status` (`name`) values ('Submitted');
 insert into `status` (`name`) values ('Confirmed');
 insert into `status` (`name`) values ('Assigned');
@@ -521,7 +505,7 @@ insert into `status` (`name`) values ('Picked');
 insert into `status` (`name`) values ('Completed');
 insert into `status` (`name`) values ('Cancel');
 
--------------ORDER
+-- ORDER
 insert into `order` (`status_id`, `customer_id`, `shop_id`, `shipper_id`, `code`, `order_at`, `delivery_address`, `delivery_district`,`delivery_at`, `note`, `shipping_fees`, `discount`, `total`) values (1, 22, 106, 117, 'edc59c8b-1afa-47d7-914e-5c4485a96893', '2022-01-2 4:28:3', '60 Tân Mai Bắc Từ Liêm Hà Nội', 'Cầu Giấy', NULL, 'Nhiều tương ớt', 15000, 20000, 300000);
 insert into `order` (`status_id`, `customer_id`, `shop_id`, `shipper_id`, `code`, `order_at`, `delivery_address`, `delivery_district`,`delivery_at`, `note`, `shipping_fees`, `discount`, `total`) values (1, 12, 59, 143, 'c646ec5d-aef2-49a3-91f4-b259552bc0d5', '2022-01-5 19:13:14', '161 Tân Mai Long Biên Hà Nội', 'Thanh Xuân', NULL, 'Nhiều tương ớt', 15000, 50000, 300000);
 insert into `order` (`status_id`, `customer_id`, `shop_id`, `shipper_id`, `code`, `order_at`, `delivery_address`, `delivery_district`,`delivery_at`, `note`, `shipping_fees`, `discount`, `total`) values (1, 4, 42, 148, '14396132-c22c-46dd-b808-3ea639994055', '2022-01-5 3:48:42', '105 Tân Mai Thanh Xuân Hà Nội', 'Hoàng Mai', NULL, 'Nhiều tương ớt', 15000, 15000, 300000);
@@ -1140,4 +1124,5 @@ insert into `order_item` (`order_id`, `item_id`, `quantity`) values (174, 391, 1
 insert into `order_item` (`order_id`, `item_id`, `quantity`) values (174, 86, 2);
 insert into `order_item` (`order_id`, `item_id`, `quantity`) values (174, 32, 2);
 
+SET SQL_SAFE_UPDATES = 0;
 update `order`, (select o.id, sum(oi.quantity*i.price) total from `order_service`.`order` o, `order_service`.order_item oi, `product_service`.item i where o.id = oi.order_id and i.id = oi.item_id group by oi.order_id) result set `order`.total = result.total where `order`.id = result.id;

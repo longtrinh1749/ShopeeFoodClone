@@ -20,6 +20,9 @@ public class Shop {
     @Column(name = "id")
     private Integer shopId;
 
+    @Column(name = "shop_owner_id")
+    private Integer shopOwnerId;
+
     @Column(name = "name")
     private String shopName;
 
