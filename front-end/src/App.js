@@ -8,7 +8,7 @@ import Login from "./pages/login/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
 import Signup from "./pages/signup/Signup";
-
+import UpdateAccount from "pages/update-account/UpdateAccount";
 function App() {
   const [user, setUser] = useState('');
   return (
@@ -26,6 +26,7 @@ function App() {
             <Route path="signup" element = {<Signup/>} />
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
+            <Route path="profile" element={<UpdateAccount/>} />
         </Routes>
       </BrowserRouter>
       <Footer />
