@@ -16,4 +16,6 @@ public interface AppUserService {
     List<AppUser> getUsers();
 
     List<AppUser> getUsersByRole(String role);
+
+    AppUser getUserById(int id);
 }

@@ -91,4 +91,15 @@ public class AppUserServiceImpl implements AppUserService {
         }
     }
 
+    @Override
+    public AppUser getUserById(int id) {
+        try {
+            long id_long = id;
+            return appUserRepository.findAllById(id_long).get(0);
+        } catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

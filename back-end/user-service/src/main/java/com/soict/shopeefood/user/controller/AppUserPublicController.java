@@ -72,4 +72,17 @@ public class AppUserPublicController {
         }
         return ResponseEntity.badRequest().build();
     }
+
+    @GetMapping(value = "/users/{id}")
+    public ResponseEntity<JsonResult> getUsersById(@PathVariable int id) {
+        log.info("Get user with id: " + id);
+        AppUser user = appUserService.getUserById(id);
+        if (user != null) {
+            user.setAuthenToken(null);
+            user.setPassword(null);
+            user.getProfile().setUser(null);
+            return ResponseEntity.ok(JsonResult.build("Found", user));
+        }
+        return ResponseEntity.badRequest().build();
+    }
 }
