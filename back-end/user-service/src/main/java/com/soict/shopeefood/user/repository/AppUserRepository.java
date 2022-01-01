@@ -21,7 +21,7 @@ public interface AppUserRepository extends JpaRepository<AppUser, Long> {
     List<AppUser> findAllByUsername(String username);
 
     @Query(value = "select u from AppUser u where u.id = ?1")
-    List<AppUser> findAllById(Long id);
+    List<AppUser> getById(Long id);
 
     @Transactional
     @Modifying

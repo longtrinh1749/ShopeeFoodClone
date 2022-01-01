@@ -4,12 +4,11 @@ import com.soict.shopeefood.product.payload.ShopForm;
 import com.soict.shopeefood.product.response.JsonResult;
 import com.soict.shopeefood.product.service.DistrictService;
 import com.soict.shopeefood.product.service.ShopService;
+import com.soict.shopeefood.product.service.external.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -27,12 +26,8 @@ public class ShopPublicController {
     @Autowired
     private DistrictService districtService;
 
-    @GetMapping("/role")
-    public ResponseEntity<JsonResult> testRole() {
-        Collection<SimpleGrantedAuthority> authorities = (Collection<SimpleGrantedAuthority>)    SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-
-        return JsonResult.serverError("Current user role: " + authorities);
-    }
+    @Autowired
+    private AppUserService appUserService;
 
     @GetMapping("/{id}")
     public ResponseEntity<JsonResult> findById(@PathVariable("id") Integer shopId) {
@@ -53,6 +48,13 @@ public class ShopPublicController {
                                                     @RequestParam("size") Integer size) {
         Pageable pageable = PageRequest.of(page, size);
         return Optional.ofNullable(shopService.findAllByPage(pageable))
+                .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("shop not found"))
+                .orElse(JsonResult.serverError("Internal Server Error"));
+    }
+
+    @GetMapping("/owner/{id}")
+    public ResponseEntity<JsonResult> findByOwnerId(@PathVariable("id") Integer shopOwnerId) {
+        return Optional.ofNullable(shopService.findByOwnerId(shopOwnerId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("shop not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -101,19 +103,27 @@ public class ShopPublicController {
     @PostMapping("/upload")
     public ResponseEntity<JsonResult> upload(@RequestBody ShopForm shopForm) {
         return districtService.findById(shopForm.getDistrictId())
-                .map(section -> {
-                    return shopService.upload(shopForm)
-                            .map(JsonResult::uploaded)
-                            .orElse(JsonResult.saveError("Internal Server Error"));
+                .map(district -> {
+                    return appUserService.getUserById(shopForm.getShopOwnerId())
+                            .map(owner -> {
+                                return shopService.upload(shopForm)
+                                        .map(JsonResult::uploaded)
+                                        .orElse(JsonResult.saveError("Internal Server Error"));
+                            })
+                            .orElse(JsonResult.parentNotFound("Shop Owner doesn't exist"));
                 })
                 .orElse(JsonResult.parentNotFound("District doesn't exist"));
     }
 
     @PutMapping("/update")
     public ResponseEntity<JsonResult> update(@RequestBody ShopForm shopForm) {
-        return shopService.update(shopForm)
-                .map(JsonResult::updated)
-                .orElse(JsonResult.saveError("Internal Server Error"));
+        return appUserService.getUserById(shopForm.getShopOwnerId())
+                .map(owner -> {
+                    return shopService.update(shopForm)
+                            .map(JsonResult::updated)
+                            .orElse(JsonResult.saveError("Internal Server Error"));
+                })
+                .orElse(JsonResult.parentNotFound("Shop Owner doesn't exist"));
     }
 
 }

@@ -11,9 +11,9 @@ create table `status` (
 create table `voucher` (
     `id` int auto_increment primary key,
     `code` varchar(50) not null,
-    `discount` int not null,
-    `limit_price` int not null,
-    `description` nvarchar(255) not null,
+    `discount` decimal(16,0) not null,
+    `limit_price` decimal(16,0) not null,
+    `description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     `expired` datetime not null
 );
 
@@ -31,15 +31,15 @@ create table `order` (
     `customer_id` int not null,
     `shop_id` int not null,
     `shipper_id` int,
-    `code` varchar(50) not null,
+    `code` varchar(100) not null,
     `order_at` datetime not null,
-    `delivery_address` nvarchar(255) not null,
-    `delivery_district` nvarchar(50) not null,
+    `delivery_address` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
+    `delivery_district` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     `delivery_at` datetime,
-    `note` text,
-    `shipping_fees` int,
-    `discount` int not null,
-    `total` int not null,
+    `note` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+    `shipping_fees` decimal(16,0),
+    `discount` decimal(16,0) not null,
+    `total` decimal(16,0) not null,
     foreign key (`status_id`) references `status`(`id`)
 );
 

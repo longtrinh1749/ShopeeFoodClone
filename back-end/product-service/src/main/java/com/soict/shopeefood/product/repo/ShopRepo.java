@@ -23,6 +23,9 @@ public interface ShopRepo extends JpaRepository<Shop, Integer> {
     @Query(value = "select s from Shop s order by s.shopId desc ")
     Page<Shop> findAllByPage(Pageable pageable);
 
+    @Query(value = "select s from Shop s where s.shopOwnerId = ?1 order by s.shopId desc ")
+    List<Shop> findByOwnerId(Integer shopOwnerId);
+
     @Query(value = "select s from Shop s where s.shopName like %:name% or s.address like %:name% order by s.shopId desc")
     Page<Shop> findByNameAndAddress(@Param("name") String name, Pageable pageable);
 
