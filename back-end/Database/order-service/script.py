@@ -39,17 +39,97 @@ def create_account():
         print(res.text)
         time.sleep(0.1)
 
-def create_script_voucher_owner():
-    types = ['SHOP', 'USER']
+def create_script_voucher_owner_shop():
+    types = ['SHOP']
     list_variable = []
     for voucher_id in range(1, 16):
         number_of_owner = random.randint(1, 70)
         for _ in range(0, number_of_owner):
             # print("insert into `voucher_owner` values ({}, '{}', {});".format(voucher_id, random.choice(types), random.randint(1,150)))
-            new_variable = {'voucher_id': voucher_id, 'type': random.choice(types), 'owner_id': random.randint(1, 150)}
+            new_variable = {'voucher_id': voucher_id, 'type': random.choice(types), 'owner_id': random.randint(1, 121)}
             if new_variable not in list_variable:
                 list_variable.append(new_variable)
     for variable in list_variable:
         print("insert into `voucher_owner` values ({}, '{}', {});".format(variable.get('voucher_id'), variable.get('type'), variable.get('owner_id')))
 
-create_script_voucher_owner()
+def create_script_voucher_owner_user():
+    types = ['USER']
+    list_variable = []
+    for voucher_id in range(16, 21):
+        number_of_owner = random.randint(1, 50)
+        for _ in range(0, number_of_owner):
+            # print("insert into `voucher_owner` values ({}, '{}', {});".format(voucher_id, random.choice(types), random.randint(1,150)))
+            new_variable = {'voucher_id': voucher_id, 'type': random.choice(types), 'owner_id': random.randint(1, 50)}
+            if new_variable not in list_variable:
+                list_variable.append(new_variable)
+    for variable in list_variable:
+        print("insert into `voucher_owner` values ({}, '{}', {});".format(variable.get('voucher_id'), variable.get('type'), variable.get('owner_id')))
+
+def create_script_order():
+    import uuid
+    import mysql.connector
+    from mysql.connector import Error
+    users = []
+    try:
+        connection = mysql.connector.connect(host='localhost',
+                                            database='user_service',
+                                            user='root',
+                                            password='root')
+        sql_select_Query = "select * from profile"
+        cursor = connection.cursor()
+        cursor.execute(sql_select_Query)
+        # get all records
+        records = cursor.fetchall()
+        users.extend(records)
+        print("Total number of rows in table: ", cursor.rowcount)
+
+        print("\nPrinting each row")
+        for row in records:
+            print("Id =", row[0], )
+            print("Address =", row[4])
+            print("District =", row[5])
+    except Error as e:
+        print("Error while connecting to MySQL", e)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+
+    for status_id in range (1,7):
+        for _ in range(1,30):
+            customer_id = random.randint(1,50)
+            shop_id = random.randint(1,121)
+            shipper_id = random.randint(101,150)
+            code = str(uuid.uuid4())
+            order_hour = random.randint(1,22)
+            order_at = '2022-01-{} {}:{}:{}'.format(random.randint(1,5), order_hour, random.randint(0,59), random.randint(0,59))
+            delivery_address = 'Số 1 Tân Mai Hoàng Mai Hà Nội'
+            delivery_district = 'Hoàng Mai'
+            for user in users:
+                if user[0] == customer_id:
+                    delivery_address = user[4]
+                    delivery_district = user[5]
+                    break
+            delivery_at = ''
+            if status_id == 5:
+                delivery_at = '2022-01-{} {}:{}:{}'.format(random.randint(1,5), order_hour+1, random.randint(0,59), random.randint(0,59))
+            note = 'Nhiều tương ớt'
+            shipping_fees = '15000'
+            discounts = [20000, 50000, 70000, 15000]
+            discount = random.choice(discounts)
+            total = 300000
+            if delivery_at:
+                print("insert into `order` (`status_id`, `customer_id`, `shop_id`, `shipper_id`, `code`, `order_at`, `delivery_address`, `delivery_district`,`delivery_at`, `note`, `shipping_fees`, `discount`, `total`) values ({}, {}, {}, {}, '{}', '{}', '{}', '{}', '{}', '{}', {}, {}, {});".format(status_id, customer_id, shop_id, shipper_id, code, order_at, delivery_address, delivery_district, delivery_at, note, shipping_fees, discount, total))
+            else:
+                print("insert into `order` (`status_id`, `customer_id`, `shop_id`, `shipper_id`, `code`, `order_at`, `delivery_address`, `delivery_district`,`delivery_at`, `note`, `shipping_fees`, `discount`, `total`) values ({}, {}, {}, {}, '{}', '{}', '{}', '{}', NULL, '{}', {}, {}, {});".format(status_id, customer_id, shop_id, shipper_id, code, order_at, delivery_address, delivery_district, note, shipping_fees, discount, total))
+
+def create_script_order_item():
+    for order_id in range(1,175):
+        number_of_item_distinct = random.randint(1,4)
+        for _ in range(1, number_of_item_distinct+1):
+            item_id = random.randint(1,2194)
+            quantity = random.randint(1,2)
+            print("insert into `order_item` (`order_id`, `item_id`, `quantity`) values ({}, {}, {});".format(order_id, item_id, quantity))
+
+create_script_order_item()

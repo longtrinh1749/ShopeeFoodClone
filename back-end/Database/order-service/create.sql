@@ -17,17 +17,16 @@ create table `voucher` (
     `expired` datetime not null
 );
 
-create table `voucher_owner` (
+create table `voucher_appliance` (
 	`voucher_id` int not null,
-    `type` varchar(20) not null,
-    `owner_id` int not null,
-	primary key (`voucher_id`, `type`, `owner_id`),
+    `apply_type` varchar(20) not null,
+    `apply_to_id` int not null,
+	primary key (`voucher_id`, `apply_type`, `apply_to_id`),
     foreign key (`voucher_id`) references `voucher`(`id`)
 );
 
 create table `order` (
     `id` int auto_increment primary key,
-    `voucher_id` int,
     `status_id` int not null,
     `customer_id` int not null,
     `shop_id` int not null,
@@ -35,12 +34,13 @@ create table `order` (
     `code` varchar(50) not null,
     `order_at` datetime not null,
     `delivery_address` nvarchar(255) not null,
+    `delivery_district` nvarchar(50) not null,
     `delivery_at` datetime,
     `note` text,
     `shipping_fees` int,
+    `discount` int not null,
     `total` int not null,
-    foreign key (`status_id`) references `status`(`id`),
-    foreign key (`customer_id`) references `voucher`(`id`)
+    foreign key (`status_id`) references `status`(`id`)
 );
 
 create table `order_item` (
