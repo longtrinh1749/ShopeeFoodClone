@@ -1,9 +1,12 @@
+import { stringToSlug } from "helpers/function/buildSlug";
+import { Link } from "react-router-dom";
 import "./item.scss";
 
 const Item = ({ item }) => {
+    let url = "/shop/" + stringToSlug(`${item.shopName} ${item.shopId}`);
     return (
         <div className="item">
-            <a href="/">
+            <Link to={url}>
                 <div className="item_img">
                     <img src={item.imgUrl} alt="" />
                 </div>
@@ -16,7 +19,7 @@ const Item = ({ item }) => {
                     <span>{item.priceRange}</span>
                 </div>
                 {/* {item.active && <div className="item_active"></div>} */}
-            </a>
+            </Link>
         </div>
     );
 };

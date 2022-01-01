@@ -8,7 +8,7 @@ import AreaListItem from '../../atoms/FilterListItem/FilterListItem';
 const FilterArea = () => {
     const dispatch = useDispatch();
     const { districtList } = useStore("Search", "districtReducer");
-    const { filterDistrict, filterCategory } = useStore("Search", "filterReducer");
+    const { filterDistrict, filterCategory } = useStore("Search", "dropdownReducer");
     const { execute, isLoading, response, error } = useListDistrict();
     useEffect(() => {
         execute({

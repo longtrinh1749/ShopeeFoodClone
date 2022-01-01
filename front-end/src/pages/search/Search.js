@@ -3,12 +3,9 @@ import SearchList from "./orgamisms/SearchList/SearchList";
 import "./search.scss";
 
 const Search = (props) => {
-    const handleSearch = () => {
-    };
-
     return (
         <div className="search">
-            <div className="search_wrap" onClick={handleSearch}></div>
+            {/* <div className="search_wrap" onClick={handleSearch}></div> */}
             <div className="container">
                 <Filter />
                 <SearchList />

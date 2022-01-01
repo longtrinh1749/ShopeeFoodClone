@@ -13,6 +13,9 @@ create table app_user (
 
 create table `profile` (
     `user_id` int primary key,
+    `name` nvarchar(50),
+    `avatar_img_url` nvarchar(255),
+    `gender` nvarchar(50),
     `address` nvarchar(255),
     `district` nvarchar(20),
     `city` nvarchar(20),

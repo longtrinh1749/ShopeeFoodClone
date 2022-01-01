@@ -1,0 +1,558 @@
+.detail-restaurant-part {
+    background-color: white;
+    .detail-restaurant {
+        margin-top: 70px;
+        padding: 30px;
+        .detail-restaurant-img {
+            width: 480px;
+            height: 300px;
+            position: relative;
+            float: left;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .detail-restaurant-info {
+            margin-left: 5%;
+            div {
+                margin-bottom: 4px;
+            }
+            .breadcrumb {
+                padding-left: 0;
+                margin-bottom: 10px;
+                list-style: none;
+                overflow: hidden;
+                margin-top: -2px;
+
+                .breadcrumb-link {
+                    font-size: 13px;
+                    color: #187caa;
+                }
+            }
+            .kind-restaurant {
+                font-size: 11px;
+                color: #959595;
+                text-transform: uppercase;
+                display: flex;
+            }
+            .name-restaurant {
+                font-size: 22px;
+                color: #464646;
+                font-weight: 700;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-bottom: 4px;
+                line-height: 33px;
+            }
+            .address-restaurant{
+
+            }
+            .rating {
+                margin-left: -16px;
+                .rating-number {
+                    background-color: #ffc107;
+                    padding: 0 5px;
+                    border-radius: 4px;
+                    color: #fff;
+                    margin: 0 5px;
+                    box-sizing: border-box;
+                    width: 6%;
+                }
+            }
+            .status-restaurant {
+                .opentime{
+                    font-size: 14px;
+                    color: green;
+                }
+                .opentime::before {
+                    background-color: #6cc942;
+                    content: "";
+                    border-radius: 50%;
+                    cursor: pointer;
+                    width: 8px;
+                    height: 8px;
+                    display: inline-block;
+                    position: relative;
+                    top: -1px;
+                    z-index: 2;
+                    margin-right: 5px;
+                    margin-left: -10px;
+                }
+                .time{
+                    padding-left: 0px;
+                    margin-left: -20px;
+                    .fa-clock {
+                        color: #959595;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            .cost-restaurant {
+                color: #959595;
+                font-size: 15px;
+                .fa-dollar-sign {
+                    padding: 0;
+                    text-align: center;
+                    font-size: 11px;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid;
+                    border-radius: 50%;
+                    line-height: 14px;
+                    vertical-align: top;
+                    margin-top: 3px;
+                    margin-right: 3px;
+                }
+            }
+        }
+        
+    }
+}
+
+.menu-restaurant-part {
+    .restaurant{
+        .menu-restaurant {
+            .menu-restaurant-tab {
+                font-weight: 700;
+                color: #cf2127;
+                cursor: default;
+                text-transform: uppercase;
+                padding: 13px 26px;
+            }
+            .menu-restaurant-content {
+                .menu-restaurant-container {
+                    .menu-restaurant-category {
+                        height: 100%;
+                        border: 1px solid #ebebeb;
+                        padding: 15px 5px 15px 15px;
+                        margin-right: 10px;
+                        background: #fff;
+                        border-radius: 4px;
+                        .item-link {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            margin: 5px 0;
+                            padding: 2px 0;
+                            font-size: 13px;
+                            color: #6d6f71;
+                            text-transform: uppercase;
+                            padding: 3px 7px 1px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+                    }
+                    .search-items {
+                        top: 70px;
+                        background: #fff;
+                        z-index: 2;
+                        padding: 15px 0 10px;
+
+                        input {
+                            margin-left: 10px;
+                            width: 97%;
+                            padding: 0 40px;
+                            border: 0;
+                            border: 1px solid #ededed;
+                            height: 40px;
+                        }
+                    }
+                    .menu-restaurant-detail {
+                        padding: 6px 15px;
+                        border: 1px solid #ebebeb;
+                        border-radius: 4px;
+                        background: #fff;
+                        margin-right: 10px;
+                        .menu-restaurant-list {
+                            .title-menu {
+                                height: 56px;
+                                width: 100%;
+                                text-transform: uppercase;
+                                color: #6d6f71;
+                                padding: 5px 0 0;
+                                margin: 10px 15px -10px;
+                            }
+                        }
+                    }
+                    .now-bill-restaurant {
+                        padding: 6px 15px;
+                        border: 1px solid #ebebeb;
+                        border-radius: 4px;
+                        background: #fff;
+                        .order-card-group {
+                            .order-card-item {
+                                padding: 6px 10px;
+                                border-bottom: 1px solid #ebebeb;
+                                margin-top: -10px;
+                                .clearfix {
+                                    margin-left: 10px;
+                                    .fa-plus-square {
+                                        color: #329900;
+                                        border: 0;
+                                        background: transparent;
+                                        padding: 0;
+                                        width: 12px;
+                                    }
+                                    .number-order {
+                                        font-size: 12px;
+                                        color: #cf2127;
+                                        text-align: center;
+                                        font-weight: 700;
+                                        display: inline-block;
+                                        min-width: 18px;
+                                        max-width: 18px;
+                                        padding: 0;
+                                    }
+                                    .fa-minus-square {
+                                        border: 0;
+                                        background: transparent;
+                                        padding: 0;
+                                        width: 12px;
+                                    }
+                                    .name-order {
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        color: #464646;
+                                        width: 185px;
+                                    }
+                                }
+                                .note-order {
+                                    margin-left: 10px;
+                                    input {
+                                        font-size: 14px;
+                                        border: 0;
+                                        padding: 0;
+                                        width: 167px;
+                                    }
+                                    .price-order {
+                                        font-size: 14px;
+                                        text-align: right;    
+                                        padding-right: 0px;
+                                        width: fit-content;
+                                    }
+                                }
+                            }
+                        }
+                        .row-bill-restaurant {
+                            font-size: 13px;
+                            padding: 4px 10px;
+                            background-color: #f9f9f9;
+                            border-bottom: 1px solid #ebebeb;
+                        }
+                        .input-promocode {
+                            text-align: center;
+                            background-color: #fbf9d8;
+                            span {
+                                font-size: 10px;
+                                color: red;
+                            }
+                        }
+                        .price {
+                            text-align: right;
+                        }
+                        .total-price {
+                            text-align: right;
+                            font-weight: 700!important;
+                            font-size: 15px!important;
+                            color: #0288d1!important;
+                        }
+                        .btn-red {
+                            font-size: 15px;
+                            font-weight: 700;
+                            margin: 12px 5px 15px;
+                            display: block;
+                            width: calc(100% - 5px);
+                            background-color: #ee4d2d;
+                            color: #fff;
+                            border-color: #ee4d2d;
+                        }
+                    }
+                }
+
+            }
+        } 
+    }
+}
+.modal {
+    .modal-dialog {
+        max-width: max-content;
+        .modal-content {
+            margin-top: 150px;
+            .title-modal{
+                color: red;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.order-modal {
+    .modal-dialog {
+        max-width: max-content;
+        .modal-content {
+            .modal-header{
+                background-color: #dee2e6;
+                .modal-title {
+                    font-weight: bold;
+                }
+            }
+            width: 885px;
+            .order-left {
+                font-size: 15px;
+                .direction-from {
+                    padding: 5px 0;
+                    .direction-name {
+                        margin-left: 5px;
+                        margin-top: -60px;
+                        font-weight: 700;
+                        line-height: inherit;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    .direction-address {
+                        margin-left: 5px;
+                        margin-top: -39px;
+                        font-weight: 700;
+                        line-height: inherit;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+
+                }
+                .direction-from::before {
+                    content: "";
+                    width: 1px;
+                    background-color: #d7d7d7;
+                    height: 50px;
+                }
+                .direction-from::after {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: #cf2127;
+                    margin: auto;
+                    position: absolute;
+                    top: 14px;
+                    left: 9px;
+                }
+                .direction-to {
+                    padding: 5px 0;
+                    .direction-name {
+                        margin-left: 5px;
+                        margin-top: -23px;
+                        font-weight: 700;
+                        line-height: inherit;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    .direction-address {
+                        margin-left: 5px;
+                        margin-top: -3px;
+                    }
+                }
+                .direction-to::after {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: #6cc942;
+                    position: absolute;
+                    top: 62px;
+                    left: 9px;
+                }
+            }
+            .order-right {
+                font-size: 14px;
+                float: left;
+                border-left: 10px solid #d7d7d7;
+                height: 100%;
+                .title-order {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #000;
+                    margin: 0;
+                    padding: 5px 0px;
+                }
+                .order-list {
+                    .order-item {
+                        margin-left: 1px;
+                        border-bottom: 1px solid #ebebeb;
+                        padding-top: 7px;
+                        .order-item-number {
+                            font-size: 12px;
+                            text-align: center;
+                            color: #fff;
+                            width: 15px;
+                            height: 15px;
+                            background-color: #0288d1;
+                            line-height: 14px;
+                            border-radius: 4px;
+                            padding: 1px 0px 0px 1px;
+                        }
+                        .order-item-info {
+                            font-size: 15px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            margin: -3px 0px 3px;
+                            padding-bottom: 5px;
+                            font-weight: 700!important;
+                        }
+                        .order-item-price {
+                            text-align: right;
+                            font-size: 15px;
+                        } 
+                    }
+                }
+                .info-order {
+                    border-top: 7px solid #d7d7d7;
+                    padding: 4px 10px;
+                    .info-order-left {
+                        text-align: left;
+                        padding-left: 0px;
+                        font-size: 15px;
+                    }
+                    .info-order-right {
+                        text-align: right;
+                        font-size: 15px;
+                    }
+                }
+                .discount-code {
+                    background-color: #fbf9d8;
+                    padding: 7px 25px 7px 10px;
+                    .discount-code-left {
+                        padding-left: 0px;
+                        .text {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        input {
+                            font-size: 12px;
+                            text-align: center;
+                            color: #cf2127;
+                            font-weight: 700;
+                            width: 88px;
+                            height: 22px;
+                            background-color: #fff;
+                            border: 1px solid #d7d7d7;
+                            margin: 0 10px 0 40px;
+                            text-transform: uppercase;
+                        }
+                        button {
+                            font-size: 12px;
+                            color: #fff;
+                            cursor: pointer;
+                            text-align: center;
+                            border-radius: 3px;
+                            border: 0;
+                            background-color: #6cc942;
+                            height: 22px;
+                            width: 58px;
+                        }
+                    }
+                    .discount-code-right {
+                        padding-right: 0px;
+                        .txt-blue {
+                            font-size: 15px;
+                            cursor: pointer;
+                            color: #0288d1!important;
+                        }
+                        i {
+                            transform: rotate(-45deg);
+                            font-size: 22px;
+                            border-color: #959595;
+                            border: solid #252525;
+                            border-width: 0 2px 2px 0;
+                            display: inline-block;
+                            padding: 3px;
+                            float: right !important;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+                .payment-method {
+                    border: 1px solid white;
+                    background-color: #fbf9d8;
+                    padding: 7px 25px 7px 10px;
+                    .payment-method-left {
+                        padding-left: 0px;
+                        .text {
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                    }
+                    .payment-method-right {
+                        padding-top: 3px;
+                        padding-right: 0px;
+                        .txt-blue {
+                            font-size: 15px;
+                            cursor: pointer;
+                            color: #0288d1!important;
+                            margin-left: -3px;
+                        }
+                        i {
+                            transform: rotate(-45deg);
+                            font-size: 22px;
+                            border-color: #959595;
+                            border: solid #252525;
+                            border-width: 0 2px 2px 0;
+                            display: inline-block;
+                            padding: 3px;
+                            float: right !important;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+                .order-note {
+                    padding: 7px 10px 0;
+                    position: relative;
+                    textarea {
+                        font-size: 15px;
+                        min-height: inherit;
+                        overflow-y: hidden;
+                        resize: none;
+                        padding: 0 25px 0 0;
+                        height: 30px;
+                        width: 100%;
+                        max-width: 100%;
+                        border: 0;
+                        border-bottom: 1px solid #ebebeb;
+                        margin: 0;
+                        transition: all .2s;
+                        height: 24px;
+                    }
+                    textarea:focus{
+                        border: none;
+                        border-color: transparent;
+                        outline: none;
+                        border-bottom: 1px solid red;
+                    }
+                }
+                .not-vat {
+                    color: #959595;
+                    padding: 10px 0px;
+                }
+            }
+        }
+    }   
+    .modal-footer {
+        button {
+            width: 100%;
+            .submit-order{
+                font-size: 19px !important;
+                color: #fff;
+            }
+            .fas {
+                float: right !important;
+                margin-top: 3px;
+            }
+        }
+        
+    }
+}

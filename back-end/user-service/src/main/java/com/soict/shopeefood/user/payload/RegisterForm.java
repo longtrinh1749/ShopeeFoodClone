@@ -5,6 +5,12 @@ import lombok.Data;
 @Data
 public class RegisterForm {
 
+    private String name;
+
+    private String gender;
+
+    private String avatarImg;
+
     private String username;
 
     private String password;
@@ -83,5 +89,29 @@ public class RegisterForm {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAvatarImg() {
+        return avatarImg;
+    }
+
+    public void setAvatarImg(String avatarImg) {
+        this.avatarImg = avatarImg;
     }
 }

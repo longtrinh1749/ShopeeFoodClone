@@ -13,6 +13,15 @@ public class Profile {
     @Column(name = "user_id")
     private Long userId;
 
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "avatar_img_url")
+    private String avatarImgUrl;
+
+    @Column(name = "gender")
+    private String gender;
+
     @Column
     private String address;
 
@@ -87,5 +96,29 @@ public class Profile {
 
     public void setUser(AppUser user) {
         this.user = user;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAvatarImgUrl() {
+        return avatarImgUrl;
+    }
+
+    public void setAvatarImgUrl(String avatarImgUrl) {
+        this.avatarImgUrl = avatarImgUrl;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

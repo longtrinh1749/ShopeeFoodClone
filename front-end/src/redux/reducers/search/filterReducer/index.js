@@ -1,8 +1,8 @@
 import { SEARCH_LABELS } from "redux/actionLabels";
 
 const initialState = {
-    filterDistrict: false,
-    filterCategory: false,
+    filterCategoryList: [],
+    filterDistrictList: [],
 };
 
 export function filterReducer(
@@ -10,7 +10,7 @@ export function filterReducer(
     { type, payload }
 ) {
     switch (type) {
-        case SEARCH_LABELS.UPDATE_FILTER: {
+        case SEARCH_LABELS.FILTER_LIST: {
             return {
                 ...state,
                 ...payload,

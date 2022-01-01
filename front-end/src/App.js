@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
 import Signup from "./pages/signup/Signup";
 import UpdateAccount from "pages/update-account/UpdateAccount";
+import Shop from "./pages/shop/shop";
+
 function App() {
   const [user, setUser] = useState('');
   return (
@@ -27,6 +29,7 @@ function App() {
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
             <Route path="profile" element={<UpdateAccount/>} />
+            <Route path="shop/:shopUrl" element = {<Shop/>} />
         </Routes>
       </BrowserRouter>
       <Footer />

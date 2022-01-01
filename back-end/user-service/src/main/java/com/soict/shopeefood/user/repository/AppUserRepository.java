@@ -27,4 +27,7 @@ public interface AppUserRepository extends JpaRepository<AppUser, Long> {
 
     @Query(value = "select u from AppUser u where u.authenToken = ?1")
     List<AppUser> findAllByAuthenToken(String authenToken);
+
+    @Query(value = "select u from AppUser u where u.role = ?1")
+    List<AppUser> findAllByRole(String role);
 }
