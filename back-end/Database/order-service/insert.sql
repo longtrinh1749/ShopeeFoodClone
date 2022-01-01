@@ -6625,6 +6625,7 @@ insert into
 values
     (173, 1247, 3);
 
+SET SQL_SAFE_UPDATES = 0;
 update
     `order`,
     (
