@@ -1,6 +1,6 @@
 use order_service;
 
------------- VOUCHER
+-- VOUCHER
 insert into
     `voucher` (
         `code`,
@@ -256,7 +256,7 @@ values
         '2022-01-07 00:00:00'
     );
 
--------------voucher
+-- voucher
 insert into
     `voucher` (
         `code`,
@@ -597,7 +597,7 @@ values
         '2022-08-16 00:00:00'
     );
 
----------------- OWNER IS SHOP
+-- OWNER IS SHOP
 insert into
     `voucher_appliance`
 values
@@ -2413,7 +2413,7 @@ insert into
 values
     (15, 'SHOP', 92);
 
-------- OWNER IS USER
+-- OWNER IS USER
 insert into
     `voucher_appliance`
 values
@@ -2949,7 +2949,7 @@ insert into
 values
     (20, 'USER', 22);
 
--------------STATUS
+-- STATUS
 insert into
     `status` (`name`)
 values
@@ -2980,7 +2980,7 @@ insert into
 values
     ('Cancel');
 
--------------ORDER
+-- ORDER
 INSERT INTO
     `order`
 VALUES
