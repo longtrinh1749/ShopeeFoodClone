@@ -102,7 +102,7 @@ def create_script_order():
         for _ in range(1,30):
             customer_id = random.randint(1,50)
             shop_id = random.randint(1,121)
-            shipper_id = random.randint(101,150)
+            shipper_id = random.randint(51,100)
             code = str(uuid.uuid4())
             order_hour = random.randint(1,22)
             order_at = '2022-01-{} {}:{}:{}'.format(random.randint(1,5), order_hour, random.randint(0,59), random.randint(0,59))
@@ -126,10 +126,13 @@ def create_script_order():
             else:
                 print("insert into `order` (`status_id`, `customer_id`, `shop_id`, `shipper_id`, `code`, `order_at`, `delivery_address`, `delivery_district`,`delivery_at`, `note`, `shipping_fees`, `discount`, `total`) values ({}, {}, {}, {}, '{}', '{}', '{}', '{}', NULL, '{}', {}, {}, {});".format(status_id, customer_id, shop_id, shipper_id, code, order_at, delivery_address, delivery_district, note, shipping_fees, discount, total))
 
+create_script_order();
+
 def create_script_order_item():
     import mysql.connector
     from mysql.connector import Error
     items_shop = []
+    orders = []
     try:
         connection = mysql.connector.connect(host='localhost',
                                             database='product_service',
@@ -154,24 +157,55 @@ def create_script_order_item():
             cursor.close()
             connection.close()
             print("MySQL connection is closed")
-    for order_id in range(1,175):
+    try:
+        connection = mysql.connector.connect(host='localhost',
+                                            database='order_service',
+                                            user='root',
+                                            password='root')
+        sql_select_Query = "select `order`.id, `order`.shop_id from `order`;"
+        cursor = connection.cursor()
+        cursor.execute(sql_select_Query)
+        # get all records
+        records = cursor.fetchall()
+        orders.extend(records)
+        print("Total number of rows in table: ", cursor.rowcount)
+
+        print("\nPrinting each row")
+        for row in records:
+            print("Order Id =", row[0])
+            print("Shop Id =", row[1])
+    except Error as e:
+        print("Error while connecting to MySQL", e)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+    for order_id in range(1,174):
         appear_shop_id = []
-        shop_id = 0
+        # shop_id = 0
+        shop_id = orders[order_id][1]
         number_of_item_distinct = random.randint(1,2)
         items = []
-        while True:
-            while True:
-                shop_id = random.randint(1,121)
-                if shop_id in appear_shop_id:
-                    shop_id = random.randint(1,121)
-                else:
-                    break
-            for item_shop in items_shop:
-                if item_shop[1] == shop_id:
-                    items.append(item_shop[0])
-            if items:
-                appear_shop_id.append(shop_id)
-                break
+        # while True:
+        #     while True:
+        #         shop_id = random.randint(1,121)
+        #         if shop_id in appear_shop_id:
+        #             shop_id = random.randint(1,121)
+        #         else:
+        #             break
+        #     for item_shop in items_shop:
+        #         if item_shop[1] == shop_id:
+        #             items.append(item_shop[0])
+        #     if items:
+        #         appear_shop_id.append(shop_id)
+        #         break
+        for item_shop in items_shop:
+            if item_shop[1] == shop_id:
+                items.append(item_shop[0])
+        if not items:
+            # print("Shop id without items:", shop_id)
+            continue
         appear_item_ids = []
         for _ in range(1, number_of_item_distinct+1):
             item_id = random.choice(items)
@@ -182,4 +216,4 @@ def create_script_order_item():
             quantity = random.randint(1,3)
             print("insert into `order_item` (`order_id`, `item_id`, `quantity`) values ({}, {}, {});".format(order_id, item_id, quantity))
 
-create_script_order_item()
+# create_script_order_item()
