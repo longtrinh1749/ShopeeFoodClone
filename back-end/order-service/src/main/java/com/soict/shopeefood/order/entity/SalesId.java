@@ -19,4 +19,7 @@ public class SalesId implements Serializable {
     @Column(name = "order_id")
     private Integer orderId;
 
+    @Column(name = "item_id")
+    private Integer itemId;
+
 }

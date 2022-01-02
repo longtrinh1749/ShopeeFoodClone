@@ -16,7 +16,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(schema = "order_service", name = "order")
+@Table(schema = "order_service", name = "orders")
 public class Orders {
 
     @Id

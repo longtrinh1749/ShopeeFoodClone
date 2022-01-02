@@ -228,9 +228,9 @@ public class OrdersServiceImpl implements OrdersService {
                     .stream()
                     .map(sale -> {
                         return Sales.builder()
-                                .salesId(new SalesId(order.getOrderId()))
+                                .salesId(new SalesId(order.getOrderId(), sale.getItemId()))
                                 .order(order)
-                                .itemId(sale.getItemId())
+//                                .itemId(sale.getItemId())
                                 .quantity(sale.getQuantity())
                                 .build();
                     })

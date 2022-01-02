@@ -1,5 +1,6 @@
 package com.soict.shopeefood.order.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,20 +14,17 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(schema = "order_service", name = "order_item")
-public class Sales implements Serializable {
+@Table(schema = "order_service", name = "sales")
+public class Sales {
 
     @EmbeddedId
     private SalesId salesId;
 
+    @JsonIgnore
     @MapsId("orderId")
     @ManyToOne(optional = false)
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     private Orders order;
-
-    @Id
-    @Column(name = "item_id")
-    private Integer itemId;
 
     @Column(name = "quantity")
     private Integer quantity;

@@ -13,7 +13,7 @@ public interface SalesRepo extends JpaRepository<Sales, Integer> {
     @Query(value = "select s from Sales s where s.order.orderId = ?1")
     List<Sales> findByOrderId(Integer orderId);
 
-    @Query(value = "select s from Sales s where s.itemId = ?1")
+    @Query(value = "select s from Sales s where s.salesId.itemId = ?1")
     List<Sales> findByItemId(Integer itemId);
 
 }
