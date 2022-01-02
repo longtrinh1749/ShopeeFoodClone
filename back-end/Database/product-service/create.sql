@@ -16,7 +16,8 @@ create table `shop` (
     `name` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
     `img_url` varchar(500) not null,
     `address` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci not null,
-    `price_range` varchar(100)
+    `price_range` varchar(100),
+    foreign key (`district_id`) references `district`(`id`)
 );
 
 create table `category` (

@@ -17,5 +17,5 @@ spring:
 
 
 server:
-  port: 10201
+  port: 10203
 

@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -57,7 +59,11 @@ public class Order {
     @Column(name = "total")
     private BigDecimal total;
 
+    @Transient
+    List<OrderItem> orderItemList = new ArrayList<>();
+
     @ManyToOne
     @JoinColumn(name = "status_id")
     private Status status;
+
 }
