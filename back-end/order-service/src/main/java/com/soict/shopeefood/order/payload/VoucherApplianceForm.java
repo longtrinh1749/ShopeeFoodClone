@@ -10,12 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class VoucherApplianceForm {
-    private Integer shopId;
-    private Integer shopOwnerId;
-    private Integer districtId;
-    private String shopName;
-    private String imgUrl;
-    private String address;
-    private String priceRange;
-    private List<Integer> categoryList;
+    private Integer voucherId;
+    private String applyType;
+    private List<Integer> applyToIdList;
 }

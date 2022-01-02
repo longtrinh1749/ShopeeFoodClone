@@ -13,11 +13,9 @@ import java.util.List;
 @AllArgsConstructor
 public class VoucherForm {
     private Integer voucherId;
-    private Integer voucherCode;
+    private String voucherCode;
     private BigDecimal discount;
     private BigDecimal limitPrice;
     private String description;
     private Timestamp expired;
-    private String applyType;
-    private List<Integer> applyToIdList;
 }

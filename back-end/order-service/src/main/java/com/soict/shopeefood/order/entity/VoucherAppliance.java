@@ -15,9 +15,12 @@ import javax.persistence.*;
 @Table(schema = "order_service", name = "voucher_appliance")
 public class VoucherAppliance {
 
-    @Id
-    @ManyToOne
-    @JoinColumn(name = "voucher_id")
+    @EmbeddedId
+    private VoucherApplianceId voucherApplianceId;
+
+    @ManyToOne(optional = false)
+    @MapsId("voucherId")
+    @JoinColumn(name = "voucher_id", referencedColumnName = "id")
     private Voucher voucher;
 
     @Id
