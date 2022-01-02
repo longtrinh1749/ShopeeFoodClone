@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @Entity
@@ -13,11 +14,14 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(schema = "order_service", name = "voucher_appliance")
-public class VoucherAppliance {
+public class VoucherAppliance implements Serializable {
 
-    @Id
-    @ManyToOne
-    @JoinColumn(name = "voucher_id")
+    @EmbeddedId
+    private VoucherApplianceId voucherApplianceId;
+
+    @ManyToOne(optional = false)
+    @MapsId("voucherId")
+    @JoinColumn(name = "voucher_id", referencedColumnName = "id")
     private Voucher voucher;
 
     @Id

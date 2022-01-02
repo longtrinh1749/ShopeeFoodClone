@@ -9,13 +9,11 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class VoucherForm {
-    private Integer voucherId;
-    private String voucherCode;
-    private BigDecimal discount;
-    private BigDecimal limitPrice;
-    private String description;
-    private Timestamp expired;
+@NoArgsConstructor
+public class OrderUpdateForm {
+    private Integer orderId;
+    private Integer statusId;
+    private Integer shipperId;
+    private Timestamp deliveryAt;
 }
