@@ -12,7 +12,10 @@ import UpdateAccount from "pages/update-account/UpdateAccount";
 import Shop from "./pages/shop/shop";
 
 function App() {
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState({
+    username: '',
+    headerKey: ''
+  });
   return (
     <>
       <BrowserRouter>
@@ -28,7 +31,7 @@ function App() {
             <Route path="signup" element = {<Signup/>} />
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
-            <Route path="profile" element={<UpdateAccount/>} />
+            <Route path="profile" element={<UpdateAccount user = {user}/>} /> 
             <Route path="shop/:shopUrl" element = {<Shop/>} />
         </Routes>
       </BrowserRouter>

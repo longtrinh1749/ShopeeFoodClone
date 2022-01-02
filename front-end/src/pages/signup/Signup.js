@@ -6,6 +6,7 @@ const Signup = (props) => {
     function sendRegisterInfo() {
         let name = document.getElementById("name").value;
         let gender = document.getElementById("gender").value;
+        let role = document.getElementById("role").value;
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
         let city = document.getElementById("city").value;
@@ -14,16 +15,16 @@ const Signup = (props) => {
         let email = document.getElementById("email").value;
         let phone = document.getElementById("phone").value;
         let registerInfo = {
-            // name: name,
-            // gender: gender,
+            name: name,
+            gender: gender,
             username: username,
             password: password,
+            role: role,
             city: city,
             district: district,
             address: address,
             email: email,
             phone: phone,
-            role: "user",
         };
         console.log(registerInfo);
         if (
@@ -93,6 +94,15 @@ const Signup = (props) => {
                                 placeholder="Mật khẩu"
                                 id="password"
                             ></input>
+                        </div>
+                        <div className="input-group">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                            <select id="role" defaultValue="" autoComplete="off">
+                                <option value="" disabled hidden>Vai trò</option>
+                                <option value="SELLER">Người mua</option>
+                                <option value="DRIVER">Người bán</option>
+                                <option value="USER">Shipper</option>
+                            </select>
                         </div>
                         <div className="input-group">
                             <i className="fas fa-city"></i>

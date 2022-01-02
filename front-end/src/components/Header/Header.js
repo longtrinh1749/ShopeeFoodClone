@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SearchModal from "../SearchModal";
 import "./header.scss";
-
+import { useNavigate } from 'react-router-dom';
 const Logo = () => {
     return (
         <div className="header_img">
@@ -85,8 +85,15 @@ const Login = () => {
 };
 
 const User = (props) => {
+    const navigate = useNavigate();
     function logout() {
-        props.setUser("");
+        props.setUser({
+            username:'',
+            headerKey: ''
+        });
+    }
+    function moveToUpdate(){
+        navigate('/profile')
     }
     return (
         <div className="dropdown">
@@ -114,7 +121,7 @@ const User = (props) => {
                     </a>
                 </li>
                 <li>
-                    <a className="dropdown-item" href="/">
+                    <a className="dropdown-item" onClick={moveToUpdate}>
                         <i className="fa fa-user" aria-hidden="true"></i>Cập
                         nhật tài khoản
                     </a>
@@ -153,10 +160,10 @@ const Header = (props) => {
                     {/* <Dropdown /> */}
                     <Navbar />
                     <SearchButton />
-                    {props.user === "" ? (
+                    {props.user.username === "" ? (
                         <Login />
                     ) : (
-                        <User username={props.user} setUser={props.setUser} />
+                        <User username={props.user.username} setUser={props.setUser} />
                     )}
                 </div>
             </div>

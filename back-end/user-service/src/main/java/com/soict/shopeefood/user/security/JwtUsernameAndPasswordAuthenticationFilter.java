@@ -84,7 +84,7 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
         // Add token to header
         response.addHeader(jwtConfig.getHeader(), jwtConfig.getPrefix() + token);
         String body = new Gson().toJson(new RegisterResult(auth.getAuthorities().toArray()[0]
-                .toString().split("_")[1]));
+                .toString().split("_")[1], jwtConfig.getPrefix() + token));
 //        String body = new Gson().toJson(new RegisterResult(auth.getAuthorities().toArray()[0]
 //                .toString().split("_")[1]));
 

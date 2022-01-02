@@ -4,11 +4,6 @@ import { useNavigate } from 'react-router-dom';
 const Login = (props) => {
     const navigate = useNavigate();
     function sendAuthenInfo(){
-        // let config = {
-        //     headers: {
-        //         Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGltZWFyYTQiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImlhdCI6MTYzOTQwOTM4NywiZXhwIjoxNjM5NDk1Nzg3fQ.BGBclGWtCMGr2pZEcgE7PomX6jwgVoXV-nB337kjFV7lAXnJ94MW971scQZLemaWKWEE2yZBJCQ9kMKzFVNL4w",
-        //     }
-        // }
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
         let authenInfo = {
@@ -17,11 +12,15 @@ const Login = (props) => {
         }
         console.log(authenInfo)
         console.log(process.env.REACT_APP_SERVER_ADDRESS)
-        axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/auth`, authenInfo)
+        // axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/auth`, authenInfo)
+        axios.post(`http://localhost:8400/auth`, authenInfo)
           .then( (response)=>{
-            console.log(response);
+            console.log(response.data.token);
             document.getElementsByClassName("alert-danger")[0].style.display = "none";
-            props.setUser(username);
+            props.setUser({
+                username: username,
+                headerKey:response.data.token
+            });
             navigate('/home');
           })
           .catch(function (error) {
