@@ -4077,6 +4077,8 @@ insert into `sales` (`order_id`, `item_id`, `quantity`) values (172, 1660, 1);
 insert into `sales` (`order_id`, `item_id`, `quantity`) values (173, 1747, 3);
 insert into `sales` (`order_id`, `item_id`, `quantity`) values (174, 1246, 2);
 
+delete from `orders` where `orders`.id not in (select `order_id` from `sales`);
+
 update
     `orders`,
     (
