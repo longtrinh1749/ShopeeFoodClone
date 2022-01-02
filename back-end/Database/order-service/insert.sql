@@ -1,261 +1,5 @@
 use order_service;
 
--- VOUCHER
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU20K',
-        20000,
-        60000,
-        'Giảm giá 20k, ăn thỏa ga',
-        '2022-05-06 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU20K',
-        20000,
-        60000,
-        'Giảm giá 20k, ăn thỏa ga',
-        '2022-09-17 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU20K',
-        20000,
-        60000,
-        'Giảm giá 20k, ăn thỏa ga',
-        '2022-02-08 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU50K',
-        50000,
-        150000,
-        'Giảm giá 50k, ăn thỏa ga',
-        '2022-02-13 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU50K',
-        50000,
-        150000,
-        'Giảm giá 50k, ăn thỏa ga',
-        '2022-02-01 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU50K',
-        50000,
-        150000,
-        'Giảm giá 50k, ăn thỏa ga',
-        '2022-11-08 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU70K',
-        70000,
-        210000,
-        'Giảm giá 70k, ăn thỏa ga',
-        '2022-07-09 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU70K',
-        70000,
-        210000,
-        'Giảm giá 70k, ăn thỏa ga',
-        '2022-08-09 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU70K',
-        70000,
-        210000,
-        'Giảm giá 70k, ăn thỏa ga',
-        '2022-08-16 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU100K',
-        100000,
-        300000,
-        'Giảm giá 100k, ăn thỏa ga',
-        '2022-08-19 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU100K',
-        100000,
-        300000,
-        'Giảm giá 100k, ăn thỏa ga',
-        '2022-08-07 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU100K',
-        100000,
-        300000,
-        'Giảm giá 100k, ăn thỏa ga',
-        '2022-08-13 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU200K',
-        200000,
-        600000,
-        'Giảm giá 200k, ăn thỏa ga',
-        '2022-11-14 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU200K',
-        200000,
-        600000,
-        'Giảm giá 200k, ăn thỏa ga',
-        '2022-08-13 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU200K',
-        200000,
-        600000,
-        'Giảm giá 200k, ăn thỏa ga',
-        '2022-01-07 00:00:00'
-    );
-
 -- voucher
 insert into
     `voucher` (
@@ -284,79 +28,11 @@ insert into
     )
 values
     (
-        'SIEU20K',
-        20000,
-        60000,
-        'Giảm giá 20k, ăn thỏa ga',
-        '2022-09-17 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU20K',
-        20000,
-        60000,
-        'Giảm giá 20k, ăn thỏa ga',
-        '2022-02-08 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
         'SIEU50K',
         50000,
         150000,
         'Giảm giá 50k, ăn thỏa ga',
         '2022-02-13 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU50K',
-        50000,
-        150000,
-        'Giảm giá 50k, ăn thỏa ga',
-        '2022-02-01 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU50K',
-        50000,
-        150000,
-        'Giảm giá 50k, ăn thỏa ga',
-        '2022-11-08 00:00:00'
     );
 
 insert into
@@ -386,40 +62,6 @@ insert into
     )
 values
     (
-        'SIEU70K',
-        70000,
-        210000,
-        'Giảm giá 70k, ăn thỏa ga',
-        '2022-08-09 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU70K',
-        70000,
-        210000,
-        'Giảm giá 70k, ăn thỏa ga',
-        '2022-08-16 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
         'SIEU100K',
         100000,
         300000,
@@ -437,79 +79,11 @@ insert into
     )
 values
     (
-        'SIEU100K',
-        100000,
-        300000,
-        'Giảm giá 100k, ăn thỏa ga',
-        '2022-08-07 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU100K',
-        100000,
-        300000,
-        'Giảm giá 100k, ăn thỏa ga',
-        '2022-08-13 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
         'SIEU200K',
         200000,
         600000,
         'Giảm giá 200k, ăn thỏa ga',
         '2022-11-14 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU200K',
-        200000,
-        600000,
-        'Giảm giá 200k, ăn thỏa ga',
-        '2022-08-13 00:00:00'
-    );
-
-insert into
-    `voucher` (
-        `code`,
-        `discount`,
-        `limit_price`,
-        `description`,
-        `expired`
-    )
-values
-    (
-        'SIEU200K',
-        200000,
-        600000,
-        'Giảm giá 200k, ăn thỏa ga',
-        '2022-01-07 00:00:00'
     );
 
 insert into
@@ -598,2356 +172,913 @@ values
     );
 
 -- OWNER IS SHOP
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 35);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 68);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 15);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 47);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 67);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 58);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 8);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 4);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 24);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 93);
-
-insert into
-    `voucher_appliance`
-values
-    (1, 'SHOP', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 19);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 104);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 121);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 116);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 78);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 118);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 59);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 32);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 17);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 92);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 75);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 83);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 3);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 71);
-
-insert into
-    `voucher_appliance`
-values
-    (2, 'SHOP', 64);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 53);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 47);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 115);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 51);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 74);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 69);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 68);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 61);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 121);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 27);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 34);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 119);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 99);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 92);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 52);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 2);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 60);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 79);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 49);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 105);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 108);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 37);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 93);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 88);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 96);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 98);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 90);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 84);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 33);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 42);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 21);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 89);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 117);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 1);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 30);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 25);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 112);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 65);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 116);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 40);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 100);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 9);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 76);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 81);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 120);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 80);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 111);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 17);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 106);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 26);
-
-insert into
-    `voucher_appliance`
-values
-    (3, 'SHOP', 56);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 60);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 114);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 113);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 88);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 15);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 118);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 25);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 56);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 71);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 6);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 49);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 111);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 67);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 39);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 17);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 2);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 10);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 57);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 96);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 69);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 93);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 46);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 112);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (4, 'SHOP', 24);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 2);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 76);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 56);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 98);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 7);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 119);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 116);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 24);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 82);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 95);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 51);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 61);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 32);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 53);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 12);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 70);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 45);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 79);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 26);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 58);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 4);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 87);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 49);
-
-insert into
-    `voucher_appliance`
-values
-    (5, 'SHOP', 41);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 80);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 45);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 34);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 25);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 44);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 84);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 93);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 39);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 75);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 26);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 23);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 33);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 60);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 47);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 114);
-
-insert into
-    `voucher_appliance`
-values
-    (6, 'SHOP', 8);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 104);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 71);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 86);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 7);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 2);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 70);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 1);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 111);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 83);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 14);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 114);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 110);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 117);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 100);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 116);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 78);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 46);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 68);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 74);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 33);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 15);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 56);
-
-insert into
-    `voucher_appliance`
-values
-    (7, 'SHOP', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 80);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 121);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 34);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 69);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 113);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 44);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 97);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 110);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 71);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 11);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 58);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 62);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 114);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 39);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 82);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 59);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 37);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 26);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 90);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 27);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 88);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 115);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 64);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 117);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 6);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 106);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 93);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 16);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 77);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 76);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 40);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 91);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 51);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 52);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 86);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 19);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 41);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 109);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 61);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 1);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 81);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 72);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 63);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 14);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 89);
-
-insert into
-    `voucher_appliance`
-values
-    (8, 'SHOP', 10);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 108);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 65);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 117);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 110);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 11);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 121);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 99);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 106);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 8);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 78);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 120);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 15);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 25);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 27);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 64);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 55);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 20);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 59);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 24);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 104);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 111);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 21);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 47);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 41);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 60);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 112);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 44);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 107);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 37);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 32);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 56);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 114);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 67);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 77);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 109);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 3);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 96);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 93);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 39);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 97);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 74);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 87);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 18);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (9, 'SHOP', 42);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 114);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 33);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 19);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 35);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 53);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 70);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (10, 'SHOP', 49);
-
-insert into
-    `voucher_appliance`
-values
-    (11, 'SHOP', 6);
-
-insert into
-    `voucher_appliance`
-values
-    (11, 'SHOP', 26);
-
-insert into
-    `voucher_appliance`
-values
-    (11, 'SHOP', 76);
-
-insert into
-    `voucher_appliance`
-values
-    (11, 'SHOP', 34);
-
-insert into
-    `voucher_appliance`
-values
-    (11, 'SHOP', 60);
-
-insert into
-    `voucher_appliance`
-values
-    (11, 'SHOP', 11);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 108);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 3);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 91);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 57);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 90);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 64);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 8);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 45);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 98);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 73);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 17);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 21);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 58);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (12, 'SHOP', 38);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 90);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 85);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 94);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 12);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 74);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 27);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 33);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 19);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 73);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 72);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 77);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 71);
-
-insert into
-    `voucher_appliance`
-values
-    (13, 'SHOP', 47);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 10);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 61);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 112);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 27);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 78);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 65);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 25);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 35);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 98);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 70);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 62);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 99);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 117);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 4);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 9);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 58);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 73);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 3);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 92);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 52);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 7);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 44);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 115);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 106);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 48);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 59);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 89);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 69);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 110);
-
-insert into
-    `voucher_appliance`
-values
-    (14, 'SHOP', 46);
-
-insert into
-    `voucher_appliance`
-values
-    (15, 'SHOP', 33);
-
-insert into
-    `voucher_appliance`
-values
-    (15, 'SHOP', 45);
-
-insert into
-    `voucher_appliance`
-values
-    (15, 'SHOP', 12);
-
-insert into
-    `voucher_appliance`
-values
-    (15, 'SHOP', 26);
-
-insert into
-    `voucher_appliance`
-values
-    (15, 'SHOP', 92);
+insert into `voucher_appliance` values (1, 'SHOP', 1);
+insert into `voucher_appliance` values (1, 'SHOP', 2);
+insert into `voucher_appliance` values (1, 'SHOP', 3);
+insert into `voucher_appliance` values (1, 'SHOP', 4);
+insert into `voucher_appliance` values (1, 'SHOP', 5);
+insert into `voucher_appliance` values (1, 'SHOP', 6);
+insert into `voucher_appliance` values (1, 'SHOP', 7);
+insert into `voucher_appliance` values (1, 'SHOP', 8);
+insert into `voucher_appliance` values (1, 'SHOP', 9);
+insert into `voucher_appliance` values (1, 'SHOP', 10);
+insert into `voucher_appliance` values (1, 'SHOP', 11);
+insert into `voucher_appliance` values (1, 'SHOP', 12);
+insert into `voucher_appliance` values (1, 'SHOP', 13);
+insert into `voucher_appliance` values (1, 'SHOP', 14);
+insert into `voucher_appliance` values (1, 'SHOP', 15);
+insert into `voucher_appliance` values (1, 'SHOP', 16);
+insert into `voucher_appliance` values (1, 'SHOP', 17);
+insert into `voucher_appliance` values (1, 'SHOP', 18);
+insert into `voucher_appliance` values (1, 'SHOP', 19);
+insert into `voucher_appliance` values (1, 'SHOP', 20);
+insert into `voucher_appliance` values (1, 'SHOP', 21);
+insert into `voucher_appliance` values (1, 'SHOP', 22);
+insert into `voucher_appliance` values (1, 'SHOP', 23);
+insert into `voucher_appliance` values (1, 'SHOP', 24);
+insert into `voucher_appliance` values (1, 'SHOP', 25);
+insert into `voucher_appliance` values (1, 'SHOP', 26);
+insert into `voucher_appliance` values (1, 'SHOP', 27);
+insert into `voucher_appliance` values (1, 'SHOP', 28);
+insert into `voucher_appliance` values (1, 'SHOP', 29);
+insert into `voucher_appliance` values (1, 'SHOP', 30);
+insert into `voucher_appliance` values (1, 'SHOP', 31);
+insert into `voucher_appliance` values (1, 'SHOP', 32);
+insert into `voucher_appliance` values (1, 'SHOP', 33);
+insert into `voucher_appliance` values (1, 'SHOP', 34);
+insert into `voucher_appliance` values (1, 'SHOP', 35);
+insert into `voucher_appliance` values (1, 'SHOP', 36);
+insert into `voucher_appliance` values (1, 'SHOP', 37);
+insert into `voucher_appliance` values (1, 'SHOP', 38);
+insert into `voucher_appliance` values (1, 'SHOP', 39);
+insert into `voucher_appliance` values (1, 'SHOP', 40);
+insert into `voucher_appliance` values (1, 'SHOP', 41);
+insert into `voucher_appliance` values (1, 'SHOP', 42);
+insert into `voucher_appliance` values (1, 'SHOP', 43);
+insert into `voucher_appliance` values (1, 'SHOP', 44);
+insert into `voucher_appliance` values (1, 'SHOP', 45);
+insert into `voucher_appliance` values (1, 'SHOP', 46);
+insert into `voucher_appliance` values (1, 'SHOP', 47);
+insert into `voucher_appliance` values (1, 'SHOP', 48);
+insert into `voucher_appliance` values (1, 'SHOP', 49);
+insert into `voucher_appliance` values (1, 'SHOP', 50);
+insert into `voucher_appliance` values (1, 'SHOP', 51);
+insert into `voucher_appliance` values (1, 'SHOP', 52);
+insert into `voucher_appliance` values (1, 'SHOP', 53);
+insert into `voucher_appliance` values (1, 'SHOP', 54);
+insert into `voucher_appliance` values (1, 'SHOP', 55);
+insert into `voucher_appliance` values (1, 'SHOP', 56);
+insert into `voucher_appliance` values (1, 'SHOP', 57);
+insert into `voucher_appliance` values (1, 'SHOP', 58);
+insert into `voucher_appliance` values (1, 'SHOP', 59);
+insert into `voucher_appliance` values (1, 'SHOP', 60);
+insert into `voucher_appliance` values (1, 'SHOP', 61);
+insert into `voucher_appliance` values (1, 'SHOP', 62);
+insert into `voucher_appliance` values (1, 'SHOP', 63);
+insert into `voucher_appliance` values (1, 'SHOP', 64);
+insert into `voucher_appliance` values (1, 'SHOP', 65);
+insert into `voucher_appliance` values (1, 'SHOP', 66);
+insert into `voucher_appliance` values (1, 'SHOP', 67);
+insert into `voucher_appliance` values (1, 'SHOP', 68);
+insert into `voucher_appliance` values (1, 'SHOP', 69);
+insert into `voucher_appliance` values (1, 'SHOP', 70);
+insert into `voucher_appliance` values (1, 'SHOP', 71);
+insert into `voucher_appliance` values (1, 'SHOP', 72);
+insert into `voucher_appliance` values (1, 'SHOP', 73);
+insert into `voucher_appliance` values (1, 'SHOP', 74);
+insert into `voucher_appliance` values (1, 'SHOP', 75);
+insert into `voucher_appliance` values (1, 'SHOP', 76);
+insert into `voucher_appliance` values (1, 'SHOP', 77);
+insert into `voucher_appliance` values (1, 'SHOP', 78);
+insert into `voucher_appliance` values (1, 'SHOP', 79);
+insert into `voucher_appliance` values (1, 'SHOP', 80);
+insert into `voucher_appliance` values (1, 'SHOP', 81);
+insert into `voucher_appliance` values (1, 'SHOP', 82);
+insert into `voucher_appliance` values (1, 'SHOP', 83);
+insert into `voucher_appliance` values (1, 'SHOP', 84);
+insert into `voucher_appliance` values (1, 'SHOP', 85);
+insert into `voucher_appliance` values (1, 'SHOP', 86);
+insert into `voucher_appliance` values (1, 'SHOP', 87);
+insert into `voucher_appliance` values (1, 'SHOP', 88);
+insert into `voucher_appliance` values (1, 'SHOP', 89);
+insert into `voucher_appliance` values (1, 'SHOP', 90);
+insert into `voucher_appliance` values (1, 'SHOP', 91);
+insert into `voucher_appliance` values (1, 'SHOP', 92);
+insert into `voucher_appliance` values (1, 'SHOP', 93);
+insert into `voucher_appliance` values (1, 'SHOP', 94);
+insert into `voucher_appliance` values (1, 'SHOP', 95);
+insert into `voucher_appliance` values (1, 'SHOP', 96);
+insert into `voucher_appliance` values (1, 'SHOP', 97);
+insert into `voucher_appliance` values (1, 'SHOP', 98);
+insert into `voucher_appliance` values (1, 'SHOP', 99);
+insert into `voucher_appliance` values (1, 'SHOP', 100);
+insert into `voucher_appliance` values (1, 'SHOP', 101);
+insert into `voucher_appliance` values (1, 'SHOP', 102);
+insert into `voucher_appliance` values (1, 'SHOP', 103);
+insert into `voucher_appliance` values (1, 'SHOP', 104);
+insert into `voucher_appliance` values (1, 'SHOP', 105);
+insert into `voucher_appliance` values (1, 'SHOP', 106);
+insert into `voucher_appliance` values (1, 'SHOP', 107);
+insert into `voucher_appliance` values (1, 'SHOP', 108);
+insert into `voucher_appliance` values (1, 'SHOP', 109);
+insert into `voucher_appliance` values (1, 'SHOP', 110);
+insert into `voucher_appliance` values (1, 'SHOP', 111);
+insert into `voucher_appliance` values (1, 'SHOP', 112);
+insert into `voucher_appliance` values (1, 'SHOP', 113);
+insert into `voucher_appliance` values (1, 'SHOP', 114);
+insert into `voucher_appliance` values (1, 'SHOP', 115);
+insert into `voucher_appliance` values (1, 'SHOP', 116);
+insert into `voucher_appliance` values (1, 'SHOP', 117);
+insert into `voucher_appliance` values (1, 'SHOP', 118);
+insert into `voucher_appliance` values (1, 'SHOP', 119);
+insert into `voucher_appliance` values (1, 'SHOP', 120);
+insert into `voucher_appliance` values (1, 'SHOP', 121);
+insert into `voucher_appliance` values (2, 'SHOP', 1);
+insert into `voucher_appliance` values (2, 'SHOP', 2);
+insert into `voucher_appliance` values (2, 'SHOP', 3);
+insert into `voucher_appliance` values (2, 'SHOP', 4);
+insert into `voucher_appliance` values (2, 'SHOP', 5);
+insert into `voucher_appliance` values (2, 'SHOP', 6);
+insert into `voucher_appliance` values (2, 'SHOP', 7);
+insert into `voucher_appliance` values (2, 'SHOP', 8);
+insert into `voucher_appliance` values (2, 'SHOP', 9);
+insert into `voucher_appliance` values (2, 'SHOP', 10);
+insert into `voucher_appliance` values (2, 'SHOP', 11);
+insert into `voucher_appliance` values (2, 'SHOP', 12);
+insert into `voucher_appliance` values (2, 'SHOP', 13);
+insert into `voucher_appliance` values (2, 'SHOP', 14);
+insert into `voucher_appliance` values (2, 'SHOP', 15);
+insert into `voucher_appliance` values (2, 'SHOP', 16);
+insert into `voucher_appliance` values (2, 'SHOP', 17);
+insert into `voucher_appliance` values (2, 'SHOP', 18);
+insert into `voucher_appliance` values (2, 'SHOP', 19);
+insert into `voucher_appliance` values (2, 'SHOP', 20);
+insert into `voucher_appliance` values (2, 'SHOP', 21);
+insert into `voucher_appliance` values (2, 'SHOP', 22);
+insert into `voucher_appliance` values (2, 'SHOP', 23);
+insert into `voucher_appliance` values (2, 'SHOP', 24);
+insert into `voucher_appliance` values (2, 'SHOP', 25);
+insert into `voucher_appliance` values (2, 'SHOP', 26);
+insert into `voucher_appliance` values (2, 'SHOP', 27);
+insert into `voucher_appliance` values (2, 'SHOP', 28);
+insert into `voucher_appliance` values (2, 'SHOP', 29);
+insert into `voucher_appliance` values (2, 'SHOP', 30);
+insert into `voucher_appliance` values (2, 'SHOP', 31);
+insert into `voucher_appliance` values (2, 'SHOP', 32);
+insert into `voucher_appliance` values (2, 'SHOP', 33);
+insert into `voucher_appliance` values (2, 'SHOP', 34);
+insert into `voucher_appliance` values (2, 'SHOP', 35);
+insert into `voucher_appliance` values (2, 'SHOP', 36);
+insert into `voucher_appliance` values (2, 'SHOP', 37);
+insert into `voucher_appliance` values (2, 'SHOP', 38);
+insert into `voucher_appliance` values (2, 'SHOP', 39);
+insert into `voucher_appliance` values (2, 'SHOP', 40);
+insert into `voucher_appliance` values (2, 'SHOP', 41);
+insert into `voucher_appliance` values (2, 'SHOP', 42);
+insert into `voucher_appliance` values (2, 'SHOP', 43);
+insert into `voucher_appliance` values (2, 'SHOP', 44);
+insert into `voucher_appliance` values (2, 'SHOP', 45);
+insert into `voucher_appliance` values (2, 'SHOP', 46);
+insert into `voucher_appliance` values (2, 'SHOP', 47);
+insert into `voucher_appliance` values (2, 'SHOP', 48);
+insert into `voucher_appliance` values (2, 'SHOP', 49);
+insert into `voucher_appliance` values (2, 'SHOP', 50);
+insert into `voucher_appliance` values (2, 'SHOP', 51);
+insert into `voucher_appliance` values (2, 'SHOP', 52);
+insert into `voucher_appliance` values (2, 'SHOP', 53);
+insert into `voucher_appliance` values (2, 'SHOP', 54);
+insert into `voucher_appliance` values (2, 'SHOP', 55);
+insert into `voucher_appliance` values (2, 'SHOP', 56);
+insert into `voucher_appliance` values (2, 'SHOP', 57);
+insert into `voucher_appliance` values (2, 'SHOP', 58);
+insert into `voucher_appliance` values (2, 'SHOP', 59);
+insert into `voucher_appliance` values (2, 'SHOP', 60);
+insert into `voucher_appliance` values (2, 'SHOP', 61);
+insert into `voucher_appliance` values (2, 'SHOP', 62);
+insert into `voucher_appliance` values (2, 'SHOP', 63);
+insert into `voucher_appliance` values (2, 'SHOP', 64);
+insert into `voucher_appliance` values (2, 'SHOP', 65);
+insert into `voucher_appliance` values (2, 'SHOP', 66);
+insert into `voucher_appliance` values (2, 'SHOP', 67);
+insert into `voucher_appliance` values (2, 'SHOP', 68);
+insert into `voucher_appliance` values (2, 'SHOP', 69);
+insert into `voucher_appliance` values (2, 'SHOP', 70);
+insert into `voucher_appliance` values (2, 'SHOP', 71);
+insert into `voucher_appliance` values (2, 'SHOP', 72);
+insert into `voucher_appliance` values (2, 'SHOP', 73);
+insert into `voucher_appliance` values (2, 'SHOP', 74);
+insert into `voucher_appliance` values (2, 'SHOP', 75);
+insert into `voucher_appliance` values (2, 'SHOP', 76);
+insert into `voucher_appliance` values (2, 'SHOP', 77);
+insert into `voucher_appliance` values (2, 'SHOP', 78);
+insert into `voucher_appliance` values (2, 'SHOP', 79);
+insert into `voucher_appliance` values (2, 'SHOP', 80);
+insert into `voucher_appliance` values (2, 'SHOP', 81);
+insert into `voucher_appliance` values (2, 'SHOP', 82);
+insert into `voucher_appliance` values (2, 'SHOP', 83);
+insert into `voucher_appliance` values (2, 'SHOP', 84);
+insert into `voucher_appliance` values (2, 'SHOP', 85);
+insert into `voucher_appliance` values (2, 'SHOP', 86);
+insert into `voucher_appliance` values (2, 'SHOP', 87);
+insert into `voucher_appliance` values (2, 'SHOP', 88);
+insert into `voucher_appliance` values (2, 'SHOP', 89);
+insert into `voucher_appliance` values (2, 'SHOP', 90);
+insert into `voucher_appliance` values (2, 'SHOP', 91);
+insert into `voucher_appliance` values (2, 'SHOP', 92);
+insert into `voucher_appliance` values (2, 'SHOP', 93);
+insert into `voucher_appliance` values (2, 'SHOP', 94);
+insert into `voucher_appliance` values (2, 'SHOP', 95);
+insert into `voucher_appliance` values (2, 'SHOP', 96);
+insert into `voucher_appliance` values (2, 'SHOP', 97);
+insert into `voucher_appliance` values (2, 'SHOP', 98);
+insert into `voucher_appliance` values (2, 'SHOP', 99);
+insert into `voucher_appliance` values (2, 'SHOP', 100);
+insert into `voucher_appliance` values (2, 'SHOP', 101);
+insert into `voucher_appliance` values (2, 'SHOP', 102);
+insert into `voucher_appliance` values (2, 'SHOP', 103);
+insert into `voucher_appliance` values (2, 'SHOP', 104);
+insert into `voucher_appliance` values (2, 'SHOP', 105);
+insert into `voucher_appliance` values (2, 'SHOP', 106);
+insert into `voucher_appliance` values (2, 'SHOP', 107);
+insert into `voucher_appliance` values (2, 'SHOP', 108);
+insert into `voucher_appliance` values (2, 'SHOP', 109);
+insert into `voucher_appliance` values (2, 'SHOP', 110);
+insert into `voucher_appliance` values (2, 'SHOP', 111);
+insert into `voucher_appliance` values (2, 'SHOP', 112);
+insert into `voucher_appliance` values (2, 'SHOP', 113);
+insert into `voucher_appliance` values (2, 'SHOP', 114);
+insert into `voucher_appliance` values (2, 'SHOP', 115);
+insert into `voucher_appliance` values (2, 'SHOP', 116);
+insert into `voucher_appliance` values (2, 'SHOP', 117);
+insert into `voucher_appliance` values (2, 'SHOP', 118);
+insert into `voucher_appliance` values (2, 'SHOP', 119);
+insert into `voucher_appliance` values (2, 'SHOP', 120);
+insert into `voucher_appliance` values (2, 'SHOP', 121);
+insert into `voucher_appliance` values (3, 'SHOP', 1);
+insert into `voucher_appliance` values (3, 'SHOP', 2);
+insert into `voucher_appliance` values (3, 'SHOP', 3);
+insert into `voucher_appliance` values (3, 'SHOP', 4);
+insert into `voucher_appliance` values (3, 'SHOP', 5);
+insert into `voucher_appliance` values (3, 'SHOP', 6);
+insert into `voucher_appliance` values (3, 'SHOP', 7);
+insert into `voucher_appliance` values (3, 'SHOP', 8);
+insert into `voucher_appliance` values (3, 'SHOP', 9);
+insert into `voucher_appliance` values (3, 'SHOP', 10);
+insert into `voucher_appliance` values (3, 'SHOP', 11);
+insert into `voucher_appliance` values (3, 'SHOP', 12);
+insert into `voucher_appliance` values (3, 'SHOP', 13);
+insert into `voucher_appliance` values (3, 'SHOP', 14);
+insert into `voucher_appliance` values (3, 'SHOP', 15);
+insert into `voucher_appliance` values (3, 'SHOP', 16);
+insert into `voucher_appliance` values (3, 'SHOP', 17);
+insert into `voucher_appliance` values (3, 'SHOP', 18);
+insert into `voucher_appliance` values (3, 'SHOP', 19);
+insert into `voucher_appliance` values (3, 'SHOP', 20);
+insert into `voucher_appliance` values (3, 'SHOP', 21);
+insert into `voucher_appliance` values (3, 'SHOP', 22);
+insert into `voucher_appliance` values (3, 'SHOP', 23);
+insert into `voucher_appliance` values (3, 'SHOP', 24);
+insert into `voucher_appliance` values (3, 'SHOP', 25);
+insert into `voucher_appliance` values (3, 'SHOP', 26);
+insert into `voucher_appliance` values (3, 'SHOP', 27);
+insert into `voucher_appliance` values (3, 'SHOP', 28);
+insert into `voucher_appliance` values (3, 'SHOP', 29);
+insert into `voucher_appliance` values (3, 'SHOP', 30);
+insert into `voucher_appliance` values (3, 'SHOP', 31);
+insert into `voucher_appliance` values (3, 'SHOP', 32);
+insert into `voucher_appliance` values (3, 'SHOP', 33);
+insert into `voucher_appliance` values (3, 'SHOP', 34);
+insert into `voucher_appliance` values (3, 'SHOP', 35);
+insert into `voucher_appliance` values (3, 'SHOP', 36);
+insert into `voucher_appliance` values (3, 'SHOP', 37);
+insert into `voucher_appliance` values (3, 'SHOP', 38);
+insert into `voucher_appliance` values (3, 'SHOP', 39);
+insert into `voucher_appliance` values (3, 'SHOP', 40);
+insert into `voucher_appliance` values (3, 'SHOP', 41);
+insert into `voucher_appliance` values (3, 'SHOP', 42);
+insert into `voucher_appliance` values (3, 'SHOP', 43);
+insert into `voucher_appliance` values (3, 'SHOP', 44);
+insert into `voucher_appliance` values (3, 'SHOP', 45);
+insert into `voucher_appliance` values (3, 'SHOP', 46);
+insert into `voucher_appliance` values (3, 'SHOP', 47);
+insert into `voucher_appliance` values (3, 'SHOP', 48);
+insert into `voucher_appliance` values (3, 'SHOP', 49);
+insert into `voucher_appliance` values (3, 'SHOP', 50);
+insert into `voucher_appliance` values (3, 'SHOP', 51);
+insert into `voucher_appliance` values (3, 'SHOP', 52);
+insert into `voucher_appliance` values (3, 'SHOP', 53);
+insert into `voucher_appliance` values (3, 'SHOP', 54);
+insert into `voucher_appliance` values (3, 'SHOP', 55);
+insert into `voucher_appliance` values (3, 'SHOP', 56);
+insert into `voucher_appliance` values (3, 'SHOP', 57);
+insert into `voucher_appliance` values (3, 'SHOP', 58);
+insert into `voucher_appliance` values (3, 'SHOP', 59);
+insert into `voucher_appliance` values (3, 'SHOP', 60);
+insert into `voucher_appliance` values (3, 'SHOP', 61);
+insert into `voucher_appliance` values (3, 'SHOP', 62);
+insert into `voucher_appliance` values (3, 'SHOP', 63);
+insert into `voucher_appliance` values (3, 'SHOP', 64);
+insert into `voucher_appliance` values (3, 'SHOP', 65);
+insert into `voucher_appliance` values (3, 'SHOP', 66);
+insert into `voucher_appliance` values (3, 'SHOP', 67);
+insert into `voucher_appliance` values (3, 'SHOP', 68);
+insert into `voucher_appliance` values (3, 'SHOP', 69);
+insert into `voucher_appliance` values (3, 'SHOP', 70);
+insert into `voucher_appliance` values (3, 'SHOP', 71);
+insert into `voucher_appliance` values (3, 'SHOP', 72);
+insert into `voucher_appliance` values (3, 'SHOP', 73);
+insert into `voucher_appliance` values (3, 'SHOP', 74);
+insert into `voucher_appliance` values (3, 'SHOP', 75);
+insert into `voucher_appliance` values (3, 'SHOP', 76);
+insert into `voucher_appliance` values (3, 'SHOP', 77);
+insert into `voucher_appliance` values (3, 'SHOP', 78);
+insert into `voucher_appliance` values (3, 'SHOP', 79);
+insert into `voucher_appliance` values (3, 'SHOP', 80);
+insert into `voucher_appliance` values (3, 'SHOP', 81);
+insert into `voucher_appliance` values (3, 'SHOP', 82);
+insert into `voucher_appliance` values (3, 'SHOP', 83);
+insert into `voucher_appliance` values (3, 'SHOP', 84);
+insert into `voucher_appliance` values (3, 'SHOP', 85);
+insert into `voucher_appliance` values (3, 'SHOP', 86);
+insert into `voucher_appliance` values (3, 'SHOP', 87);
+insert into `voucher_appliance` values (3, 'SHOP', 88);
+insert into `voucher_appliance` values (3, 'SHOP', 89);
+insert into `voucher_appliance` values (3, 'SHOP', 90);
+insert into `voucher_appliance` values (3, 'SHOP', 91);
+insert into `voucher_appliance` values (3, 'SHOP', 92);
+insert into `voucher_appliance` values (3, 'SHOP', 93);
+insert into `voucher_appliance` values (3, 'SHOP', 94);
+insert into `voucher_appliance` values (3, 'SHOP', 95);
+insert into `voucher_appliance` values (3, 'SHOP', 96);
+insert into `voucher_appliance` values (3, 'SHOP', 97);
+insert into `voucher_appliance` values (3, 'SHOP', 98);
+insert into `voucher_appliance` values (3, 'SHOP', 99);
+insert into `voucher_appliance` values (3, 'SHOP', 100);
+insert into `voucher_appliance` values (3, 'SHOP', 101);
+insert into `voucher_appliance` values (3, 'SHOP', 102);
+insert into `voucher_appliance` values (3, 'SHOP', 103);
+insert into `voucher_appliance` values (3, 'SHOP', 104);
+insert into `voucher_appliance` values (3, 'SHOP', 105);
+insert into `voucher_appliance` values (3, 'SHOP', 106);
+insert into `voucher_appliance` values (3, 'SHOP', 107);
+insert into `voucher_appliance` values (3, 'SHOP', 108);
+insert into `voucher_appliance` values (3, 'SHOP', 109);
+insert into `voucher_appliance` values (3, 'SHOP', 110);
+insert into `voucher_appliance` values (3, 'SHOP', 111);
+insert into `voucher_appliance` values (3, 'SHOP', 112);
+insert into `voucher_appliance` values (3, 'SHOP', 113);
+insert into `voucher_appliance` values (3, 'SHOP', 114);
+insert into `voucher_appliance` values (3, 'SHOP', 115);
+insert into `voucher_appliance` values (3, 'SHOP', 116);
+insert into `voucher_appliance` values (3, 'SHOP', 117);
+insert into `voucher_appliance` values (3, 'SHOP', 118);
+insert into `voucher_appliance` values (3, 'SHOP', 119);
+insert into `voucher_appliance` values (3, 'SHOP', 120);
+insert into `voucher_appliance` values (3, 'SHOP', 121);
+insert into `voucher_appliance` values (4, 'SHOP', 1);
+insert into `voucher_appliance` values (4, 'SHOP', 2);
+insert into `voucher_appliance` values (4, 'SHOP', 3);
+insert into `voucher_appliance` values (4, 'SHOP', 4);
+insert into `voucher_appliance` values (4, 'SHOP', 5);
+insert into `voucher_appliance` values (4, 'SHOP', 6);
+insert into `voucher_appliance` values (4, 'SHOP', 7);
+insert into `voucher_appliance` values (4, 'SHOP', 8);
+insert into `voucher_appliance` values (4, 'SHOP', 9);
+insert into `voucher_appliance` values (4, 'SHOP', 10);
+insert into `voucher_appliance` values (4, 'SHOP', 11);
+insert into `voucher_appliance` values (4, 'SHOP', 12);
+insert into `voucher_appliance` values (4, 'SHOP', 13);
+insert into `voucher_appliance` values (4, 'SHOP', 14);
+insert into `voucher_appliance` values (4, 'SHOP', 15);
+insert into `voucher_appliance` values (4, 'SHOP', 16);
+insert into `voucher_appliance` values (4, 'SHOP', 17);
+insert into `voucher_appliance` values (4, 'SHOP', 18);
+insert into `voucher_appliance` values (4, 'SHOP', 19);
+insert into `voucher_appliance` values (4, 'SHOP', 20);
+insert into `voucher_appliance` values (4, 'SHOP', 21);
+insert into `voucher_appliance` values (4, 'SHOP', 22);
+insert into `voucher_appliance` values (4, 'SHOP', 23);
+insert into `voucher_appliance` values (4, 'SHOP', 24);
+insert into `voucher_appliance` values (4, 'SHOP', 25);
+insert into `voucher_appliance` values (4, 'SHOP', 26);
+insert into `voucher_appliance` values (4, 'SHOP', 27);
+insert into `voucher_appliance` values (4, 'SHOP', 28);
+insert into `voucher_appliance` values (4, 'SHOP', 29);
+insert into `voucher_appliance` values (4, 'SHOP', 30);
+insert into `voucher_appliance` values (4, 'SHOP', 31);
+insert into `voucher_appliance` values (4, 'SHOP', 32);
+insert into `voucher_appliance` values (4, 'SHOP', 33);
+insert into `voucher_appliance` values (4, 'SHOP', 34);
+insert into `voucher_appliance` values (4, 'SHOP', 35);
+insert into `voucher_appliance` values (4, 'SHOP', 36);
+insert into `voucher_appliance` values (4, 'SHOP', 37);
+insert into `voucher_appliance` values (4, 'SHOP', 38);
+insert into `voucher_appliance` values (4, 'SHOP', 39);
+insert into `voucher_appliance` values (4, 'SHOP', 40);
+insert into `voucher_appliance` values (4, 'SHOP', 41);
+insert into `voucher_appliance` values (4, 'SHOP', 42);
+insert into `voucher_appliance` values (4, 'SHOP', 43);
+insert into `voucher_appliance` values (4, 'SHOP', 44);
+insert into `voucher_appliance` values (4, 'SHOP', 45);
+insert into `voucher_appliance` values (4, 'SHOP', 46);
+insert into `voucher_appliance` values (4, 'SHOP', 47);
+insert into `voucher_appliance` values (4, 'SHOP', 48);
+insert into `voucher_appliance` values (4, 'SHOP', 49);
+insert into `voucher_appliance` values (4, 'SHOP', 50);
+insert into `voucher_appliance` values (4, 'SHOP', 51);
+insert into `voucher_appliance` values (4, 'SHOP', 52);
+insert into `voucher_appliance` values (4, 'SHOP', 53);
+insert into `voucher_appliance` values (4, 'SHOP', 54);
+insert into `voucher_appliance` values (4, 'SHOP', 55);
+insert into `voucher_appliance` values (4, 'SHOP', 56);
+insert into `voucher_appliance` values (4, 'SHOP', 57);
+insert into `voucher_appliance` values (4, 'SHOP', 58);
+insert into `voucher_appliance` values (4, 'SHOP', 59);
+insert into `voucher_appliance` values (4, 'SHOP', 60);
+insert into `voucher_appliance` values (4, 'SHOP', 61);
+insert into `voucher_appliance` values (4, 'SHOP', 62);
+insert into `voucher_appliance` values (4, 'SHOP', 63);
+insert into `voucher_appliance` values (4, 'SHOP', 64);
+insert into `voucher_appliance` values (4, 'SHOP', 65);
+insert into `voucher_appliance` values (4, 'SHOP', 66);
+insert into `voucher_appliance` values (4, 'SHOP', 67);
+insert into `voucher_appliance` values (4, 'SHOP', 68);
+insert into `voucher_appliance` values (4, 'SHOP', 69);
+insert into `voucher_appliance` values (4, 'SHOP', 70);
+insert into `voucher_appliance` values (4, 'SHOP', 71);
+insert into `voucher_appliance` values (4, 'SHOP', 72);
+insert into `voucher_appliance` values (4, 'SHOP', 73);
+insert into `voucher_appliance` values (4, 'SHOP', 74);
+insert into `voucher_appliance` values (4, 'SHOP', 75);
+insert into `voucher_appliance` values (4, 'SHOP', 76);
+insert into `voucher_appliance` values (4, 'SHOP', 77);
+insert into `voucher_appliance` values (4, 'SHOP', 78);
+insert into `voucher_appliance` values (4, 'SHOP', 79);
+insert into `voucher_appliance` values (4, 'SHOP', 80);
+insert into `voucher_appliance` values (4, 'SHOP', 81);
+insert into `voucher_appliance` values (4, 'SHOP', 82);
+insert into `voucher_appliance` values (4, 'SHOP', 83);
+insert into `voucher_appliance` values (4, 'SHOP', 84);
+insert into `voucher_appliance` values (4, 'SHOP', 85);
+insert into `voucher_appliance` values (4, 'SHOP', 86);
+insert into `voucher_appliance` values (4, 'SHOP', 87);
+insert into `voucher_appliance` values (4, 'SHOP', 88);
+insert into `voucher_appliance` values (4, 'SHOP', 89);
+insert into `voucher_appliance` values (4, 'SHOP', 90);
+insert into `voucher_appliance` values (4, 'SHOP', 91);
+insert into `voucher_appliance` values (4, 'SHOP', 92);
+insert into `voucher_appliance` values (4, 'SHOP', 93);
+insert into `voucher_appliance` values (4, 'SHOP', 94);
+insert into `voucher_appliance` values (4, 'SHOP', 95);
+insert into `voucher_appliance` values (4, 'SHOP', 96);
+insert into `voucher_appliance` values (4, 'SHOP', 97);
+insert into `voucher_appliance` values (4, 'SHOP', 98);
+insert into `voucher_appliance` values (4, 'SHOP', 99);
+insert into `voucher_appliance` values (4, 'SHOP', 100);
+insert into `voucher_appliance` values (4, 'SHOP', 101);
+insert into `voucher_appliance` values (4, 'SHOP', 102);
+insert into `voucher_appliance` values (4, 'SHOP', 103);
+insert into `voucher_appliance` values (4, 'SHOP', 104);
+insert into `voucher_appliance` values (4, 'SHOP', 105);
+insert into `voucher_appliance` values (4, 'SHOP', 106);
+insert into `voucher_appliance` values (4, 'SHOP', 107);
+insert into `voucher_appliance` values (4, 'SHOP', 108);
+insert into `voucher_appliance` values (4, 'SHOP', 109);
+insert into `voucher_appliance` values (4, 'SHOP', 110);
+insert into `voucher_appliance` values (4, 'SHOP', 111);
+insert into `voucher_appliance` values (4, 'SHOP', 112);
+insert into `voucher_appliance` values (4, 'SHOP', 113);
+insert into `voucher_appliance` values (4, 'SHOP', 114);
+insert into `voucher_appliance` values (4, 'SHOP', 115);
+insert into `voucher_appliance` values (4, 'SHOP', 116);
+insert into `voucher_appliance` values (4, 'SHOP', 117);
+insert into `voucher_appliance` values (4, 'SHOP', 118);
+insert into `voucher_appliance` values (4, 'SHOP', 119);
+insert into `voucher_appliance` values (4, 'SHOP', 120);
+insert into `voucher_appliance` values (4, 'SHOP', 121);
+insert into `voucher_appliance` values (5, 'SHOP', 1);
+insert into `voucher_appliance` values (5, 'SHOP', 2);
+insert into `voucher_appliance` values (5, 'SHOP', 3);
+insert into `voucher_appliance` values (5, 'SHOP', 4);
+insert into `voucher_appliance` values (5, 'SHOP', 5);
+insert into `voucher_appliance` values (5, 'SHOP', 6);
+insert into `voucher_appliance` values (5, 'SHOP', 7);
+insert into `voucher_appliance` values (5, 'SHOP', 8);
+insert into `voucher_appliance` values (5, 'SHOP', 9);
+insert into `voucher_appliance` values (5, 'SHOP', 10);
+insert into `voucher_appliance` values (5, 'SHOP', 11);
+insert into `voucher_appliance` values (5, 'SHOP', 12);
+insert into `voucher_appliance` values (5, 'SHOP', 13);
+insert into `voucher_appliance` values (5, 'SHOP', 14);
+insert into `voucher_appliance` values (5, 'SHOP', 15);
+insert into `voucher_appliance` values (5, 'SHOP', 16);
+insert into `voucher_appliance` values (5, 'SHOP', 17);
+insert into `voucher_appliance` values (5, 'SHOP', 18);
+insert into `voucher_appliance` values (5, 'SHOP', 19);
+insert into `voucher_appliance` values (5, 'SHOP', 20);
+insert into `voucher_appliance` values (5, 'SHOP', 21);
+insert into `voucher_appliance` values (5, 'SHOP', 22);
+insert into `voucher_appliance` values (5, 'SHOP', 23);
+insert into `voucher_appliance` values (5, 'SHOP', 24);
+insert into `voucher_appliance` values (5, 'SHOP', 25);
+insert into `voucher_appliance` values (5, 'SHOP', 26);
+insert into `voucher_appliance` values (5, 'SHOP', 27);
+insert into `voucher_appliance` values (5, 'SHOP', 28);
+insert into `voucher_appliance` values (5, 'SHOP', 29);
+insert into `voucher_appliance` values (5, 'SHOP', 30);
+insert into `voucher_appliance` values (5, 'SHOP', 31);
+insert into `voucher_appliance` values (5, 'SHOP', 32);
+insert into `voucher_appliance` values (5, 'SHOP', 33);
+insert into `voucher_appliance` values (5, 'SHOP', 34);
+insert into `voucher_appliance` values (5, 'SHOP', 35);
+insert into `voucher_appliance` values (5, 'SHOP', 36);
+insert into `voucher_appliance` values (5, 'SHOP', 37);
+insert into `voucher_appliance` values (5, 'SHOP', 38);
+insert into `voucher_appliance` values (5, 'SHOP', 39);
+insert into `voucher_appliance` values (5, 'SHOP', 40);
+insert into `voucher_appliance` values (5, 'SHOP', 41);
+insert into `voucher_appliance` values (5, 'SHOP', 42);
+insert into `voucher_appliance` values (5, 'SHOP', 43);
+insert into `voucher_appliance` values (5, 'SHOP', 44);
+insert into `voucher_appliance` values (5, 'SHOP', 45);
+insert into `voucher_appliance` values (5, 'SHOP', 46);
+insert into `voucher_appliance` values (5, 'SHOP', 47);
+insert into `voucher_appliance` values (5, 'SHOP', 48);
+insert into `voucher_appliance` values (5, 'SHOP', 49);
+insert into `voucher_appliance` values (5, 'SHOP', 50);
+insert into `voucher_appliance` values (5, 'SHOP', 51);
+insert into `voucher_appliance` values (5, 'SHOP', 52);
+insert into `voucher_appliance` values (5, 'SHOP', 53);
+insert into `voucher_appliance` values (5, 'SHOP', 54);
+insert into `voucher_appliance` values (5, 'SHOP', 55);
+insert into `voucher_appliance` values (5, 'SHOP', 56);
+insert into `voucher_appliance` values (5, 'SHOP', 57);
+insert into `voucher_appliance` values (5, 'SHOP', 58);
+insert into `voucher_appliance` values (5, 'SHOP', 59);
+insert into `voucher_appliance` values (5, 'SHOP', 60);
+insert into `voucher_appliance` values (5, 'SHOP', 61);
+insert into `voucher_appliance` values (5, 'SHOP', 62);
+insert into `voucher_appliance` values (5, 'SHOP', 63);
+insert into `voucher_appliance` values (5, 'SHOP', 64);
+insert into `voucher_appliance` values (5, 'SHOP', 65);
+insert into `voucher_appliance` values (5, 'SHOP', 66);
+insert into `voucher_appliance` values (5, 'SHOP', 67);
+insert into `voucher_appliance` values (5, 'SHOP', 68);
+insert into `voucher_appliance` values (5, 'SHOP', 69);
+insert into `voucher_appliance` values (5, 'SHOP', 70);
+insert into `voucher_appliance` values (5, 'SHOP', 71);
+insert into `voucher_appliance` values (5, 'SHOP', 72);
+insert into `voucher_appliance` values (5, 'SHOP', 73);
+insert into `voucher_appliance` values (5, 'SHOP', 74);
+insert into `voucher_appliance` values (5, 'SHOP', 75);
+insert into `voucher_appliance` values (5, 'SHOP', 76);
+insert into `voucher_appliance` values (5, 'SHOP', 77);
+insert into `voucher_appliance` values (5, 'SHOP', 78);
+insert into `voucher_appliance` values (5, 'SHOP', 79);
+insert into `voucher_appliance` values (5, 'SHOP', 80);
+insert into `voucher_appliance` values (5, 'SHOP', 81);
+insert into `voucher_appliance` values (5, 'SHOP', 82);
+insert into `voucher_appliance` values (5, 'SHOP', 83);
+insert into `voucher_appliance` values (5, 'SHOP', 84);
+insert into `voucher_appliance` values (5, 'SHOP', 85);
+insert into `voucher_appliance` values (5, 'SHOP', 86);
+insert into `voucher_appliance` values (5, 'SHOP', 87);
+insert into `voucher_appliance` values (5, 'SHOP', 88);
+insert into `voucher_appliance` values (5, 'SHOP', 89);
+insert into `voucher_appliance` values (5, 'SHOP', 90);
+insert into `voucher_appliance` values (5, 'SHOP', 91);
+insert into `voucher_appliance` values (5, 'SHOP', 92);
+insert into `voucher_appliance` values (5, 'SHOP', 93);
+insert into `voucher_appliance` values (5, 'SHOP', 94);
+insert into `voucher_appliance` values (5, 'SHOP', 95);
+insert into `voucher_appliance` values (5, 'SHOP', 96);
+insert into `voucher_appliance` values (5, 'SHOP', 97);
+insert into `voucher_appliance` values (5, 'SHOP', 98);
+insert into `voucher_appliance` values (5, 'SHOP', 99);
+insert into `voucher_appliance` values (5, 'SHOP', 100);
+insert into `voucher_appliance` values (5, 'SHOP', 101);
+insert into `voucher_appliance` values (5, 'SHOP', 102);
+insert into `voucher_appliance` values (5, 'SHOP', 103);
+insert into `voucher_appliance` values (5, 'SHOP', 104);
+insert into `voucher_appliance` values (5, 'SHOP', 105);
+insert into `voucher_appliance` values (5, 'SHOP', 106);
+insert into `voucher_appliance` values (5, 'SHOP', 107);
+insert into `voucher_appliance` values (5, 'SHOP', 108);
+insert into `voucher_appliance` values (5, 'SHOP', 109);
+insert into `voucher_appliance` values (5, 'SHOP', 110);
+insert into `voucher_appliance` values (5, 'SHOP', 111);
+insert into `voucher_appliance` values (5, 'SHOP', 112);
+insert into `voucher_appliance` values (5, 'SHOP', 113);
+insert into `voucher_appliance` values (5, 'SHOP', 114);
+insert into `voucher_appliance` values (5, 'SHOP', 115);
+insert into `voucher_appliance` values (5, 'SHOP', 116);
+insert into `voucher_appliance` values (5, 'SHOP', 117);
+insert into `voucher_appliance` values (5, 'SHOP', 118);
+insert into `voucher_appliance` values (5, 'SHOP', 119);
+insert into `voucher_appliance` values (5, 'SHOP', 120);
+insert into `voucher_appliance` values (5, 'SHOP', 121);
 
 -- OWNER IS USER
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 39);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 37);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 48);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 6);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 12);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 24);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 47);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 27);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 26);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 44);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 8);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 22);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 18);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 21);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 40);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 15);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 14);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 2);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 32);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 29);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 20);
-
-insert into
-    `voucher_appliance`
-values
-    (16, 'USER', 35);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 15);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 22);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 29);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 10);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 16);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 11);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 35);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 44);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 21);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 42);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 32);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 33);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 19);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 7);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 4);
-
-insert into
-    `voucher_appliance`
-values
-    (17, 'USER', 2);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 3);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 17);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 30);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 4);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 25);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 45);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (18, 'USER', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 11);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 3);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 41);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 30);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 39);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 24);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 50);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 20);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 14);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 35);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 28);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 12);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 5);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 21);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 37);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 22);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 25);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 18);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 46);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 34);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 4);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 47);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 8);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 19);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 7);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 1);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 40);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 15);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 9);
-
-insert into
-    `voucher_appliance`
-values
-    (19, 'USER', 23);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 32);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 44);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 24);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 43);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 29);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 34);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 36);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 13);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 7);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 42);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 41);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 2);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 35);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 31);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 3);
-
-insert into
-    `voucher_appliance`
-values
-    (20, 'USER', 22);
+insert into `voucher_appliance` values (5, 'USER', 1);
+insert into `voucher_appliance` values (5, 'USER', 2);
+insert into `voucher_appliance` values (5, 'USER', 3);
+insert into `voucher_appliance` values (5, 'USER', 4);
+insert into `voucher_appliance` values (5, 'USER', 5);
+insert into `voucher_appliance` values (5, 'USER', 6);
+insert into `voucher_appliance` values (5, 'USER', 7);
+insert into `voucher_appliance` values (5, 'USER', 8);
+insert into `voucher_appliance` values (5, 'USER', 9);
+insert into `voucher_appliance` values (5, 'USER', 10);
+insert into `voucher_appliance` values (5, 'USER', 11);
+insert into `voucher_appliance` values (5, 'USER', 12);
+insert into `voucher_appliance` values (5, 'USER', 13);
+insert into `voucher_appliance` values (5, 'USER', 14);
+insert into `voucher_appliance` values (5, 'USER', 15);
+insert into `voucher_appliance` values (5, 'USER', 16);
+insert into `voucher_appliance` values (5, 'USER', 17);
+insert into `voucher_appliance` values (5, 'USER', 18);
+insert into `voucher_appliance` values (5, 'USER', 19);
+insert into `voucher_appliance` values (5, 'USER', 20);
+insert into `voucher_appliance` values (5, 'USER', 21);
+insert into `voucher_appliance` values (5, 'USER', 22);
+insert into `voucher_appliance` values (5, 'USER', 23);
+insert into `voucher_appliance` values (5, 'USER', 24);
+insert into `voucher_appliance` values (5, 'USER', 25);
+insert into `voucher_appliance` values (5, 'USER', 26);
+insert into `voucher_appliance` values (5, 'USER', 27);
+insert into `voucher_appliance` values (5, 'USER', 28);
+insert into `voucher_appliance` values (5, 'USER', 29);
+insert into `voucher_appliance` values (5, 'USER', 30);
+insert into `voucher_appliance` values (5, 'USER', 31);
+insert into `voucher_appliance` values (5, 'USER', 32);
+insert into `voucher_appliance` values (5, 'USER', 33);
+insert into `voucher_appliance` values (5, 'USER', 34);
+insert into `voucher_appliance` values (5, 'USER', 35);
+insert into `voucher_appliance` values (5, 'USER', 36);
+insert into `voucher_appliance` values (5, 'USER', 37);
+insert into `voucher_appliance` values (5, 'USER', 38);
+insert into `voucher_appliance` values (5, 'USER', 39);
+insert into `voucher_appliance` values (5, 'USER', 40);
+insert into `voucher_appliance` values (5, 'USER', 41);
+insert into `voucher_appliance` values (5, 'USER', 42);
+insert into `voucher_appliance` values (5, 'USER', 43);
+insert into `voucher_appliance` values (5, 'USER', 44);
+insert into `voucher_appliance` values (5, 'USER', 45);
+insert into `voucher_appliance` values (5, 'USER', 46);
+insert into `voucher_appliance` values (5, 'USER', 47);
+insert into `voucher_appliance` values (5, 'USER', 48);
+insert into `voucher_appliance` values (5, 'USER', 49);
+insert into `voucher_appliance` values (5, 'USER', 50);
+insert into `voucher_appliance` values (6, 'USER', 1);
+insert into `voucher_appliance` values (6, 'USER', 2);
+insert into `voucher_appliance` values (6, 'USER', 3);
+insert into `voucher_appliance` values (6, 'USER', 4);
+insert into `voucher_appliance` values (6, 'USER', 5);
+insert into `voucher_appliance` values (6, 'USER', 6);
+insert into `voucher_appliance` values (6, 'USER', 7);
+insert into `voucher_appliance` values (6, 'USER', 8);
+insert into `voucher_appliance` values (6, 'USER', 9);
+insert into `voucher_appliance` values (6, 'USER', 10);
+insert into `voucher_appliance` values (6, 'USER', 11);
+insert into `voucher_appliance` values (6, 'USER', 12);
+insert into `voucher_appliance` values (6, 'USER', 13);
+insert into `voucher_appliance` values (6, 'USER', 14);
+insert into `voucher_appliance` values (6, 'USER', 15);
+insert into `voucher_appliance` values (6, 'USER', 16);
+insert into `voucher_appliance` values (6, 'USER', 17);
+insert into `voucher_appliance` values (6, 'USER', 18);
+insert into `voucher_appliance` values (6, 'USER', 19);
+insert into `voucher_appliance` values (6, 'USER', 20);
+insert into `voucher_appliance` values (6, 'USER', 21);
+insert into `voucher_appliance` values (6, 'USER', 22);
+insert into `voucher_appliance` values (6, 'USER', 23);
+insert into `voucher_appliance` values (6, 'USER', 24);
+insert into `voucher_appliance` values (6, 'USER', 25);
+insert into `voucher_appliance` values (6, 'USER', 26);
+insert into `voucher_appliance` values (6, 'USER', 27);
+insert into `voucher_appliance` values (6, 'USER', 28);
+insert into `voucher_appliance` values (6, 'USER', 29);
+insert into `voucher_appliance` values (6, 'USER', 30);
+insert into `voucher_appliance` values (6, 'USER', 31);
+insert into `voucher_appliance` values (6, 'USER', 32);
+insert into `voucher_appliance` values (6, 'USER', 33);
+insert into `voucher_appliance` values (6, 'USER', 34);
+insert into `voucher_appliance` values (6, 'USER', 35);
+insert into `voucher_appliance` values (6, 'USER', 36);
+insert into `voucher_appliance` values (6, 'USER', 37);
+insert into `voucher_appliance` values (6, 'USER', 38);
+insert into `voucher_appliance` values (6, 'USER', 39);
+insert into `voucher_appliance` values (6, 'USER', 40);
+insert into `voucher_appliance` values (6, 'USER', 41);
+insert into `voucher_appliance` values (6, 'USER', 42);
+insert into `voucher_appliance` values (6, 'USER', 43);
+insert into `voucher_appliance` values (6, 'USER', 44);
+insert into `voucher_appliance` values (6, 'USER', 45);
+insert into `voucher_appliance` values (6, 'USER', 46);
+insert into `voucher_appliance` values (6, 'USER', 47);
+insert into `voucher_appliance` values (6, 'USER', 48);
+insert into `voucher_appliance` values (6, 'USER', 49);
+insert into `voucher_appliance` values (6, 'USER', 50);
+insert into `voucher_appliance` values (7, 'USER', 1);
+insert into `voucher_appliance` values (7, 'USER', 2);
+insert into `voucher_appliance` values (7, 'USER', 3);
+insert into `voucher_appliance` values (7, 'USER', 4);
+insert into `voucher_appliance` values (7, 'USER', 5);
+insert into `voucher_appliance` values (7, 'USER', 6);
+insert into `voucher_appliance` values (7, 'USER', 7);
+insert into `voucher_appliance` values (7, 'USER', 8);
+insert into `voucher_appliance` values (7, 'USER', 9);
+insert into `voucher_appliance` values (7, 'USER', 10);
+insert into `voucher_appliance` values (7, 'USER', 11);
+insert into `voucher_appliance` values (7, 'USER', 12);
+insert into `voucher_appliance` values (7, 'USER', 13);
+insert into `voucher_appliance` values (7, 'USER', 14);
+insert into `voucher_appliance` values (7, 'USER', 15);
+insert into `voucher_appliance` values (7, 'USER', 16);
+insert into `voucher_appliance` values (7, 'USER', 17);
+insert into `voucher_appliance` values (7, 'USER', 18);
+insert into `voucher_appliance` values (7, 'USER', 19);
+insert into `voucher_appliance` values (7, 'USER', 20);
+insert into `voucher_appliance` values (7, 'USER', 21);
+insert into `voucher_appliance` values (7, 'USER', 22);
+insert into `voucher_appliance` values (7, 'USER', 23);
+insert into `voucher_appliance` values (7, 'USER', 24);
+insert into `voucher_appliance` values (7, 'USER', 25);
+insert into `voucher_appliance` values (7, 'USER', 26);
+insert into `voucher_appliance` values (7, 'USER', 27);
+insert into `voucher_appliance` values (7, 'USER', 28);
+insert into `voucher_appliance` values (7, 'USER', 29);
+insert into `voucher_appliance` values (7, 'USER', 30);
+insert into `voucher_appliance` values (7, 'USER', 31);
+insert into `voucher_appliance` values (7, 'USER', 32);
+insert into `voucher_appliance` values (7, 'USER', 33);
+insert into `voucher_appliance` values (7, 'USER', 34);
+insert into `voucher_appliance` values (7, 'USER', 35);
+insert into `voucher_appliance` values (7, 'USER', 36);
+insert into `voucher_appliance` values (7, 'USER', 37);
+insert into `voucher_appliance` values (7, 'USER', 38);
+insert into `voucher_appliance` values (7, 'USER', 39);
+insert into `voucher_appliance` values (7, 'USER', 40);
+insert into `voucher_appliance` values (7, 'USER', 41);
+insert into `voucher_appliance` values (7, 'USER', 42);
+insert into `voucher_appliance` values (7, 'USER', 43);
+insert into `voucher_appliance` values (7, 'USER', 44);
+insert into `voucher_appliance` values (7, 'USER', 45);
+insert into `voucher_appliance` values (7, 'USER', 46);
+insert into `voucher_appliance` values (7, 'USER', 47);
+insert into `voucher_appliance` values (7, 'USER', 48);
+insert into `voucher_appliance` values (7, 'USER', 49);
+insert into `voucher_appliance` values (7, 'USER', 50);
+insert into `voucher_appliance` values (8, 'USER', 1);
+insert into `voucher_appliance` values (8, 'USER', 2);
+insert into `voucher_appliance` values (8, 'USER', 3);
+insert into `voucher_appliance` values (8, 'USER', 4);
+insert into `voucher_appliance` values (8, 'USER', 5);
+insert into `voucher_appliance` values (8, 'USER', 6);
+insert into `voucher_appliance` values (8, 'USER', 7);
+insert into `voucher_appliance` values (8, 'USER', 8);
+insert into `voucher_appliance` values (8, 'USER', 9);
+insert into `voucher_appliance` values (8, 'USER', 10);
+insert into `voucher_appliance` values (8, 'USER', 11);
+insert into `voucher_appliance` values (8, 'USER', 12);
+insert into `voucher_appliance` values (8, 'USER', 13);
+insert into `voucher_appliance` values (8, 'USER', 14);
+insert into `voucher_appliance` values (8, 'USER', 15);
+insert into `voucher_appliance` values (8, 'USER', 16);
+insert into `voucher_appliance` values (8, 'USER', 17);
+insert into `voucher_appliance` values (8, 'USER', 18);
+insert into `voucher_appliance` values (8, 'USER', 19);
+insert into `voucher_appliance` values (8, 'USER', 20);
+insert into `voucher_appliance` values (8, 'USER', 21);
+insert into `voucher_appliance` values (8, 'USER', 22);
+insert into `voucher_appliance` values (8, 'USER', 23);
+insert into `voucher_appliance` values (8, 'USER', 24);
+insert into `voucher_appliance` values (8, 'USER', 25);
+insert into `voucher_appliance` values (8, 'USER', 26);
+insert into `voucher_appliance` values (8, 'USER', 27);
+insert into `voucher_appliance` values (8, 'USER', 28);
+insert into `voucher_appliance` values (8, 'USER', 29);
+insert into `voucher_appliance` values (8, 'USER', 30);
+insert into `voucher_appliance` values (8, 'USER', 31);
+insert into `voucher_appliance` values (8, 'USER', 32);
+insert into `voucher_appliance` values (8, 'USER', 33);
+insert into `voucher_appliance` values (8, 'USER', 34);
+insert into `voucher_appliance` values (8, 'USER', 35);
+insert into `voucher_appliance` values (8, 'USER', 36);
+insert into `voucher_appliance` values (8, 'USER', 37);
+insert into `voucher_appliance` values (8, 'USER', 38);
+insert into `voucher_appliance` values (8, 'USER', 39);
+insert into `voucher_appliance` values (8, 'USER', 40);
+insert into `voucher_appliance` values (8, 'USER', 41);
+insert into `voucher_appliance` values (8, 'USER', 42);
+insert into `voucher_appliance` values (8, 'USER', 43);
+insert into `voucher_appliance` values (8, 'USER', 44);
+insert into `voucher_appliance` values (8, 'USER', 45);
+insert into `voucher_appliance` values (8, 'USER', 46);
+insert into `voucher_appliance` values (8, 'USER', 47);
+insert into `voucher_appliance` values (8, 'USER', 48);
+insert into `voucher_appliance` values (8, 'USER', 49);
+insert into `voucher_appliance` values (8, 'USER', 50);
+insert into `voucher_appliance` values (9, 'USER', 1);
+insert into `voucher_appliance` values (9, 'USER', 2);
+insert into `voucher_appliance` values (9, 'USER', 3);
+insert into `voucher_appliance` values (9, 'USER', 4);
+insert into `voucher_appliance` values (9, 'USER', 5);
+insert into `voucher_appliance` values (9, 'USER', 6);
+insert into `voucher_appliance` values (9, 'USER', 7);
+insert into `voucher_appliance` values (9, 'USER', 8);
+insert into `voucher_appliance` values (9, 'USER', 9);
+insert into `voucher_appliance` values (9, 'USER', 10);
+insert into `voucher_appliance` values (9, 'USER', 11);
+insert into `voucher_appliance` values (9, 'USER', 12);
+insert into `voucher_appliance` values (9, 'USER', 13);
+insert into `voucher_appliance` values (9, 'USER', 14);
+insert into `voucher_appliance` values (9, 'USER', 15);
+insert into `voucher_appliance` values (9, 'USER', 16);
+insert into `voucher_appliance` values (9, 'USER', 17);
+insert into `voucher_appliance` values (9, 'USER', 18);
+insert into `voucher_appliance` values (9, 'USER', 19);
+insert into `voucher_appliance` values (9, 'USER', 20);
+insert into `voucher_appliance` values (9, 'USER', 21);
+insert into `voucher_appliance` values (9, 'USER', 22);
+insert into `voucher_appliance` values (9, 'USER', 23);
+insert into `voucher_appliance` values (9, 'USER', 24);
+insert into `voucher_appliance` values (9, 'USER', 25);
+insert into `voucher_appliance` values (9, 'USER', 26);
+insert into `voucher_appliance` values (9, 'USER', 27);
+insert into `voucher_appliance` values (9, 'USER', 28);
+insert into `voucher_appliance` values (9, 'USER', 29);
+insert into `voucher_appliance` values (9, 'USER', 30);
+insert into `voucher_appliance` values (9, 'USER', 31);
+insert into `voucher_appliance` values (9, 'USER', 32);
+insert into `voucher_appliance` values (9, 'USER', 33);
+insert into `voucher_appliance` values (9, 'USER', 34);
+insert into `voucher_appliance` values (9, 'USER', 35);
+insert into `voucher_appliance` values (9, 'USER', 36);
+insert into `voucher_appliance` values (9, 'USER', 37);
+insert into `voucher_appliance` values (9, 'USER', 38);
+insert into `voucher_appliance` values (9, 'USER', 39);
+insert into `voucher_appliance` values (9, 'USER', 40);
+insert into `voucher_appliance` values (9, 'USER', 41);
+insert into `voucher_appliance` values (9, 'USER', 42);
+insert into `voucher_appliance` values (9, 'USER', 43);
+insert into `voucher_appliance` values (9, 'USER', 44);
+insert into `voucher_appliance` values (9, 'USER', 45);
+insert into `voucher_appliance` values (9, 'USER', 46);
+insert into `voucher_appliance` values (9, 'USER', 47);
+insert into `voucher_appliance` values (9, 'USER', 48);
+insert into `voucher_appliance` values (9, 'USER', 49);
+insert into `voucher_appliance` values (9, 'USER', 50);
+insert into `voucher_appliance` values (10, 'USER', 1);
+insert into `voucher_appliance` values (10, 'USER', 2);
+insert into `voucher_appliance` values (10, 'USER', 3);
+insert into `voucher_appliance` values (10, 'USER', 4);
+insert into `voucher_appliance` values (10, 'USER', 5);
+insert into `voucher_appliance` values (10, 'USER', 6);
+insert into `voucher_appliance` values (10, 'USER', 7);
+insert into `voucher_appliance` values (10, 'USER', 8);
+insert into `voucher_appliance` values (10, 'USER', 9);
+insert into `voucher_appliance` values (10, 'USER', 10);
+insert into `voucher_appliance` values (10, 'USER', 11);
+insert into `voucher_appliance` values (10, 'USER', 12);
+insert into `voucher_appliance` values (10, 'USER', 13);
+insert into `voucher_appliance` values (10, 'USER', 14);
+insert into `voucher_appliance` values (10, 'USER', 15);
+insert into `voucher_appliance` values (10, 'USER', 16);
+insert into `voucher_appliance` values (10, 'USER', 17);
+insert into `voucher_appliance` values (10, 'USER', 18);
+insert into `voucher_appliance` values (10, 'USER', 19);
+insert into `voucher_appliance` values (10, 'USER', 20);
+insert into `voucher_appliance` values (10, 'USER', 21);
+insert into `voucher_appliance` values (10, 'USER', 22);
+insert into `voucher_appliance` values (10, 'USER', 23);
+insert into `voucher_appliance` values (10, 'USER', 24);
+insert into `voucher_appliance` values (10, 'USER', 25);
+insert into `voucher_appliance` values (10, 'USER', 26);
+insert into `voucher_appliance` values (10, 'USER', 27);
+insert into `voucher_appliance` values (10, 'USER', 28);
+insert into `voucher_appliance` values (10, 'USER', 29);
+insert into `voucher_appliance` values (10, 'USER', 30);
+insert into `voucher_appliance` values (10, 'USER', 31);
+insert into `voucher_appliance` values (10, 'USER', 32);
+insert into `voucher_appliance` values (10, 'USER', 33);
+insert into `voucher_appliance` values (10, 'USER', 34);
+insert into `voucher_appliance` values (10, 'USER', 35);
+insert into `voucher_appliance` values (10, 'USER', 36);
+insert into `voucher_appliance` values (10, 'USER', 37);
+insert into `voucher_appliance` values (10, 'USER', 38);
+insert into `voucher_appliance` values (10, 'USER', 39);
+insert into `voucher_appliance` values (10, 'USER', 40);
+insert into `voucher_appliance` values (10, 'USER', 41);
+insert into `voucher_appliance` values (10, 'USER', 42);
+insert into `voucher_appliance` values (10, 'USER', 43);
+insert into `voucher_appliance` values (10, 'USER', 44);
+insert into `voucher_appliance` values (10, 'USER', 45);
+insert into `voucher_appliance` values (10, 'USER', 46);
+insert into `voucher_appliance` values (10, 'USER', 47);
+insert into `voucher_appliance` values (10, 'USER', 48);
+insert into `voucher_appliance` values (10, 'USER', 49);
+insert into `voucher_appliance` values (10, 'USER', 50);
 
 -- STATUS
 insert into
@@ -3000,7 +1131,7 @@ VALUES
         20000,
         255000
     ),
-(
+    (
         2,
         1,
         12,
@@ -3016,7 +1147,7 @@ VALUES
         50000,
         308000
     ),
-(
+    (
         3,
         1,
         4,
@@ -3032,7 +1163,7 @@ VALUES
         15000,
         188000
     ),
-(
+    (
         4,
         1,
         41,
@@ -3048,7 +1179,7 @@ VALUES
         20000,
         71400
     ),
-(
+    (
         5,
         1,
         38,
@@ -3064,7 +1195,7 @@ VALUES
         70000,
         160000
     ),
-(
+    (
         6,
         1,
         45,
@@ -3080,7 +1211,7 @@ VALUES
         20000,
         208000
     ),
-(
+    (
         7,
         1,
         3,
@@ -3096,7 +1227,7 @@ VALUES
         15000,
         260000
     ),
-(
+    (
         8,
         1,
         36,
@@ -3112,7 +1243,7 @@ VALUES
         50000,
         105000
     ),
-(
+    (
         9,
         1,
         40,
@@ -3128,7 +1259,7 @@ VALUES
         15000,
         918000
     ),
-(
+    (
         10,
         1,
         20,
@@ -3144,7 +1275,7 @@ VALUES
         50000,
         83000
     ),
-(
+    (
         11,
         1,
         28,
@@ -3160,7 +1291,7 @@ VALUES
         15000,
         300000
     ),
-(
+    (
         12,
         1,
         25,
@@ -3176,7 +1307,7 @@ VALUES
         70000,
         166000
     ),
-(
+    (
         13,
         1,
         40,
@@ -3192,7 +1323,7 @@ VALUES
         70000,
         237000
     ),
-(
+    (
         14,
         1,
         32,
@@ -3208,7 +1339,7 @@ VALUES
         20000,
         48000
     ),
-(
+    (
         15,
         1,
         19,
@@ -3224,7 +1355,7 @@ VALUES
         20000,
         82000
     ),
-(
+    (
         16,
         1,
         12,
@@ -3240,7 +1371,7 @@ VALUES
         20000,
         300000
     ),
-(
+    (
         17,
         1,
         34,
@@ -3256,7 +1387,7 @@ VALUES
         50000,
         90000
     ),
-(
+    (
         18,
         1,
         16,
@@ -3272,7 +1403,7 @@ VALUES
         15000,
         200000
     ),
-(
+    (
         19,
         1,
         19,
@@ -3288,7 +1419,7 @@ VALUES
         70000,
         78500
     ),
-(
+    (
         20,
         1,
         45,
@@ -3304,7 +1435,7 @@ VALUES
         50000,
         135000
     ),
-(
+    (
         21,
         1,
         11,
@@ -3320,7 +1451,7 @@ VALUES
         15000,
         1022000
     ),
-(
+    (
         22,
         1,
         3,
@@ -3336,7 +1467,7 @@ VALUES
         20000,
         460000
     ),
-(
+    (
         23,
         1,
         49,
@@ -3352,7 +1483,7 @@ VALUES
         20000,
         329400
     ),
-(
+    (
         24,
         1,
         7,
@@ -3368,7 +1499,7 @@ VALUES
         15000,
         162000
     ),
-(
+    (
         25,
         1,
         20,
@@ -3384,7 +1515,7 @@ VALUES
         20000,
         150000
     ),
-(
+    (
         26,
         1,
         9,
@@ -3400,7 +1531,7 @@ VALUES
         70000,
         250000
     ),
-(
+    (
         27,
         1,
         18,
@@ -3416,7 +1547,7 @@ VALUES
         20000,
         448000
     ),
-(
+    (
         28,
         1,
         3,
@@ -3432,7 +1563,7 @@ VALUES
         50000,
         66000
     ),
-(
+    (
         29,
         1,
         40,
@@ -3448,7 +1579,7 @@ VALUES
         50000,
         327000
     ),
-(
+    (
         30,
         2,
         32,
@@ -3464,7 +1595,7 @@ VALUES
         50000,
         165000
     ),
-(
+    (
         31,
         2,
         23,
@@ -3480,7 +1611,7 @@ VALUES
         70000,
         200000
     ),
-(
+    (
         32,
         2,
         19,
@@ -3496,7 +1627,7 @@ VALUES
         20000,
         44000
     ),
-(
+    (
         33,
         2,
         47,
@@ -3512,7 +1643,7 @@ VALUES
         70000,
         82800
     ),
-(
+    (
         34,
         2,
         4,
@@ -3528,7 +1659,7 @@ VALUES
         70000,
         75000
     ),
-(
+    (
         35,
         2,
         31,
@@ -3544,7 +1675,7 @@ VALUES
         70000,
         880000
     ),
-(
+    (
         36,
         2,
         10,
@@ -3560,7 +1691,7 @@ VALUES
         20000,
         150000
     ),
-(
+    (
         37,
         2,
         29,
@@ -3576,7 +1707,7 @@ VALUES
         50000,
         37000
     ),
-(
+    (
         38,
         2,
         22,
@@ -3592,7 +1723,7 @@ VALUES
         50000,
         30000
     ),
-(
+    (
         39,
         2,
         44,
@@ -3608,7 +1739,7 @@ VALUES
         15000,
         129000
     ),
-(
+    (
         40,
         2,
         26,
@@ -3624,7 +1755,7 @@ VALUES
         20000,
         11000
     ),
-(
+    (
         41,
         2,
         24,
@@ -3640,7 +1771,7 @@ VALUES
         70000,
         90000
     ),
-(
+    (
         42,
         2,
         30,
@@ -3656,7 +1787,7 @@ VALUES
         15000,
         300000
     ),
-(
+    (
         43,
         2,
         49,
@@ -3672,7 +1803,7 @@ VALUES
         20000,
         602100
     ),
-(
+    (
         44,
         2,
         30,
@@ -3688,7 +1819,7 @@ VALUES
         15000,
         91000
     ),
-(
+    (
         45,
         2,
         31,
@@ -3704,7 +1835,7 @@ VALUES
         20000,
         580000
     ),
-(
+    (
         46,
         2,
         33,
@@ -3720,7 +1851,7 @@ VALUES
         70000,
         80000
     ),
-(
+    (
         47,
         2,
         13,
@@ -3736,7 +1867,7 @@ VALUES
         20000,
         101400
     ),
-(
+    (
         48,
         2,
         22,
@@ -3752,7 +1883,7 @@ VALUES
         20000,
         360000
     ),
-(
+    (
         49,
         2,
         18,
@@ -3768,7 +1899,7 @@ VALUES
         70000,
         637000
     ),
-(
+    (
         50,
         2,
         14,
@@ -3784,7 +1915,7 @@ VALUES
         50000,
         15000
     ),
-(
+    (
         51,
         2,
         4,
@@ -3800,7 +1931,7 @@ VALUES
         20000,
         15000
     ),
-(
+    (
         52,
         2,
         49,
@@ -3816,7 +1947,7 @@ VALUES
         70000,
         450000
     ),
-(
+    (
         53,
         2,
         28,
@@ -3832,7 +1963,7 @@ VALUES
         15000,
         29997
     ),
-(
+    (
         54,
         2,
         27,
@@ -3848,7 +1979,7 @@ VALUES
         50000,
         54000
     ),
-(
+    (
         55,
         2,
         17,
@@ -3864,7 +1995,7 @@ VALUES
         50000,
         222000
     ),
-(
+    (
         56,
         2,
         28,
@@ -3880,7 +2011,7 @@ VALUES
         70000,
         150000
     ),
-(
+    (
         57,
         2,
         11,
@@ -3896,7 +2027,7 @@ VALUES
         70000,
         25000
     ),
-(
+    (
         58,
         2,
         15,
@@ -3912,7 +2043,7 @@ VALUES
         20000,
         95000
     ),
-(
+    (
         59,
         3,
         40,
@@ -3928,7 +2059,7 @@ VALUES
         50000,
         78000
     ),
-(
+    (
         60,
         3,
         37,
@@ -3944,7 +2075,7 @@ VALUES
         50000,
         45000
     ),
-(
+    (
         61,
         3,
         20,
@@ -3960,7 +2091,7 @@ VALUES
         15000,
         165000
     ),
-(
+    (
         62,
         3,
         43,
@@ -3976,7 +2107,7 @@ VALUES
         20000,
         198000
     ),
-(
+    (
         63,
         3,
         45,
@@ -3992,7 +2123,7 @@ VALUES
         20000,
         56000
     ),
-(
+    (
         64,
         3,
         38,
@@ -4008,7 +2139,7 @@ VALUES
         50000,
         6000
     ),
-(
+    (
         65,
         3,
         5,
@@ -4024,7 +2155,7 @@ VALUES
         15000,
         40000
     ),
-(
+    (
         66,
         3,
         49,
@@ -4040,7 +2171,7 @@ VALUES
         70000,
         100000
     ),
-(
+    (
         67,
         3,
         34,
@@ -4056,7 +2187,7 @@ VALUES
         70000,
         114000
     ),
-(
+    (
         68,
         3,
         27,
@@ -4072,7 +2203,7 @@ VALUES
         15000,
         20997
     ),
-(
+    (
         69,
         3,
         4,
@@ -4088,7 +2219,7 @@ VALUES
         15000,
         33001
     ),
-(
+    (
         70,
         3,
         15,
@@ -4104,7 +2235,7 @@ VALUES
         20000,
         55000
     ),
-(
+    (
         71,
         3,
         35,
@@ -4120,7 +2251,7 @@ VALUES
         15000,
         66000
     ),
-(
+    (
         72,
         3,
         45,
@@ -4136,7 +2267,7 @@ VALUES
         50000,
         780000
     ),
-(
+    (
         73,
         3,
         34,
@@ -4152,7 +2283,7 @@ VALUES
         15000,
         60000
     ),
-(
+    (
         74,
         3,
         7,
@@ -4168,7 +2299,7 @@ VALUES
         70000,
         45000
     ),
-(
+    (
         75,
         3,
         27,
@@ -4184,7 +2315,7 @@ VALUES
         20000,
         81000
     ),
-(
+    (
         76,
         3,
         32,
@@ -4200,7 +2331,7 @@ VALUES
         20000,
         159000
     ),
-(
+    (
         77,
         3,
         2,
@@ -4216,7 +2347,7 @@ VALUES
         50000,
         17000
     ),
-(
+    (
         78,
         3,
         45,
@@ -4232,7 +2363,7 @@ VALUES
         50000,
         390000
     ),
-(
+    (
         79,
         3,
         30,
@@ -4248,7 +2379,7 @@ VALUES
         50000,
         381000
     ),
-(
+    (
         80,
         3,
         24,
@@ -4264,7 +2395,7 @@ VALUES
         50000,
         55000
     ),
-(
+    (
         81,
         3,
         18,
@@ -4280,7 +2411,7 @@ VALUES
         70000,
         98000
     ),
-(
+    (
         82,
         3,
         7,
@@ -4296,7 +2427,7 @@ VALUES
         70000,
         48000
     ),
-(
+    (
         83,
         3,
         49,
@@ -4312,7 +2443,7 @@ VALUES
         70000,
         75000
     ),
-(
+    (
         84,
         3,
         24,
@@ -4328,7 +2459,7 @@ VALUES
         50000,
         477000
     ),
-(
+    (
         85,
         3,
         9,
@@ -4344,7 +2475,7 @@ VALUES
         70000,
         400000
     ),
-(
+    (
         86,
         3,
         4,
@@ -4360,7 +2491,7 @@ VALUES
         70000,
         1274000
     ),
-(
+    (
         87,
         3,
         50,
@@ -4376,7 +2507,7 @@ VALUES
         15000,
         69000
     ),
-(
+    (
         88,
         4,
         5,
@@ -4392,7 +2523,7 @@ VALUES
         70000,
         276000
     ),
-(
+    (
         89,
         4,
         39,
@@ -4408,7 +2539,7 @@ VALUES
         15000,
         70200
     ),
-(
+    (
         90,
         4,
         46,
@@ -4424,7 +2555,7 @@ VALUES
         50000,
         168000
     ),
-(
+    (
         91,
         4,
         37,
@@ -4440,7 +2571,7 @@ VALUES
         20000,
         70000
     ),
-(
+    (
         92,
         4,
         11,
@@ -4456,7 +2587,7 @@ VALUES
         70000,
         270000
     ),
-(
+    (
         93,
         4,
         44,
@@ -4472,7 +2603,7 @@ VALUES
         50000,
         6999
     ),
-(
+    (
         94,
         4,
         12,
@@ -4488,7 +2619,7 @@ VALUES
         20000,
         22000
     ),
-(
+    (
         95,
         4,
         19,
@@ -4504,7 +2635,7 @@ VALUES
         20000,
         152000
     ),
-(
+    (
         96,
         4,
         37,
@@ -4520,7 +2651,7 @@ VALUES
         50000,
         39600
     ),
-(
+    (
         97,
         4,
         39,
@@ -4536,7 +2667,7 @@ VALUES
         20000,
         131000
     ),
-(
+    (
         98,
         4,
         17,
@@ -4552,7 +2683,7 @@ VALUES
         50000,
         280000
     ),
-(
+    (
         99,
         4,
         16,
@@ -4568,7 +2699,7 @@ VALUES
         20000,
         71000
     ),
-(
+    (
         100,
         4,
         37,
@@ -4584,7 +2715,7 @@ VALUES
         70000,
         105000
     ),
-(
+    (
         101,
         4,
         15,
@@ -4600,7 +2731,7 @@ VALUES
         70000,
         70000
     ),
-(
+    (
         102,
         4,
         33,
@@ -4616,7 +2747,7 @@ VALUES
         20000,
         96000
     ),
-(
+    (
         103,
         4,
         15,
@@ -4632,7 +2763,7 @@ VALUES
         15000,
         11000
     ),
-(
+    (
         104,
         4,
         21,
@@ -4648,7 +2779,7 @@ VALUES
         50000,
         45001
     ),
-(
+    (
         105,
         4,
         43,
@@ -4664,7 +2795,7 @@ VALUES
         15000,
         130000
     ),
-(
+    (
         106,
         4,
         15,
@@ -4680,7 +2811,7 @@ VALUES
         50000,
         96000
     ),
-(
+    (
         107,
         4,
         42,
@@ -4696,7 +2827,7 @@ VALUES
         70000,
         209000
     ),
-(
+    (
         108,
         4,
         50,
@@ -4712,7 +2843,7 @@ VALUES
         50000,
         580000
     ),
-(
+    (
         109,
         4,
         40,
@@ -4728,7 +2859,7 @@ VALUES
         15000,
         90000
     ),
-(
+    (
         110,
         4,
         43,
@@ -4744,7 +2875,7 @@ VALUES
         20000,
         35000
     ),
-(
+    (
         111,
         4,
         2,
@@ -4760,7 +2891,7 @@ VALUES
         50000,
         1680000
     ),
-(
+    (
         112,
         4,
         38,
@@ -4776,7 +2907,7 @@ VALUES
         15000,
         370000
     ),
-(
+    (
         113,
         4,
         29,
@@ -4792,7 +2923,7 @@ VALUES
         70000,
         114000
     ),
-(
+    (
         114,
         4,
         42,
@@ -4808,7 +2939,7 @@ VALUES
         50000,
         150000
     ),
-(
+    (
         115,
         4,
         8,
@@ -4824,7 +2955,7 @@ VALUES
         20000,
         130000
     ),
-(
+    (
         116,
         4,
         32,
@@ -4840,7 +2971,7 @@ VALUES
         15000,
         24000
     ),
-(
+    (
         117,
         5,
         8,
@@ -4856,7 +2987,7 @@ VALUES
         20000,
         331000
     ),
-(
+    (
         118,
         5,
         20,
@@ -4872,7 +3003,7 @@ VALUES
         20000,
         500000
     ),
-(
+    (
         119,
         5,
         47,
@@ -4888,7 +3019,7 @@ VALUES
         20000,
         120000
     ),
-(
+    (
         120,
         5,
         25,
@@ -4904,7 +3035,7 @@ VALUES
         50000,
         170000
     ),
-(
+    (
         121,
         5,
         20,
@@ -4920,7 +3051,7 @@ VALUES
         70000,
         100000
     ),
-(
+    (
         122,
         5,
         8,
@@ -4936,7 +3067,7 @@ VALUES
         15000,
         183600
     ),
-(
+    (
         123,
         5,
         12,
@@ -4952,7 +3083,7 @@ VALUES
         70000,
         190000
     ),
-(
+    (
         124,
         5,
         36,
@@ -4968,7 +3099,7 @@ VALUES
         20000,
         161000
     ),
-(
+    (
         125,
         5,
         2,
@@ -4984,7 +3115,7 @@ VALUES
         50000,
         927000
     ),
-(
+    (
         126,
         5,
         18,
@@ -5000,7 +3131,7 @@ VALUES
         15000,
         30000
     ),
-(
+    (
         127,
         5,
         7,
@@ -5016,7 +3147,7 @@ VALUES
         20000,
         280000
     ),
-(
+    (
         128,
         5,
         10,
@@ -5032,7 +3163,7 @@ VALUES
         15000,
         160000
     ),
-(
+    (
         129,
         5,
         40,
@@ -5048,7 +3179,7 @@ VALUES
         50000,
         261900
     ),
-(
+    (
         130,
         5,
         9,
@@ -5064,7 +3195,7 @@ VALUES
         50000,
         67500
     ),
-(
+    (
         131,
         5,
         50,
@@ -5080,7 +3211,7 @@ VALUES
         20000,
         90000
     ),
-(
+    (
         132,
         5,
         44,
@@ -5096,7 +3227,7 @@ VALUES
         20000,
         170000
     ),
-(
+    (
         133,
         5,
         12,
@@ -5112,7 +3243,7 @@ VALUES
         15000,
         60000
     ),
-(
+    (
         134,
         5,
         12,
@@ -5128,7 +3259,7 @@ VALUES
         50000,
         390000
     ),
-(
+    (
         135,
         5,
         45,
@@ -5144,7 +3275,7 @@ VALUES
         70000,
         150000
     ),
-(
+    (
         136,
         5,
         36,
@@ -5160,7 +3291,7 @@ VALUES
         70000,
         30000
     ),
-(
+    (
         137,
         5,
         38,
@@ -5176,7 +3307,7 @@ VALUES
         15000,
         135000
     ),
-(
+    (
         138,
         5,
         20,
@@ -5192,7 +3323,7 @@ VALUES
         20000,
         32000
     ),
-(
+    (
         139,
         5,
         19,
@@ -5208,7 +3339,7 @@ VALUES
         20000,
         45000
     ),
-(
+    (
         140,
         5,
         2,
@@ -5224,7 +3355,7 @@ VALUES
         15000,
         91000
     ),
-(
+    (
         141,
         5,
         44,
@@ -5240,7 +3371,7 @@ VALUES
         20000,
         68000
     ),
-(
+    (
         142,
         5,
         17,
@@ -5256,7 +3387,7 @@ VALUES
         50000,
         1575000
     ),
-(
+    (
         143,
         5,
         9,
@@ -5272,7 +3403,7 @@ VALUES
         20000,
         150000
     ),
-(
+    (
         144,
         5,
         17,
@@ -5288,7 +3419,7 @@ VALUES
         15000,
         294000
     ),
-(
+    (
         145,
         5,
         38,
@@ -5304,7 +3435,7 @@ VALUES
         20000,
         122000
     ),
-(
+    (
         146,
         6,
         46,
@@ -5320,7 +3451,7 @@ VALUES
         15000,
         112500
     ),
-(
+    (
         147,
         6,
         2,
@@ -5336,7 +3467,7 @@ VALUES
         70000,
         12000
     ),
-(
+    (
         148,
         6,
         33,
@@ -5352,7 +3483,7 @@ VALUES
         70000,
         279000
     ),
-(
+    (
         149,
         6,
         26,
@@ -5368,7 +3499,7 @@ VALUES
         20000,
         670000
     ),
-(
+    (
         150,
         6,
         41,
@@ -5384,7 +3515,7 @@ VALUES
         50000,
         45000
     ),
-(
+    (
         151,
         6,
         47,
@@ -5400,7 +3531,7 @@ VALUES
         20000,
         300000
     ),
-(
+    (
         152,
         6,
         5,
@@ -5416,7 +3547,7 @@ VALUES
         50000,
         770000
     ),
-(
+    (
         153,
         6,
         45,
@@ -5432,7 +3563,7 @@ VALUES
         20000,
         50000
     ),
-(
+    (
         154,
         6,
         28,
@@ -5448,7 +3579,7 @@ VALUES
         70000,
         405000
     ),
-(
+    (
         155,
         6,
         6,
@@ -5464,7 +3595,7 @@ VALUES
         20000,
         32400
     ),
-(
+    (
         156,
         6,
         19,
@@ -5480,7 +3611,7 @@ VALUES
         70000,
         234000
     ),
-(
+    (
         157,
         6,
         19,
@@ -5496,7 +3627,7 @@ VALUES
         70000,
         835000
     ),
-(
+    (
         158,
         6,
         38,
@@ -5512,7 +3643,7 @@ VALUES
         20000,
         45000
     ),
-(
+    (
         159,
         6,
         11,
@@ -5528,7 +3659,7 @@ VALUES
         15000,
         76000
     ),
-(
+    (
         160,
         6,
         11,
@@ -5544,7 +3675,7 @@ VALUES
         20000,
         91000
     ),
-(
+    (
         161,
         6,
         17,
@@ -5560,7 +3691,7 @@ VALUES
         20000,
         157500
     ),
-(
+    (
         162,
         6,
         16,
@@ -5576,7 +3707,7 @@ VALUES
         70000,
         120000
     ),
-(
+    (
         163,
         6,
         47,
@@ -5592,7 +3723,7 @@ VALUES
         20000,
         555000
     ),
-(
+    (
         164,
         6,
         14,
@@ -5608,7 +3739,7 @@ VALUES
         20000,
         100000
     ),
-(
+    (
         165,
         6,
         47,
@@ -5624,7 +3755,7 @@ VALUES
         15000,
         85000
     ),
-(
+    (
         166,
         6,
         17,
@@ -5640,7 +3771,7 @@ VALUES
         20000,
         75000
     ),
-(
+    (
         167,
         6,
         42,
@@ -5656,7 +3787,7 @@ VALUES
         20000,
         1120000
     ),
-(
+    (
         168,
         6,
         23,
@@ -5672,7 +3803,7 @@ VALUES
         15000,
         1275000
     ),
-(
+    (
         169,
         6,
         4,
@@ -5688,7 +3819,7 @@ VALUES
         70000,
         56000
     ),
-(
+    (
         170,
         6,
         44,
@@ -5704,7 +3835,7 @@ VALUES
         70000,
         30600
     ),
-(
+    (
         171,
         6,
         24,
@@ -5720,7 +3851,7 @@ VALUES
         20000,
         240000
     ),
-(
+    (
         172,
         6,
         4,
@@ -5736,7 +3867,7 @@ VALUES
         50000,
         73500
     ),
-(
+    (
         173,
         6,
         42,
@@ -5752,7 +3883,7 @@ VALUES
         15000,
         260000
     ),
-(
+    (
         174,
         6,
         47,
@@ -5770,860 +3901,181 @@ VALUES
     );
 
 -- ORDER_ITEM
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (2, 2087, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (3, 1937, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (4, 1660, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (6, 1115, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (6, 1118, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (7, 1952, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (7, 1948, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (8, 1892, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (8, 1895, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (9, 1827, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (9, 1828, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (12, 1853, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (14, 1281, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (14, 1650, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (16, 1887, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (16, 1892, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (17, 1838, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (17, 1849, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (18, 1704, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (18, 1257, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (19, 1948, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (21, 266, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (21, 359, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (22, 360, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (23, 1595, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (24, 1128, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (24, 1134, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (26, 1830, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (26, 1817, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (28, 189, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (28, 234, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (29, 1247, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (29, 1246, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (31, 1520, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (32, 1395, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (35, 229, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (36, 1917, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (36, 1916, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (37, 925, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (37, 866, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (41, 1486, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (45, 1965, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (45, 1974, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (46, 1542, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (46, 1539, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (47, 555, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (50, 2084, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (50, 2081, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (51, 1830, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (52, 2100, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (52, 2110, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (54, 576, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (56, 2018, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (57, 860, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (57, 855, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (59, 1393, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (60, 1023, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (62, 1972, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (63, 2042, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (64, 431, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (66, 1625, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (66, 1623, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (67, 1049, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (68, 388, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (70, 371, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (70, 485, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (71, 874, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (71, 875, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (72, 2010, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (75, 874, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (77, 2179, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (77, 2173, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (78, 1861, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (79, 144, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (80, 2178, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (80, 2168, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (81, 1316, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (82, 1651, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (82, 1654, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (83, 1428, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (83, 1425, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (84, 1911, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (86, 1362, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (88, 1227, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (89, 467, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (89, 474, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (91, 747, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (91, 743, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (93, 1247, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (94, 2046, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (96, 140, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (96, 141, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (98, 46, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (98, 51, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (99, 1115, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (100, 1163, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (101, 1922, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (102, 1653, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (102, 1651, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (104, 931, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (105, 390, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (105, 381, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (106, 1815, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (106, 1821, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (108, 1021, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (109, 1862, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (109, 1864, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (110, 509, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (112, 1044, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (112, 1152, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (113, 1917, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (113, 1918, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (114, 1486, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (115, 333, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (115, 325, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (116, 1889, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (117, 875, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (118, 1113, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (118, 1115, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (119, 335, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (120, 1049, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (121, 1006, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (121, 113, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (122, 559, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (125, 1520, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (125, 1511, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (126, 1091, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (127, 1023, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (127, 1014, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (128, 1377, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (129, 465, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (129, 1903, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (131, 875, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (131, 874, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (132, 324, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (132, 322, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (133, 1247, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (134, 390, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (135, 1510, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (139, 496, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (139, 497, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (140, 591, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (141, 1847, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (142, 1387, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (143, 1026, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (143, 1010, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (144, 2112, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (144, 2113, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (146, 1794, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (146, 1800, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (147, 1247, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (150, 1024, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (152, 1377, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (152, 1371, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (153, 245, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (153, 238, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (156, 1159, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (157, 1925, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (157, 1928, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (158, 50, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (159, 883, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (161, 564, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (163, 1502, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (164, 542, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (168, 875, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (169, 1970, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (170, 703, 2);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (171, 1660, 1);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (172, 1760, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (172, 1751, 3);
-
-insert into
-    `order_item` (`order_id`, `item_id`, `quantity`)
-values
-    (173, 1247, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (1, 1919, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (3, 928, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (3, 866, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (4, 1939, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (4, 1954, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (5, 1660, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (7, 1109, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (8, 1180, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (9, 1881, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (10, 1823, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (10, 1827, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (13, 1841, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (15, 1281, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (17, 1890, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (18, 1836, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (19, 156, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (19, 1445, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (20, 1182, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (20, 1944, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (22, 274, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (22, 268, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (23, 360, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (23, 263, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (24, 1589, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (24, 1596, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (25, 1140, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (25, 1127, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (27, 1821, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (29, 236, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (30, 1246, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (30, 1247, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (32, 1518, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (32, 1507, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (33, 1388, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (36, 217, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (37, 1921, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (37, 1916, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (38, 862, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (42, 1499, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (46, 1960, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (47, 1542, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (47, 1535, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (48, 567, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (51, 1546, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (52, 1813, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (53, 2090, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (53, 2118, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (55, 584, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (57, 2018, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (58, 770, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (58, 865, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (60, 1401, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (61, 1026, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (61, 1010, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (63, 1970, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (64, 2043, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (65, 411, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (65, 413, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (67, 1624, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (68, 1049, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (69, 382, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (69, 388, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (71, 1658, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (71, 601, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (72, 875, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (72, 874, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (73, 2006, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (73, 1656, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (76, 874, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (78, 2180, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (79, 1866, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (80, 141, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (80, 143, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (81, 2168, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (82, 1313, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (82, 1315, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (83, 1654, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (84, 2017, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (85, 1901, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (85, 1913, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (87, 1373, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (89, 1223, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (90, 1931, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (92, 743, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (92, 744, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (94, 1246, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (94, 1247, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (95, 2047, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (97, 144, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (99, 98, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (99, 43, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (100, 1113, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (100, 1117, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (101, 1159, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (101, 1160, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (102, 1350, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (102, 1923, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (103, 1651, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (103, 1654, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (105, 1185, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (105, 933, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (106, 394, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (107, 1828, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (107, 1827, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (109, 1024, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (110, 1871, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (110, 1875, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (111, 516, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (111, 501, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (113, 352, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (113, 1038, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (114, 1919, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (114, 1920, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (115, 1496, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (116, 326, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (117, 1891, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (118, 874, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (119, 1110, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (120, 335, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (121, 1048, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (122, 1001, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (122, 994, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (123, 552, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (126, 1521, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (126, 1519, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (127, 1081, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (127, 145, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (128, 1011, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (129, 1378, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (130, 466, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (130, 164, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (132, 874, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (132, 875, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (133, 321, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (133, 312, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (134, 1246, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (134, 1247, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (135, 389, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (136, 1519, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (136, 1503, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (140, 497, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (141, 591, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (141, 611, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (142, 1840, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (143, 1390, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (143, 1400, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (144, 1020, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (145, 2096, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (145, 2088, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (147, 1805, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (147, 1802, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (148, 1247, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (148, 1246, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (151, 1009, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (151, 1014, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (153, 1360, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (154, 193, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (154, 207, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (157, 1161, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (158, 1929, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (158, 1352, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (159, 98, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (160, 710, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (160, 718, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (162, 551, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (164, 1502, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (164, 2071, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (165, 537, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (169, 875, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (170, 1971, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (171, 881, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (171, 704, 2);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (172, 1660, 1);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (173, 1747, 3);
+insert into `order_item` (`order_id`, `item_id`, `quantity`) values (174, 1246, 2);
 
 update
     `order`,
