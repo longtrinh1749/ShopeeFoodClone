@@ -3,7 +3,7 @@ package com.soict.shopeefood.order.controller;
 import com.soict.shopeefood.order.payload.OrderForm;
 import com.soict.shopeefood.order.payload.OrderUpdateForm;
 import com.soict.shopeefood.order.response.JsonResult;
-import com.soict.shopeefood.order.service.OrderService;
+import com.soict.shopeefood.order.service.OrdersService;
 import com.soict.shopeefood.order.service.StatusService;
 import com.soict.shopeefood.order.service.external.AppUserService;
 import com.soict.shopeefood.order.service.external.ProductService;
@@ -19,7 +19,7 @@ import java.util.Optional;
 public class OrderPublicController {
 
     @Autowired
-    private OrderService orderService;
+    private OrdersService ordersService;
 
     @Autowired
     private StatusService statusService;
@@ -32,49 +32,49 @@ public class OrderPublicController {
 
     @GetMapping("/{id}")
     public ResponseEntity<JsonResult> findById(@PathVariable("id") Integer orderId) {
-        return orderService.findById(orderId)
+        return ordersService.findById(orderId)
                 .map(JsonResult::found)
                 .orElse(JsonResult.idNotFound());
     }
 
     @GetMapping("/all")
     public ResponseEntity<JsonResult> findAll() {
-        return Optional.ofNullable(orderService.findAll())
+        return Optional.ofNullable(ordersService.findAll())
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("order not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
 
     @GetMapping("/full-info/{id}")
     public ResponseEntity<JsonResult> findAllByPage(@PathVariable("id") Integer orderId) {
-        return orderService.findFullInfoById(orderId)
+        return ordersService.findFullInfoById(orderId)
                 .map(JsonResult::found)
                 .orElse(JsonResult.idNotFound());
     }
 
     @GetMapping("/shipper/{id}")
     public ResponseEntity<JsonResult> findByShipperId(@PathVariable("id") Integer shipperId) {
-        return Optional.ofNullable(orderService.findByShipper(shipperId))
+        return Optional.ofNullable(ordersService.findByShipper(shipperId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("order not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
 
     @GetMapping("/shop/{id}")
     public ResponseEntity<JsonResult> findByShopId(@PathVariable("id") Integer shopId) {
-        return Optional.ofNullable(orderService.findByShop(shopId))
+        return Optional.ofNullable(ordersService.findByShop(shopId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("order not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
 
     @GetMapping("/customer/{id}")
     public ResponseEntity<JsonResult> findByCustomerId(@PathVariable("id") Integer customerId) {
-        return Optional.ofNullable(orderService.findByCustomer(customerId))
+        return Optional.ofNullable(ordersService.findByCustomer(customerId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("order not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
 
     @GetMapping("/status/{id}")
     public ResponseEntity<JsonResult> findByStatusId(@PathVariable("id") Integer statusId) {
-        return Optional.ofNullable(orderService.findByStatus(statusId))
+        return Optional.ofNullable(ordersService.findByStatus(statusId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("order not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -82,7 +82,7 @@ public class OrderPublicController {
     @GetMapping("/status-district")
     public ResponseEntity<JsonResult> findByStatusAndDistrict(@RequestParam("statusId") Integer statusId,
                                                  @RequestParam("district") String district) {
-        return Optional.ofNullable(orderService.findByStatusAndDistrict(statusId, district))
+        return Optional.ofNullable(ordersService.findByStatusAndDistrict(statusId, district))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("voucher not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -90,7 +90,7 @@ public class OrderPublicController {
     @GetMapping("/status-shop")
     public ResponseEntity<JsonResult> findByStatusAndShop(@RequestParam("statusId") Integer statusId,
                                                           @RequestParam("shopId") Integer shopId) {
-        return Optional.ofNullable(orderService.findByStatusAndShop(statusId, shopId))
+        return Optional.ofNullable(ordersService.findByStatusAndShop(statusId, shopId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("voucher not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -98,7 +98,7 @@ public class OrderPublicController {
     @GetMapping("/status-customer")
     public ResponseEntity<JsonResult> findByStatusAndCustomer(@RequestParam("statusId") Integer statusId,
                                                               @RequestParam("customerId") Integer customerId) {
-        return Optional.ofNullable(orderService.findByStatusAndCustomer(statusId, customerId))
+        return Optional.ofNullable(ordersService.findByStatusAndCustomer(statusId, customerId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("voucher not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -106,7 +106,7 @@ public class OrderPublicController {
     @GetMapping("/status-shipper")
     public ResponseEntity<JsonResult> findByStatusAndShipper(@RequestParam("statusId") Integer statusId,
                                                               @RequestParam("shipperId") Integer shipperId) {
-        return Optional.ofNullable(orderService.findByStatusAndShipper(statusId, shipperId))
+        return Optional.ofNullable(ordersService.findByStatusAndShipper(statusId, shipperId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("voucher not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -114,7 +114,7 @@ public class OrderPublicController {
     @GetMapping("/shipper-district")
     public ResponseEntity<JsonResult> findByShipperAndDistrict(@RequestParam("shipperId") Integer shipperId,
                                                               @RequestParam("district") String district) {
-        return Optional.ofNullable(orderService.findByShipperAndDistrict(shipperId, district))
+        return Optional.ofNullable(ordersService.findByShipperAndDistrict(shipperId, district))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("voucher not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -123,7 +123,7 @@ public class OrderPublicController {
     public ResponseEntity<JsonResult> findByShipperAndDistrictAndStatus(@RequestParam("shipperId") Integer shipperId,
                                                                         @RequestParam("district") String district,
                                                                         @RequestParam("statusId") Integer statusId) {
-        return Optional.ofNullable(orderService.findByShipperAndDistrictAndStatus(shipperId, district, statusId))
+        return Optional.ofNullable(ordersService.findByShipperAndDistrictAndStatus(shipperId, district, statusId))
                 .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("voucher not found"))
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
@@ -137,7 +137,7 @@ public class OrderPublicController {
                             .map(cus -> {
                                 return productService.getShopById(orderForm.getShopId())
                                         .map(shop -> {
-                                            return orderService.upload(orderForm)
+                                            return ordersService.upload(orderForm)
                                                     .map(JsonResult::uploaded)
                                                     .orElse(JsonResult.saveError("Internal Server Error"));
                                         })
@@ -153,7 +153,7 @@ public class OrderPublicController {
     public ResponseEntity<JsonResult> update(@RequestBody OrderUpdateForm orderUpdateForm) {
         return appUserService.getUserById(orderUpdateForm.getShipperId())
                 .map(shipper -> {
-                    return orderService.update(orderUpdateForm)
+                    return ordersService.update(orderUpdateForm)
                             .map(JsonResult::updated)
                             .orElse(JsonResult.saveError("Internal Server Error"));
                 })

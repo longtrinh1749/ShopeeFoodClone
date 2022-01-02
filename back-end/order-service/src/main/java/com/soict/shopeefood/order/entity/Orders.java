@@ -16,8 +16,9 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table( schema = "order_service", name = "order")
-public class Order {
+@Table(schema = "order_service", name = "order")
+public class Orders {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -33,7 +34,7 @@ public class Order {
     private Integer shipperId;
 
     @Column(name = "code")
-    private String orderCode;
+    private String code;
 
     @Column(name = "order_at")
     private Timestamp orderAt;
@@ -59,11 +60,11 @@ public class Order {
     @Column(name = "total")
     private BigDecimal total;
 
-    @Transient
-    List<OrderItem> orderItemList = new ArrayList<>();
-
     @ManyToOne
     @JoinColumn(name = "status_id")
     private Status status;
+
+    @Transient
+    List<Sales> salesList = new ArrayList<>();
 
 }

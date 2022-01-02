@@ -14,10 +14,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-public class OrderItemId implements Serializable {
+public class SalesId implements Serializable {
 
     @Column(name = "order_id")
     private Integer orderId;
-
 
 }

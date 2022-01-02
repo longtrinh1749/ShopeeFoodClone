@@ -1,15 +1,15 @@
 package com.soict.shopeefood.order.service.impl;
 
-import com.soict.shopeefood.order.entity.Order;
-import com.soict.shopeefood.order.entity.OrderItem;
-import com.soict.shopeefood.order.entity.OrderItemId;
+import com.soict.shopeefood.order.entity.Orders;
+import com.soict.shopeefood.order.entity.Sales;
+import com.soict.shopeefood.order.entity.SalesId;
 import com.soict.shopeefood.order.entity.Status;
 import com.soict.shopeefood.order.payload.OrderForm;
 import com.soict.shopeefood.order.payload.OrderUpdateForm;
-import com.soict.shopeefood.order.repo.OrderItemRepo;
-import com.soict.shopeefood.order.repo.OrderRepo;
+import com.soict.shopeefood.order.repo.OrdersRepo;
+import com.soict.shopeefood.order.repo.SalesRepo;
 import com.soict.shopeefood.order.repo.StatusRepo;
-import com.soict.shopeefood.order.service.OrderService;
+import com.soict.shopeefood.order.service.OrdersService;
 import org.hibernate.HibernateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,23 +22,23 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-public class OrderServiceImpl implements OrderService {
+public class OrdersServiceImpl implements OrdersService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(OrderServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(OrdersServiceImpl.class);
 
     @Autowired
-    private OrderRepo orderRepo;
+    private OrdersRepo ordersRepo;
 
     @Autowired
     private StatusRepo statusRepo;
 
     @Autowired
-    private OrderItemRepo orderItemRepo;
+    private SalesRepo salesRepo;
 
     @Override
-    public Optional<Order> findById(Integer orderId) {
+    public Optional<Orders> findById(Integer orderId) {
         try {
-            return orderRepo.findById(orderId);
+            return ordersRepo.findById(orderId);
         } catch (Exception ex) {
             LOGGER.error("findById error", ex);
             ex.printStackTrace();
@@ -47,12 +47,12 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Optional<Order> findFullInfoById(Integer orderId) {
+    public Optional<Orders> findFullInfoById(Integer orderId) {
         try {
-            return orderRepo.findById(orderId)
-                    .map(order -> {
-                        order.setOrderItemList(orderItemRepo.findByOrderId(orderId));
-                        return Optional.of(order);
+            return ordersRepo.findById(orderId)
+                    .map(orders -> {
+                        orders.setSalesList(salesRepo.findByOrderId(orderId));
+                        return Optional.of(orders);
                     })
                     .orElse(Optional.empty());
         } catch (Exception ex) {
@@ -63,9 +63,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findAll() {
+    public List<Orders> findAll() {
         try {
-            return orderRepo.findAll();
+            return ordersRepo.findAll();
         } catch (Exception ex) {
             LOGGER.error("findAll error", ex);
             ex.printStackTrace();
@@ -74,9 +74,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByShop(Integer shopId) {
+    public List<Orders> findByShop(Integer shopId) {
         try {
-            return orderRepo.findByShop(shopId);
+            return ordersRepo.findByShop(shopId);
         } catch (Exception ex) {
             LOGGER.error("findByShop error", ex);
             ex.printStackTrace();
@@ -85,9 +85,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByCustomer(Integer customerId) {
+    public List<Orders> findByCustomer(Integer customerId) {
         try {
-            return orderRepo.findByCustomer(customerId);
+            return ordersRepo.findByCustomer(customerId);
         } catch (Exception ex) {
             LOGGER.error("findByCustomer error", ex);
             ex.printStackTrace();
@@ -96,9 +96,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByStatus(Integer statusId) {
+    public List<Orders> findByStatus(Integer statusId) {
         try {
-            return orderRepo.findByStatus(statusId);
+            return ordersRepo.findByStatus(statusId);
         } catch (Exception ex) {
             LOGGER.error("findByStatus error", ex);
             ex.printStackTrace();
@@ -107,9 +107,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByShipper(Integer shipperId) {
+    public List<Orders> findByShipper(Integer shipperId) {
         try {
-            return orderRepo.findByShipper(shipperId);
+            return ordersRepo.findByShipper(shipperId);
         } catch (Exception ex) {
             LOGGER.error("findByShipper error", ex);
             ex.printStackTrace();
@@ -118,9 +118,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByStatusAndDistrict(Integer statusId, String district) {
+    public List<Orders> findByStatusAndDistrict(Integer statusId, String district) {
         try {
-            return orderRepo.findByStatusAndDistrict(statusId, district);
+            return ordersRepo.findByStatusAndDistrict(statusId, district);
         } catch (Exception ex) {
             LOGGER.error("findByStatusAndDistrict error", ex);
             ex.printStackTrace();
@@ -129,9 +129,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByStatusAndShop(Integer statusId, Integer shopId) {
+    public List<Orders> findByStatusAndShop(Integer statusId, Integer shopId) {
         try {
-            return orderRepo.findByStatusAndShop(statusId, shopId);
+            return ordersRepo.findByStatusAndShop(statusId, shopId);
         } catch (Exception ex) {
             LOGGER.error("findByStatusAndShop error", ex);
             ex.printStackTrace();
@@ -140,9 +140,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByStatusAndCustomer(Integer statusId, Integer customerId) {
+    public List<Orders> findByStatusAndCustomer(Integer statusId, Integer customerId) {
         try {
-            return orderRepo.findByStatusAndCustomer(statusId, customerId);
+            return ordersRepo.findByStatusAndCustomer(statusId, customerId);
         } catch (Exception ex) {
             LOGGER.error("findByStatusAndCustomer error", ex);
             ex.printStackTrace();
@@ -151,9 +151,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByStatusAndShipper(Integer statusId, Integer shipperId) {
+    public List<Orders> findByStatusAndShipper(Integer statusId, Integer shipperId) {
         try {
-            return orderRepo.findByStatusAndShipper(statusId, shipperId);
+            return ordersRepo.findByStatusAndShipper(statusId, shipperId);
         } catch (Exception ex) {
             LOGGER.error("findByStatusAndShipper error", ex);
             ex.printStackTrace();
@@ -162,9 +162,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByShipperAndDistrict(Integer shipperId, String district) {
+    public List<Orders> findByShipperAndDistrict(Integer shipperId, String district) {
         try {
-            return orderRepo.findByShipperAndDistrict(shipperId, district);
+            return ordersRepo.findByShipperAndDistrict(shipperId, district);
         } catch (Exception ex) {
             LOGGER.error("findByShipperAndDistrict error", ex);
             ex.printStackTrace();
@@ -173,9 +173,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<Order> findByShipperAndDistrictAndStatus(Integer shipperId, String district, Integer statusId) {
+    public List<Orders> findByShipperAndDistrictAndStatus(Integer shipperId, String district, Integer statusId) {
         try {
-            return orderRepo.findByShipperAndDistrictAndStatus(shipperId, district, statusId);
+            return ordersRepo.findByShipperAndDistrictAndStatus(shipperId, district, statusId);
         } catch (Exception ex) {
             LOGGER.error("findByShipperAndDistrictAndStatus error", ex);
             ex.printStackTrace();
@@ -184,16 +184,16 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Optional<Order> update(OrderUpdateForm sf) {
+    public Optional<Orders> update(OrderUpdateForm sf) {
         try {
             return statusRepo.findById(sf.getStatusId())
                     .map(status -> {
-                        return orderRepo.findById(sf.getOrderId())
+                        return ordersRepo.findById(sf.getOrderId())
                                 .map(order -> {
                                     order.setDeliveryAt(sf.getDeliveryAt());
                                     order.setShipperId(sf.getShipperId());
                                     order.setStatus(status);
-                                    return Optional.ofNullable(orderRepo.save(order));
+                                    return Optional.ofNullable(ordersRepo.save(order));
                                 })
                                 .orElse(Optional.empty());
                     })
@@ -206,14 +206,14 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Optional<Order> upload(OrderForm sf) {
+    public Optional<Orders> upload(OrderForm sf) {
         try {
             Status status = statusRepo.findById(sf.getStatusId()).orElse(null);
-            Order order = Order.builder()
+            Orders order = Orders.builder()
                     .status(status)
                     .customerId(sf.getCustomerId())
                     .shopId(sf.getShopId())
-                    .orderCode(UUID.randomUUID().toString())
+                    .code(UUID.randomUUID().toString())
                     .orderAt(sf.getOrderAt())
                     .deliveryAddress(sf.getDeliveryAddress())
                     .deliveryDistrict(sf.getDeliveryDistrict())
@@ -222,24 +222,24 @@ public class OrderServiceImpl implements OrderService {
                     .discount(sf.getDiscount())
                     .total(sf.getTotal())
                     .build();
-            if (orderRepo.save(order) == null) throw new HibernateException("Can't add new Order");
+            if (ordersRepo.save(order) == null) throw new HibernateException("Can't add new Orders");
 
-            List<OrderItem> orderItemList = sf.getOrderItemList()
+            List<Sales> salesList = sf.getSaleFormList()
                     .stream()
-                    .map(oi -> {
-                        return OrderItem.builder()
-                                .orderItemId(new OrderItemId(order.getOrderId()))
+                    .map(sale -> {
+                        return Sales.builder()
+                                .salesId(new SalesId(order.getOrderId()))
                                 .order(order)
-                                .itemId(oi.getItemId())
-                                .quantity(oi.getQuantity())
+                                .itemId(sale.getItemId())
+                                .quantity(sale.getQuantity())
                                 .build();
                     })
                     .collect(Collectors.toList());
-            if (orderItemRepo.saveAll(orderItemList) == null) throw new HibernateException("Can't add new OrderItem");
+            if (salesRepo.saveAll(salesList) == null) throw new HibernateException("Can't add new OrdersItem");
 
-            order.setOrderItemList(orderItemList);
+            order.setSalesList(salesList);
 
-            return Optional.ofNullable(orderRepo.save(order));
+            return Optional.ofNullable(ordersRepo.save(order));
         } catch (Exception ex) {
             LOGGER.error("upload error", ex);
             ex.printStackTrace();
@@ -248,3 +248,4 @@ public class OrderServiceImpl implements OrderService {
     }
 
 }
+

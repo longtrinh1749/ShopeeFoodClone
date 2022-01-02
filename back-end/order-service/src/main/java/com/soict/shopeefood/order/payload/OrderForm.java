@@ -23,5 +23,5 @@ public class OrderForm {
     private BigDecimal shippingFees;
     private BigDecimal discount;
     private BigDecimal total;
-    private List<OrderItemForm> orderItemList;
+    private List<SaleForm> saleFormList;
 }

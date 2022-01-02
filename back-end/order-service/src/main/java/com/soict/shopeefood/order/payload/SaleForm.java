@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderItemForm {
+public class SaleForm {
     private int itemId;
     private int quantity;
 }
