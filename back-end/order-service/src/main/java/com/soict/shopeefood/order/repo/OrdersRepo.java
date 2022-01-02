@@ -46,7 +46,4 @@ public interface OrdersRepo extends JpaRepository<Orders, Integer> {
     @Query(value = "select s from Orders s where s.shipperId = :shipperId and s.deliveryDistrict like %:district% order by s.orderAt desc ")
     List<Orders> findByShipperAndDistrict(@Param("shipperId") Integer shipperId, @Param("district") String district);
 
-    @Query(value = "select s from Orders s where s.shipperId = :shipperId and s.deliveryDistrict like %:district% and s.status.statusId = :statusId order by s.orderAt desc ")
-    List<Orders> findByShipperAndDistrictAndStatus(@Param("shipperId") Integer shipperId, @Param("district") String district, @Param("statusId") Integer statusId);
-
 }

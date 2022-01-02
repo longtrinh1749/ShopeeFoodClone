@@ -173,17 +173,6 @@ public class OrdersServiceImpl implements OrdersService {
     }
 
     @Override
-    public List<Orders> findByShipperAndDistrictAndStatus(Integer shipperId, String district, Integer statusId) {
-        try {
-            return ordersRepo.findByShipperAndDistrictAndStatus(shipperId, district, statusId);
-        } catch (Exception ex) {
-            LOGGER.error("findByShipperAndDistrictAndStatus error", ex);
-            ex.printStackTrace();
-            return null;
-        }
-    }
-
-    @Override
     public Optional<Orders> update(OrderUpdateForm sf) {
         try {
             return statusRepo.findById(sf.getStatusId())

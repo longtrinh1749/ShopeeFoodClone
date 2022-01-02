@@ -119,16 +119,6 @@ public class OrderPublicController {
                 .orElse(JsonResult.serverError("Internal Server Error"));
     }
 
-    @GetMapping("/shipper-district-status")
-    public ResponseEntity<JsonResult> findByShipperAndDistrictAndStatus(@RequestParam("shipperId") Integer shipperId,
-                                                                        @RequestParam("district") String district,
-                                                                        @RequestParam("statusId") Integer statusId) {
-        return Optional.ofNullable(ordersService.findByShipperAndDistrictAndStatus(shipperId, district, statusId))
-                .map(rsList -> !rsList.isEmpty() ? JsonResult.found(rsList) : JsonResult.notFound("voucher not found"))
-                .orElse(JsonResult.serverError("Internal Server Error"));
-    }
-
-
     @PostMapping("/upload")
     public ResponseEntity<JsonResult> upload(@RequestBody OrderForm orderForm) {
         return statusService.findById(orderForm.getStatusId())

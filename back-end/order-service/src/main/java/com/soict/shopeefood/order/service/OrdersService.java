@@ -33,8 +33,6 @@ public interface OrdersService {
 
     List<Orders> findByShipperAndDistrict(Integer shipperId, String district);
 
-    List<Orders> findByShipperAndDistrictAndStatus(Integer shipperId, String district, Integer statusId);
-
     Optional<Orders> upload(OrderForm orderForm);
 
     Optional<Orders> update(OrderUpdateForm orderUpdateForm);
