@@ -1111,9 +1111,9 @@ insert into
 values
     ('Cancel');
 
--- ORDER
+-- ORDERS
 INSERT INTO
-    `order`
+    `orders`
 VALUES
     (
         1,
@@ -3900,192 +3900,192 @@ VALUES
         90000
     );
 
--- ORDER_ITEM
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (1, 1919, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (3, 928, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (3, 866, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (4, 1939, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (4, 1954, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (5, 1660, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (7, 1109, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (8, 1180, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (9, 1881, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (10, 1823, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (10, 1827, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (13, 1841, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (15, 1281, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (17, 1890, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (18, 1836, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (19, 156, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (19, 1445, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (20, 1182, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (20, 1944, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (22, 274, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (22, 268, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (23, 360, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (23, 263, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (24, 1589, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (24, 1596, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (25, 1140, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (25, 1127, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (27, 1821, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (29, 236, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (30, 1246, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (30, 1247, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (32, 1518, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (32, 1507, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (33, 1388, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (36, 217, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (37, 1921, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (37, 1916, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (38, 862, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (42, 1499, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (46, 1960, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (47, 1542, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (47, 1535, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (48, 567, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (51, 1546, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (52, 1813, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (53, 2090, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (53, 2118, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (55, 584, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (57, 2018, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (58, 770, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (58, 865, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (60, 1401, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (61, 1026, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (61, 1010, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (63, 1970, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (64, 2043, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (65, 411, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (65, 413, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (67, 1624, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (68, 1049, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (69, 382, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (69, 388, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (71, 1658, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (71, 601, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (72, 875, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (72, 874, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (73, 2006, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (73, 1656, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (76, 874, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (78, 2180, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (79, 1866, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (80, 141, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (80, 143, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (81, 2168, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (82, 1313, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (82, 1315, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (83, 1654, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (84, 2017, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (85, 1901, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (85, 1913, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (87, 1373, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (89, 1223, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (90, 1931, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (92, 743, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (92, 744, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (94, 1246, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (94, 1247, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (95, 2047, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (97, 144, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (99, 98, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (99, 43, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (100, 1113, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (100, 1117, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (101, 1159, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (101, 1160, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (102, 1350, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (102, 1923, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (103, 1651, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (103, 1654, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (105, 1185, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (105, 933, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (106, 394, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (107, 1828, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (107, 1827, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (109, 1024, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (110, 1871, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (110, 1875, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (111, 516, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (111, 501, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (113, 352, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (113, 1038, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (114, 1919, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (114, 1920, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (115, 1496, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (116, 326, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (117, 1891, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (118, 874, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (119, 1110, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (120, 335, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (121, 1048, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (122, 1001, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (122, 994, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (123, 552, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (126, 1521, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (126, 1519, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (127, 1081, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (127, 145, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (128, 1011, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (129, 1378, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (130, 466, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (130, 164, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (132, 874, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (132, 875, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (133, 321, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (133, 312, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (134, 1246, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (134, 1247, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (135, 389, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (136, 1519, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (136, 1503, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (140, 497, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (141, 591, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (141, 611, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (142, 1840, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (143, 1390, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (143, 1400, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (144, 1020, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (145, 2096, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (145, 2088, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (147, 1805, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (147, 1802, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (148, 1247, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (148, 1246, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (151, 1009, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (151, 1014, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (153, 1360, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (154, 193, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (154, 207, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (157, 1161, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (158, 1929, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (158, 1352, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (159, 98, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (160, 710, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (160, 718, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (162, 551, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (164, 1502, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (164, 2071, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (165, 537, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (169, 875, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (170, 1971, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (171, 881, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (171, 704, 2);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (172, 1660, 1);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (173, 1747, 3);
-insert into `order_item` (`order_id`, `item_id`, `quantity`) values (174, 1246, 2);
+-- sales
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (1, 1919, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (3, 928, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (3, 866, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (4, 1939, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (4, 1954, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (5, 1660, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (7, 1109, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (8, 1180, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (9, 1881, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (10, 1823, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (10, 1827, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (13, 1841, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (15, 1281, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (17, 1890, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (18, 1836, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (19, 156, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (19, 1445, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (20, 1182, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (20, 1944, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (22, 274, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (22, 268, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (23, 360, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (23, 263, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (24, 1589, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (24, 1596, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (25, 1140, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (25, 1127, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (27, 1821, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (29, 236, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (30, 1246, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (30, 1247, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (32, 1518, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (32, 1507, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (33, 1388, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (36, 217, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (37, 1921, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (37, 1916, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (38, 862, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (42, 1499, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (46, 1960, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (47, 1542, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (47, 1535, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (48, 567, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (51, 1546, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (52, 1813, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (53, 2090, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (53, 2118, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (55, 584, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (57, 2018, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (58, 770, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (58, 865, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (60, 1401, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (61, 1026, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (61, 1010, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (63, 1970, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (64, 2043, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (65, 411, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (65, 413, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (67, 1624, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (68, 1049, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (69, 382, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (69, 388, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (71, 1658, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (71, 601, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (72, 875, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (72, 874, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (73, 2006, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (73, 1656, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (76, 874, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (78, 2180, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (79, 1866, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (80, 141, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (80, 143, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (81, 2168, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (82, 1313, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (82, 1315, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (83, 1654, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (84, 2017, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (85, 1901, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (85, 1913, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (87, 1373, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (89, 1223, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (90, 1931, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (92, 743, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (92, 744, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (94, 1246, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (94, 1247, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (95, 2047, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (97, 144, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (99, 98, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (99, 43, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (100, 1113, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (100, 1117, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (101, 1159, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (101, 1160, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (102, 1350, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (102, 1923, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (103, 1651, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (103, 1654, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (105, 1185, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (105, 933, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (106, 394, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (107, 1828, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (107, 1827, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (109, 1024, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (110, 1871, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (110, 1875, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (111, 516, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (111, 501, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (113, 352, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (113, 1038, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (114, 1919, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (114, 1920, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (115, 1496, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (116, 326, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (117, 1891, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (118, 874, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (119, 1110, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (120, 335, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (121, 1048, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (122, 1001, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (122, 994, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (123, 552, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (126, 1521, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (126, 1519, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (127, 1081, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (127, 145, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (128, 1011, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (129, 1378, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (130, 466, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (130, 164, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (132, 874, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (132, 875, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (133, 321, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (133, 312, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (134, 1246, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (134, 1247, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (135, 389, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (136, 1519, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (136, 1503, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (140, 497, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (141, 591, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (141, 611, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (142, 1840, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (143, 1390, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (143, 1400, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (144, 1020, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (145, 2096, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (145, 2088, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (147, 1805, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (147, 1802, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (148, 1247, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (148, 1246, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (151, 1009, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (151, 1014, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (153, 1360, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (154, 193, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (154, 207, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (157, 1161, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (158, 1929, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (158, 1352, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (159, 98, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (160, 710, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (160, 718, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (162, 551, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (164, 1502, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (164, 2071, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (165, 537, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (169, 875, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (170, 1971, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (171, 881, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (171, 704, 2);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (172, 1660, 1);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (173, 1747, 3);
+insert into `sales` (`order_id`, `item_id`, `quantity`) values (174, 1246, 2);
 
 update
-    `order`,
+    `orders`,
     (
         select
             o.id,
             sum(oi.quantity * i.price) total
         from
-            `order_service`.`order` o,
-            `order_service`.order_item oi,
+            `order_service`.`orders` o,
+            `order_service`.sales oi,
             `product_service`.item i
         where
             o.id = oi.order_id
@@ -4094,6 +4094,6 @@ update
             oi.order_id
     ) result
 set
-    `order`.total = result.total
+    `orders`.total = result.total
 where
-    `order`.id = result.id;
+    `orders`.id = result.id;

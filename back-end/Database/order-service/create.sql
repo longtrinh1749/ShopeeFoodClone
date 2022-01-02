@@ -25,7 +25,7 @@ create table `voucher_appliance` (
     foreign key (`voucher_id`) references `voucher`(`id`)
 );
 
-create table `order` (
+create table `orders` (
     `id` int auto_increment primary key,
     `status_id` int not null,
     `customer_id` int not null,
@@ -43,10 +43,10 @@ create table `order` (
     foreign key (`status_id`) references `status`(`id`)
 );
 
-create table `order_item` (
+create table `sales` (
     `order_id` int not null,
     `item_id` int not null,
     `quantity` int not null,
     primary key (`order_id`, `item_id`),
-    foreign key (`order_id`) references `order`(`id`)
+    foreign key (`order_id`) references `orders`(`id`)
 );
