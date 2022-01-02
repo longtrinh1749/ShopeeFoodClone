@@ -42,30 +42,40 @@ def create_account():
 # create_account()
 
 def create_script_voucher_owner_shop():
-    types = ['SHOP']
-    list_variable = []
-    for voucher_id in range(1, 16):
-        number_of_owner = random.randint(1, 70)
-        for _ in range(0, number_of_owner):
-            # print("insert into `voucher_owner` values ({}, '{}', {});".format(voucher_id, random.choice(types), random.randint(1,150)))
-            new_variable = {'voucher_id': voucher_id, 'type': random.choice(types), 'owner_id': random.randint(1, 121)}
-            if new_variable not in list_variable:
-                list_variable.append(new_variable)
-    for variable in list_variable:
-        print("insert into `voucher_owner` values ({}, '{}', {});".format(variable.get('voucher_id'), variable.get('type'), variable.get('owner_id')))
+    # types = ['SHOP']
+    # list_variable = []
+    # for voucher_id in range(1, 16):
+    #     number_of_owner = random.randint(1, 70)
+    #     for _ in range(0, number_of_owner):
+    #         # print("insert into `voucher_owner` values ({}, '{}', {});".format(voucher_id, random.choice(types), random.randint(1,150)))
+    #         new_variable = {'voucher_id': voucher_id, 'type': random.choice(types), 'owner_id': random.randint(1, 121)}
+    #         if new_variable not in list_variable:
+    #             list_variable.append(new_variable)
+    # for variable in list_variable:
+    #     print("insert into `voucher_owner` values ({}, '{}', {});".format(variable.get('voucher_id'), variable.get('type'), variable.get('owner_id')))
+    type = 'SHOP'
+    for voucher_id in range(1,6):
+        for apply_to_id in range(1,122):
+            print("insert into `voucher_appliance` values ({}, '{}', {});".format(voucher_id, type, apply_to_id))
 
 def create_script_voucher_owner_user():
     types = ['USER']
-    list_variable = []
-    for voucher_id in range(16, 21):
-        number_of_owner = random.randint(1, 50)
-        for _ in range(0, number_of_owner):
-            # print("insert into `voucher_owner` values ({}, '{}', {});".format(voucher_id, random.choice(types), random.randint(1,150)))
-            new_variable = {'voucher_id': voucher_id, 'type': random.choice(types), 'owner_id': random.randint(1, 50)}
-            if new_variable not in list_variable:
-                list_variable.append(new_variable)
-    for variable in list_variable:
-        print("insert into `voucher_owner` values ({}, '{}', {});".format(variable.get('voucher_id'), variable.get('type'), variable.get('owner_id')))
+    type = 'USER'
+    # list_variable = []
+    # for voucher_id in range(16, 21):
+    #     number_of_owner = random.randint(1, 50)
+    #     for _ in range(0, number_of_owner):
+    #         # print("insert into `voucher_owner` values ({}, '{}', {});".format(voucher_id, random.choice(types), random.randint(1,150)))
+    #         new_variable = {'voucher_id': voucher_id, 'type': random.choice(types), 'owner_id': random.randint(1, 50)}
+    #         if new_variable not in list_variable:
+    #             list_variable.append(new_variable)
+    # for variable in list_variable:
+    #     print("insert into `voucher_owner` values ({}, '{}', {});".format(variable.get('voucher_id'), variable.get('type'), variable.get('owner_id')))
+    for voucher_id in range(5,11):
+        for apply_to_id in range(1,51):
+            print("insert into `voucher_appliance` values ({}, '{}', {});".format(voucher_id, type, apply_to_id))
+
+# create_script_voucher_owner_user()
 
 def create_script_order():
     import uuid
@@ -126,7 +136,7 @@ def create_script_order():
             else:
                 print("insert into `order` (`status_id`, `customer_id`, `shop_id`, `shipper_id`, `code`, `order_at`, `delivery_address`, `delivery_district`,`delivery_at`, `note`, `shipping_fees`, `discount`, `total`) values ({}, {}, {}, {}, '{}', '{}', '{}', '{}', NULL, '{}', {}, {}, {});".format(status_id, customer_id, shop_id, shipper_id, code, order_at, delivery_address, delivery_district, note, shipping_fees, discount, total))
 
-create_script_order();
+# create_script_order();
 
 def create_script_order_item():
     import mysql.connector
@@ -181,7 +191,7 @@ def create_script_order_item():
             cursor.close()
             connection.close()
             print("MySQL connection is closed")
-    for order_id in range(1,174):
+    for order_id in range(0,174):
         appear_shop_id = []
         # shop_id = 0
         shop_id = orders[order_id][1]
@@ -214,6 +224,6 @@ def create_script_order_item():
             else:
                 appear_item_ids.append(item_id)
             quantity = random.randint(1,3)
-            print("insert into `order_item` (`order_id`, `item_id`, `quantity`) values ({}, {}, {});".format(order_id, item_id, quantity))
+            print("insert into `order_item` (`order_id`, `item_id`, `quantity`) values ({}, {}, {});".format(order_id+1, item_id, quantity))
 
-# create_script_order_item()
+create_script_order_item()
