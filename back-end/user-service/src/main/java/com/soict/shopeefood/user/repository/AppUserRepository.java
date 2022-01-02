@@ -20,6 +20,9 @@ public interface AppUserRepository extends JpaRepository<AppUser, Long> {
     @Query(value = "select u from AppUser u where u.username = ?1")
     List<AppUser> findAllByUsername(String username);
 
+    @Query(value = "select u from AppUser u where u.id = ?1")
+    List<AppUser> getById(Long id);
+
     @Transactional
     @Modifying
     @Query(value = "update AppUser u set u.authenToken = ?1 where u.username = ?2")

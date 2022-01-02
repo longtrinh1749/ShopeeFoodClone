@@ -16,6 +16,8 @@ public interface ShopService {
 
     Page<Shop> findAllByPage(Pageable pageable);
 
+    List<Shop> findByOwnerId(Integer shopOwnerId);
+
     Page<Shop> findByNameAndAddress(String name, Pageable pageable);
 
     Page<Shop> findByDistrict(List<Integer> districtList, Pageable pageable);

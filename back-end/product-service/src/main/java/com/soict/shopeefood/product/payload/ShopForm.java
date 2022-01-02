@@ -12,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ShopForm {
     private Integer shopId;
+    private Integer shopOwnerId;
     private Integer districtId;
     private String shopName;
     private String imgUrl;

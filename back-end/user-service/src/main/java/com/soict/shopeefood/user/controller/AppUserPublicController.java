@@ -61,7 +61,7 @@ public class AppUserPublicController {
     @GetMapping(value = "/users-with-role")
     public ResponseEntity<JsonResult> getUsersByRole(@RequestParam("role") String role) {
         log.info("Get all users");
-        List<AppUser> users = appUserService.getUsersByRole(role);
+        List<AppUser> users = appUserService.findByRole(role);
         for (AppUser u: users) {
             u.setAuthenToken(null);
             u.setPassword(null);
@@ -69,6 +69,19 @@ public class AppUserPublicController {
         }
         if (users != null) {
             return ResponseEntity.ok(JsonResult.build("Found", users));
+        }
+        return ResponseEntity.badRequest().build();
+    }
+
+    @GetMapping(value = "/users/{id}")
+    public ResponseEntity<JsonResult> getUsersById(@PathVariable int id) {
+        log.info("Get user with id: " + id);
+        AppUser user = appUserService.findById(id);
+        if (user != null) {
+            user.setAuthenToken(null);
+            user.setPassword(null);
+            user.getProfile().setUser(null);
+            return ResponseEntity.ok(JsonResult.build("Found", user));
         }
         return ResponseEntity.badRequest().build();
     }

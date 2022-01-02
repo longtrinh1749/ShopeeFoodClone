@@ -1,43 +1,5 @@
 version: "3"
 services:
-  gallery-service:
-    image: gallery-service:1.0
-    command: "-Duser.timezone=GMT+0 -jar /gallery-service-1.0-SNAPSHOT.jar"
-    ports:
-      - "8100:8100"
-    networks:
-      - microservice-net
-    depends_on:
-      - service-mesh
-    environment:
-      _JAVA_OPTIONS: "-Xms1000m -Xmx1500m"
-      SERVER_PORT: "8100"
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-      restart_policy:
-        condition: on-failure
-
-  image-service:
-    image: image-service:1.0
-    command: "-Duser.timezone=GMT+0 -jar /image-service-1.0-SNAPSHOT.jar"
-    networks:
-      - microservice-net
-    depends_on:
-      - service-mesh
-    environment:
-      _JAVA_OPTIONS: "-Xms1000m -Xmx1500m"
-      SERVER_PORT: "8200"
-    deploy:
-      replicas: 1
-      update_config:
-        parallelism: 1
-        delay: 10s
-      restart_policy:
-        condition: on-failure
-
   user-service:
     image: user-service:1.0
     command: "-Duser.timezone=GMT+0 -jar /user-service-1.0-SNAPSHOT.jar"
@@ -71,6 +33,27 @@ services:
     environment:
       _JAVA_OPTIONS: "-Xms1000m -Xmx1500m"
       SERVER_PORT: "8500"
+      SPRING_PROFILES_ACTIVE: "docker"
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  order-service:
+    image: order-service:1.0
+    command: "-Duser.timezone=GMT+0 -jar /order-service-1.0-SNAPSHOT.jar"
+    ports:
+      - "8600:8600"
+    networks:
+      - microservice-net
+    depends_on:
+      - service-mesh
+    environment:
+      _JAVA_OPTIONS: "-Xms1000m -Xmx1500m"
+      SERVER_PORT: "8600"
       SPRING_PROFILES_ACTIVE: "docker"
     deploy:
       replicas: 1

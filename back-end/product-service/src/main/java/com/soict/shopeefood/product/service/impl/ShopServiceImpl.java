@@ -7,6 +7,7 @@ import com.soict.shopeefood.product.repo.DistrictRepo;
 import com.soict.shopeefood.product.repo.ShopCategoryRepo;
 import com.soict.shopeefood.product.repo.ShopRepo;
 import com.soict.shopeefood.product.service.ShopService;
+import com.soict.shopeefood.product.service.external.AppUserService;
 import org.hibernate.HibernateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +37,9 @@ public class ShopServiceImpl implements ShopService {
     @Autowired
     private ShopCategoryRepo shopCategoryRepo;
 
+    @Autowired
+    private AppUserService appUserService;
+
     @Override
     public Optional<Shop> findById(Integer shopId) {
         try {
@@ -64,6 +68,17 @@ public class ShopServiceImpl implements ShopService {
             return shopRepo.findAllByPage(pageable);
         } catch (Exception ex) {
             LOGGER.error("findAllByPage error", ex);
+            ex.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<Shop> findByOwnerId(Integer shopOwnerId) {
+        try {
+            return shopRepo.findByOwnerId(shopOwnerId);
+        } catch (Exception ex) {
+            LOGGER.error("findByOwner error", ex);
             ex.printStackTrace();
             return null;
         }
@@ -174,6 +189,7 @@ public class ShopServiceImpl implements ShopService {
                         shopCategoryRepo.saveAll(shopCategoryList);
                         return shopRepo.findById(sf.getShopId())
                                 .map(shop -> {
+                                    shop.setShopOwnerId(sf.getShopOwnerId());
                                     shop.setShopName(sf.getShopName());
                                     shop.setImgUrl(sf.getImgUrl());
                                     shop.setAddress(sf.getAddress());
@@ -197,6 +213,7 @@ public class ShopServiceImpl implements ShopService {
             District district = districtRepo.findById(sf.getDistrictId()).orElse(null);
             Shop shop = Shop.builder()
                     .shopName(sf.getShopName())
+                    .shopOwnerId(sf.getShopOwnerId())
                     .imgUrl(sf.getImgUrl())
                     .address(sf.getAddress())
                     .priceRange(sf.getPriceRange())

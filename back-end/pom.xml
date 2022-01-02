@@ -14,9 +14,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>gallery-service</module>
-        <module>gateway</module>
-        <module>image-service</module>
         <module>user-service</module>
         <module>product-service</module>
         <module>order-service</module>
