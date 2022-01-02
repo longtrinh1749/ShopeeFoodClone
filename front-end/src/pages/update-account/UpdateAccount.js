@@ -1,16 +1,37 @@
 import "./updateAccount.css";
 import axios from "axios";
 const UpdateAccount = (props) => {
-    function testHeader(){
-        let config = {
-            headers : {
-                Authorization: props.user.headerKey
-            } 
-        }
-        console.log(props)
-        console.log(props.headerKey);
-        axios.get('http://localhost:8400/v1/user', config).then((res)=> {console.log(res)})
+    // get user info from DB and set to front 
+//     address: "1 Tan Mai Hoang Mai Ha Noi"
+// avatarImgUrl: null
+// city: "Ha Noi"
+// district: "Hoang Mai"
+// email: "chimeara@gmail.com"
+// gender: "male"
+// name: "Trinh Long"
+// phone: "0859103016"
+// user: null
+// userId: 51
+function updateUI(name, gender, email, phone, city, district, address){
+        document.getElementById('name').value = name;
+            document.getElementById('gender').value =gender;
+            document.getElementById('email-update').innerHTML = email;
+            document.getElementById('phone').value = phone;
+            document.getElementById('city').value = city;
+            document.getElementById('district').value = district;
+            document.getElementById('address').value = address;
+}
+    let config = {
+        headers : {
+            Authorization: props.user.headerKey
+        } 
     }
+    axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/v1/user`, config)
+        .then((res)=> {
+            console.log(res.data.data)
+            const userInfo = res.data.data
+            updateUI(userInfo.name, userInfo.gender, userInfo.email, userInfo.phone, userInfo.city, userInfo.district, userInfo.address)
+        })
     function showUpdatePassword() {
         document.getElementsByClassName("password-row")[0].style.display = "none";
         document.getElementsByClassName("update-password")[0].style.display =
@@ -19,6 +40,23 @@ const UpdateAccount = (props) => {
             "table-row";
         document.getElementsByClassName("update-password")[2].style.display =
             "table-row";
+    }
+    // send update info req 
+    function updateInfo(){
+        const updateInfo = { 
+            name: document.getElementById('name').value,
+            gender: document.getElementById('gender').value,
+            phone: document.getElementById('phone').value,
+            city:  document.getElementById('city').value,
+            district:  document.getElementById('district').value,
+            address: document.getElementById('address').value
+        }
+        axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/v1/user`, updateInfo, config)
+            .then((res)=>{
+                console.log(res)
+                const userInfo = res.data.data
+            updateUI(userInfo.name, userInfo.gender, userInfo.email, userInfo.phone, userInfo.city, userInfo.district, userInfo.address)
+            })
     }
     return (
         <>
@@ -32,16 +70,16 @@ const UpdateAccount = (props) => {
                                 <tr>
                                     <td className="update-title">Tên</td>
                                     <td>
-                                        <input type="text" className="form-control"></input>
+                                        <input type="text" className="form-control" id="name"></input>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="update-title">Giới tính</td>
                                     <td>
-                                        <select name="gender" className="custom-select">
-                                            <option value="0">Không chọn</option>
-                                            <option value="1">Nam</option>
-                                            <option value="2">Nữ</option>
+                                        <select name="gender" id="gender" className="custom-select">
+                                            <option value="">Không chọn</option>
+                                            <option value="male">Nam</option>
+                                            <option value="female">Nữ</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -49,6 +87,24 @@ const UpdateAccount = (props) => {
                                     <td className="update-title">Email</td>
                                     <td>
                                         <span id="email-update">thanhtunga2cvp@gmail.com</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="update-title">Thành phố</td>
+                                    <td>
+                                        <input type="text" className="form-control" id="city"></input>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="update-title">Quận</td>
+                                    <td>
+                                        <input type="text" className="form-control" id="district"></input>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="update-title">Địa chỉ</td>
+                                    <td>
+                                        <input type="text" className="form-control" id="address"></input>
                                     </td>
                                 </tr>
                                 <tr className="password-row">
@@ -95,23 +151,23 @@ const UpdateAccount = (props) => {
                                 </tr>
                             </tbody>
                         </table>
-                        <button className="btn btn-blue-4 btn-block" onClick={testHeader}>Lưu thay đổi</button>
                     </div>
                     <div className="update-account-header">Quản lý số điện thoại</div>
                     <table>
                         <tbody>
                             <tr>
-                            <td className="update-title">Nhập lại mật khẩu mới</td>
+                            <td className="update-title">Số điện thoại</td>
                                 <td>
                                     <input
                                         type="text"
                                         className="form-control"
-                                        id="new-password"
+                                        id="phone"
                                     ></input>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <button className="btn btn-blue-4 btn-block" onClick={updateInfo}>Lưu thay đổi</button>
                 </div>
             </div>
         </>
