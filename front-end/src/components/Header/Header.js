@@ -99,6 +99,9 @@ const User = (props) => {
     function moveToOrderHistory(){
         navigate('/order-history')
     }
+    function moveToVoucherList(){
+        navigate('/voucher')
+    }
     return (
         <div className="dropdown">
             <button
@@ -119,7 +122,7 @@ const User = (props) => {
                     </a>
                 </li>
                 <li>
-                    <a className="dropdown-item" href="/">
+                    <a className="dropdown-item" onClick={moveToVoucherList}>
                         <i className="fa fa-gift" aria-hidden="true"></i>Ví
                         voucher
                     </a>

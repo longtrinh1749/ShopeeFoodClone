@@ -11,6 +11,7 @@ import Signup from "./pages/signup/Signup";
 import UpdateAccount from "pages/update-account/UpdateAccount";
 import Shop from "./pages/shop/shop";
 import OrderHistory from "pages/order-history/OrderHistory";
+import VoucherList from "pages/voucher-list/VoucherList";
 function App() {
   const [user, setUser] = useState({
     username: '',
@@ -36,6 +37,7 @@ function App() {
             <Route path="profile" element={<UpdateAccount user = {user}/>} /> 
             <Route path="order-history" element={<OrderHistory user= {user}/>} /> 
             <Route path="shop/:shopUrl" element = {<Shop/>} />
+            <Route path="voucher" element={<VoucherList user = {user}/>} /> 
         </Routes>
       </BrowserRouter>
       <Footer />
