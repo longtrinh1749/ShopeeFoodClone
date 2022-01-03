@@ -1,20 +1,24 @@
-import { useOrderShop, useOrderUser, useUpdateOrderStatus } from "api/shipper";
+import { useOrderFullInfo, useOrderShop, useOrderUser, useShopItemAll, useUpdateOrderStatus } from "api/shipper";
 import { useStore } from "hook/useStore";
 import React, { useEffect, useState } from "react";
-import { log } from "react-modal/lib/helpers/ariaAppHider";
 import { useDispatch } from "react-redux";
-import { getOrderCustomer, reloadData } from "redux/actions/shipper";
+import { getItemAll, reloadData } from "redux/actions/shipper";
 
 export const OrderModal = ({ tabId }) => {
     const dispatch = useDispatch();
     const { order } = useStore("Shipper", "orderDetailReducer");
+    const { itemList } = useStore("Shipper", "itemReducer");
     const { execute: executeUser } = useOrderUser(order.customerId)();
     const { execute: executeShop } = useOrderShop(order.shopId)();
+    const { execute: executeShopItemAll } = useShopItemAll();
+    const { execute: executeFullInfo } = useOrderFullInfo(order.orderId)();
     const [shop, setShop] = useState(null);
     const [customer, setCustomer] = useState(null);
+    const [ itemId, setItemId ] = useState([]);
 
     const { execute: executeOrderStatus } = useUpdateOrderStatus();
 
+    // console.log(order);
     useEffect(() => {
         if (order.customerId !== 0) {
             executeUser({
@@ -27,6 +31,23 @@ export const OrderModal = ({ tabId }) => {
             executeShop({
                 cbSuccess: (res) => {
                     setShop(res.data);
+                },
+            });
+        }
+        if (order.orderId !== 0) {
+            executeFullInfo({
+                cbSuccess: (res) => {
+                    // let data = res.data;
+                    setItemId(res.data.salesList)
+                    // setShop(res.data);
+                },
+            });
+            executeShopItemAll({
+                params : {
+                    shopId: order.shopId,
+                },
+                cbSuccess: (res) => {
+                    dispatch(getItemAll({ itemList : res.data }));
                 },
             });
         }
@@ -98,6 +119,23 @@ export const OrderModal = ({ tabId }) => {
                                     <td>{order?.deliveryAddress}</td>
                                     <td></td>
                                     <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Lưu ý</td>
+                                    <td>{order?.note}</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Danh sách đơn hàng</td>
+                                    <td colSpan={3}>{
+                                        itemId.map((value, index) => {
+                                            let itemInfo = itemList.find((i) => i.itemId === value.salesId.itemId);
+                                            return (
+                                                <div key={index}>{itemInfo?.itemName} x {value?.quantity}</div>
+                                            )
+                                        })
+                                    }</td>
                                 </tr>
                                 <tr>
                                     <td>Ship</td>

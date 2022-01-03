@@ -50,3 +50,31 @@ export const useUpdateOrderStatus = buildXHR(
     },
     AXIOS_ORDER_INSTANCE
 );
+
+export const useOrderFullInfo = (id) => {
+    return buildXHR(
+        {
+            url: `/api/v1/public/order/full-info/${id}`,
+            method: "GET",
+        },
+        AXIOS_ORDER_INSTANCE
+    );
+};
+
+export const useShopItemById = (id) => {
+    return buildXHR(
+        {
+            url: `/api/v1/public/item/${id}`,
+            method: "GET",
+        },
+        AXIOS_SHOP_INSTANCE
+    );
+};
+
+export const useShopItemAll = buildXHR(
+    {
+        url: "/api/v1/public/item/shop",
+        method: "GET",
+    },
+    AXIOS_SHOP_INSTANCE
+);

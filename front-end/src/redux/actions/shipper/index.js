@@ -41,3 +41,24 @@ export function changeTabId(payload) {
         payload,
     };
 }
+
+export function getOrderFullInfo(payload) {
+    return {
+        type: SHIPPER_LABELS.ORDER_FULL_INFO,
+        payload,
+    };
+}
+
+export function getItemInOrder(payload) {
+    return {
+        type: SHIPPER_LABELS.GET_ITEM_IN_ORDER,
+        payload,
+    };
+}
+
+export function getItemAll(payload) {
+    return {
+        type: SHIPPER_LABELS.GET_ITEM_ALL,
+        payload,
+    };
+}

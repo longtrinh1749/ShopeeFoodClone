@@ -42,7 +42,6 @@ export function orderReloadReducer(
     }
 }
 
-
 const initialStateTabID = {
     tabId: 1,
 };
@@ -53,6 +52,27 @@ export function orderTabReducer(
 ) {
     switch (type) {
         case SHIPPER_LABELS.CHANGE_TAB_ID: {
+            return {
+                ...state,
+                ...payload,
+            };
+        }
+        default: {
+            return state;
+        }
+    }
+}
+
+const initialStateFullInfo = {
+    fullInfo: [],
+};
+
+export function orderFullInfoReducer(
+    state = initialStateFullInfo,
+    { type, payload }
+) {
+    switch (type) {
+        case SHIPPER_LABELS.ORDER_FULL_INFO: {
             return {
                 ...state,
                 ...payload,

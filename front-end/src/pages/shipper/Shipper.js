@@ -1,6 +1,5 @@
 import { useStore } from "hook/useStore";
 import { useEffect } from "react";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { changeTabId, reloadData } from "redux/actions/shipper";
 import { OrderModal } from "./atoms/OrderModal";

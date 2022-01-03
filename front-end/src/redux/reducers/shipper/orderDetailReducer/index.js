@@ -4,6 +4,7 @@ const initialState = {
     order: {
         "customerId" : 0,
         "shopId" : 0,
+        "orderId" : 0,
     },
 };
 
