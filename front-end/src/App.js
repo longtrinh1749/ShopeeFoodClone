@@ -14,7 +14,8 @@ import OrderHistory from "pages/order-history/OrderHistory";
 function App() {
   const [user, setUser] = useState({
     username: '',
-    headerKey: ''
+    headerKey: '',
+    id: ''
   });
   return (
     <>
@@ -32,7 +33,7 @@ function App() {
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
             <Route path="profile" element={<UpdateAccount user = {user}/>} /> 
-            <Route path="order-history" element={<OrderHistory/>} /> 
+            <Route path="order-history" element={<OrderHistory user= {user}/>} /> 
             <Route path="shop/:shopUrl" element = {<Shop/>} />
         </Routes>
       </BrowserRouter>

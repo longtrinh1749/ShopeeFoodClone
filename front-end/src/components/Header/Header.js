@@ -89,11 +89,15 @@ const User = (props) => {
     function logout() {
         props.setUser({
             username:'',
-            headerKey: ''
+            headerKey: '',
+            id: ''
         });
     }
     function moveToUpdate(){
         navigate('/profile')
+    }
+    function moveToOrderHistory(){
+        navigate('/order-history')
     }
     return (
         <div className="dropdown">
@@ -106,7 +110,7 @@ const User = (props) => {
             </button>
             <ul className="dropdown-menu">
                 <li>
-                    <a className="dropdown-item" href="/">
+                    <a className="dropdown-item" onClick={moveToOrderHistory}>
                         <i
                             className="fa fa-shopping-cart"
                             aria-hidden="true"

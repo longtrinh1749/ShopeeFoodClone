@@ -11,3 +11,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+li {
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+ }
+ .modal-row{
+     width: 700px;
+ }
+ /* .big-col{
+     width: 30%;
+ } */
