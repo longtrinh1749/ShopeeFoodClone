@@ -1,6 +1,7 @@
 import './shop.scss'
 import { Container, Row, Col, Breadcrumb, Button } from 'react-bootstrap';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import Modal from 'react-bootstrap/Modal';
 import ItemShop from '../../components/ItemShop/ItemShop';
 
@@ -20,10 +21,66 @@ const Shop = () => {
     const handleOrderClose = () => setOrderShow(false);
     const handleOrderShow = () => setOrderShow(true);
 
+    const [showDiscount, setDiscountShow] = useState(false);
+    const handleDiscountClose = () => setDiscountShow(false);
+    const handleDiscountShow = () => setDiscountShow(true);
+
+    const shopId = window.location.href.substring(window.location.href.lastIndexOf("-") + 1);
+    var sections = [
+        {
+            sectionName: "alo",
+            sectionId: 111,
+        }
+    ];
+
+    useEffect(() => {
+        getShopData();
+        getShopSection();
+        getShopItemData();
+    });
+
+    function getShopData() {
+        axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/shop/` + shopId)
+            .then((response) => {
+                let shop = response.data.data;
+                document.getElementById('breadcrum-shop-name').innerHTML = `<a role="button" tabindex="0">` + shop.shopName + `</a>`;
+                document.getElementsByClassName('name-restaurant')[0].innerHTML = shop.shopName;
+                document.getElementsByClassName('address-restaurant')[0].innerHTML = shop.address;
+                document.getElementsByClassName('cost-restaurant')[0].innerHTML = `<i class="fas fa-dollar-sign"></i>` + shop.priceRange;
+
+            })
+            .catch(function (error) {
+                console.log(error)
+            });
+    }
+
+    function getShopSection() {
+        axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/section/shop?shopId=` + shopId)
+            .then((response) => {
+                sections = response.data.data;
+            })
+            .catch(function (error) {
+                console.log(error)
+            });
+    }
+    
+    function getShopItemData() {
+
+    }
+
     function openOrderModal() {
         if (1) {
             handleOrderShow();
         }
+    }
+
+    function viewMyCode() {
+        handleDiscountShow();
+    }
+
+    function applyDiscountCode() {
+        handleDiscountClose();
+        console.log(document.getElementsByClassName("modal-order-discount-code")[0].innerHTML);
     }
 
     return (
@@ -39,7 +96,7 @@ const Shop = () => {
                                 <Breadcrumb className="breadcrumb">
                                     <Breadcrumb.Item className="breadcrumb-link">Home</Breadcrumb.Item>
                                     <Breadcrumb.Item className="breadcrumb-link">Hanoi</Breadcrumb.Item>
-                                    <Breadcrumb.Item className="breadcrumb-link">Bún Bò Đất Thánh - Shop Online</Breadcrumb.Item>
+                                    <Breadcrumb.Item className="breadcrumb-link" id='breadcrum-shop-name'>Bún Bò Đất Thánh - Shop Online</Breadcrumb.Item>
                                 </Breadcrumb>
                             </Row>
                             <Row className='kind-restaurant'>Shop Online</Row>
@@ -50,7 +107,7 @@ const Shop = () => {
                                 <Col md={2} className="opentime">Mở Cửa</Col>
                                 <Col className="time"><i class="far fa-clock"></i>06:00 - 22:00</Col>
                             </Row>
-                            <Row className="cost-restaurant"><i class="fas fa-dollar-sign"></i>15,000 - 50,000</Row>
+                            <Row className="cost-restaurant"><i class="fas fa-dollar-sign"></i></Row>
 
                         </Col>
                     </Row>
@@ -64,9 +121,9 @@ const Shop = () => {
                             <Container className="menu-restaurant-container">
                                 <Row>
                                     <Col md={2} className="menu-restaurant-category">
-                                        <Row className="item-link">MÓN ĐANG GIẢM</Row>
-                                        <Row className="item-link">MÓN CHÍNH</Row>
-                                        <Row className="item-link">COMBO</Row>
+                                        {sections.map((section) => (
+                                            <div key={section.sectionId} className="item-link">{section.sectionName}</div>  
+                                        ))}
                                     </Col>
                                     <Col md={7} className="menu-restaurant-detail">
                                         <Row className="promotion-order">
@@ -94,7 +151,7 @@ const Shop = () => {
                                                     <span className="name-order"> Trà xanh rau câu</span>
                                                 </Row>
                                                 <Row className='note-order'>
-                                                    <input type="text" id="txtNote" placeholder="Thêm ghi chú..."/>
+                                                    <input type="text" id="txtNote" placeholder="Thêm ghi chú..." />
                                                     <span class="price-order">30,400đ</span>
                                                 </Row>
                                             </Row>
@@ -106,7 +163,7 @@ const Shop = () => {
                                                     <span className="name-order"> Trà xanh rau câu</span>
                                                 </Row>
                                                 <Row className='note-order'>
-                                                    <input type="text" id="txtNote" placeholder="Thêm ghi chú..."/>
+                                                    <input type="text" id="txtNote" placeholder="Thêm ghi chú..." />
                                                     <span class="price-order">30,400đ</span>
                                                 </Row>
                                             </Row>
@@ -118,7 +175,7 @@ const Shop = () => {
                                                     <span className="name-order"> Trà xanh rau câu</span>
                                                 </Row>
                                                 <Row className='note-order'>
-                                                    <input type="text" id="txtNote" placeholder="Thêm ghi chú..."/>
+                                                    <input type="text" id="txtNote" placeholder="Thêm ghi chú..." />
                                                     <span class="price-order">30,400đ</span>
                                                 </Row>
                                             </Row>
@@ -190,19 +247,25 @@ const Shop = () => {
                                         <Row className='title-order'>Chi tiết đơn hàng</Row>
                                         <Row className='order-list'>
                                             <Row className='order-item'>
-                                                <Col md={1} className='order-item-number'>2</Col>
+                                                <Col md={1} className='order-item-number'>1</Col>
                                                 <Col md={9} className='order-item-info'>Bún Bò Giò Heo Thịt Chả + Nước Ép Dưa Hấu</Col>
                                                 <Col className='order-item-price'>100000đ</Col>
                                             </Row>
                                             <Row className='order-item'>
-                                                <Col md={1} className='order-item-number'>3</Col>
+                                                <Col md={1} className='order-item-number'>2</Col>
                                                 <Col md={9} className='order-item-info'>Bún Bò Giò Heo Thịt Chả</Col>
                                                 <Col className='order-item-price'>100000đ</Col>
                                             </Row>
                                         </Row>
                                         <Row className='info-order'>
-                                            <Col className='info-order-left'>Tổng cộng <b>3</b> phần</Col>
-                                            <Col className='info-order-right'><b>200000đ</b></Col>
+                                            <Row className='info-order-row'>
+                                                <Col className='info-order-left'>Tổng cộng <b>3</b> phần</Col>
+                                                <Col className='info-order-right'><b>200000đ</b></Col>
+                                            </Row>
+                                            <Row className='info-order-row'>
+                                                <Col className='info-order-left'>Mã khuyến mãi</Col>
+                                                <Col className='info-order-right'><b>-0đ</b></Col>
+                                            </Row>
                                         </Row>
                                         <Row className='discount-code'>
                                             <Col md={9} className='discount-code-left'>
@@ -211,12 +274,16 @@ const Shop = () => {
                                                 <button type="button">Áp dụng</button>
                                             </Col>
                                             <Col className='discount-code-right'>
-                                                <span className="txt-blue">View my code</span>
-                                                <i aria-hidden="true"></i>
+                                                <span className="txt-blue" onClick={viewMyCode}>View my code</span>
+                                                <i aria-hidden="true" onClick={viewMyCode}></i>
                                             </Col>
                                         </Row>
+                                        <Row className='final-price'>
+                                            <Col className='final-price-left'>Tổng cộng <b>3</b> phần</Col>
+                                            <Col className='final-price-right'><b>200000đ</b></Col>
+                                        </Row>
                                         <Row className='payment-method'>
-                                            <Col md={10} className='payment-method-left'><span className="text">Ví ShopeePay</span></Col>
+                                            <Col md={10} className='payment-method-left'><span className="text">Tiền Mặt</span></Col>
                                             <Col className='payment-method-right'>
                                                 <span className="txt-blue">Thay đổi</span>
                                                 <i aria-hidden="true"></i>
@@ -239,6 +306,52 @@ const Shop = () => {
                         </Modal.Footer>
                     </Modal>
                 </div>
+            </div>
+            <div className='discount-modal'>
+                <Modal
+                    show={showDiscount}
+                    onHide={handleDiscountClose}
+                    backdrop="static"
+                    keyboard={false}
+                    className='discount-modal'
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title>Mã khuyến mãi</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Container>
+                            <Row className='modal-order-discount-row'>
+                                <Col md={1} className='modal-order-discount-icon'></Col>
+                                <Col className='modal-order-discount-code'>SIEUTIEC10</Col>
+                                <Col className='modal-order-discount-price'>Giảm giá: <span className='price'>10,000đ</span></Col>
+                                <Col className='modal-order-discount-minprice'>Đặt tối thiểu: <span className='price'>20,000đ</span></Col>
+                                <Col className='modal-order-discount-apply'>
+                                    <button onClick={applyDiscountCode}>Áp dụng</button>
+                                </Col>
+                            </Row>
+                            <Row className='modal-order-discount-row'>
+                                <Col md={1} className='modal-order-discount-icon'></Col>
+                                <Col className='modal-order-discount-code'>SIEUTIEC10</Col>
+                                <Col className='modal-order-discount-price'>Giảm giá: <span className='price'>10,000đ</span></Col>
+                                <Col className='modal-order-discount-minprice'>Đặt tối thiểu: <span className='price'>20,000đ</span></Col>
+                                <Col className='modal-order-discount-apply'>
+                                    <button onClick={applyDiscountCode}>Áp dụng</button>
+                                </Col>
+                            </Row>
+                            <Row className='modal-order-discount-row'>
+                                <Col md={1} className='modal-order-discount-icon'></Col>
+                                <Col className='modal-order-discount-code'>SIEUTIEC10</Col>
+                                <Col className='modal-order-discount-price'>Giảm giá: <span className='price'>10,000đ</span></Col>
+                                <Col className='modal-order-discount-minprice'>Đặt tối thiểu: <span className='price'>20,000đ</span></Col>
+                                <Col className='modal-order-discount-apply'>
+                                    <button onClick={applyDiscountCode}>Áp dụng</button>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Modal.Body>
+                    <Modal.Footer>
+                    </Modal.Footer>
+                </Modal>
             </div>
         </div>
     );

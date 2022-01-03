@@ -1,7 +1,7 @@
 .detail-restaurant-part {
     background-color: white;
     .detail-restaurant {
-        margin-top: 70px;
+        margin-top: 40px;
         padding: 30px;
         .detail-restaurant-img {
             width: 480px;
@@ -299,6 +299,7 @@
             }
             width: 885px;
             .order-left {
+                margin-top: 5px;
                 font-size: 15px;
                 .direction-from {
                     padding: 5px 0;
@@ -336,7 +337,7 @@
                     background-color: #cf2127;
                     margin: auto;
                     position: absolute;
-                    top: 14px;
+                    top: 19px;
                     left: 9px;
                 }
                 .direction-to {
@@ -362,7 +363,7 @@
                     border-radius: 50%;
                     background-color: #6cc942;
                     position: absolute;
-                    top: 62px;
+                    top: 67px;
                     left: 9px;
                 }
             }
@@ -411,12 +412,16 @@
                 .info-order {
                     border-top: 7px solid #d7d7d7;
                     padding: 4px 10px;
+                    .info-order-row {
+                        padding-right: 0;
+                    }
                     .info-order-left {
                         text-align: left;
                         padding-left: 0px;
                         font-size: 15px;
                     }
                     .info-order-right {
+                        padding-right: 0px;
                         text-align: right;
                         font-size: 15px;
                     }
@@ -471,6 +476,21 @@
                             padding: 3px;
                             float: right !important;
                             margin-top: 8px;
+                        }
+                    }
+                }
+                .final-price{
+                    .final-price-left{
+                        font-size: 17px!important;
+                        font-weight: 700!important;
+                        padding: 5px 0px 5px 10px;
+                    }
+                    .final-price-right{
+                        font-size: 17px!important;
+                        padding: 5px 20px 5px 10px;
+                        text-align: right;
+                        b {
+                            font-size: 20px;
                         }
                     }
                 }
@@ -555,4 +575,84 @@
         }
         
     }
+}
+
+.discount-modal {
+    .modal-dialog{
+        .modal-content{
+            width: 873px;
+            .modal-header{
+                padding: 10px 15px;
+                font-size: 14px;
+                font-weight: 600;
+                color: #363636;
+                background: #ebebeb;
+            }
+            .modal-body{
+                .modal-order-discount-row {
+                    display: flex;
+                    font-size: .75rem;
+                    border-bottom: 1px solid #f0f0f0;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+                    background: #fff;
+                    padding-bottom: 10px;
+                    .modal-order-discount-icon {
+                        width: 32px;
+                        height: 32px;
+                        background: hsla(0,0%,7%,.56);
+                        border-radius: 50%;
+                        font-size: 32px;
+                        color: #fff;
+                        padding: 8px 5px;
+                    }
+                    .modal-order-discount-icon::before {
+                        content: "\E90A";
+                    }
+                    .modal-order-discount-code {
+                        padding: 8px 5px;
+                        flex: 1 1;
+                        font-size: 14px;
+                        color: #111;
+                        font-weight: 600;
+                    }
+                    .modal-order-discount-price {
+                        padding: 8px 5px;
+                        flex: 1 1;
+                        font-size: 14px;
+                        .price {
+                            color: #00a2d3;
+                            font-weight: 600;
+                        }
+                    }
+                    .modal-order-discount-minprice {
+                        padding: 8px 5px;
+                        flex: 1 1;
+                        font-size: 14px;
+                        .price {
+                            color: #363636;
+                            font-weight: 600;
+                        }
+                    }
+                    .modal-order-discount-apply{
+                        text-align: right;
+                        padding: 8px 5px;
+                        flex: 1 1;
+                        font-size: 14px;
+                        button{
+                            cursor: pointer;
+                            border-radius: 4px;
+                            width: 100px;
+                            background: #fff;
+                            border: 1px solid #5aa953;
+                            color: #5aa953;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
