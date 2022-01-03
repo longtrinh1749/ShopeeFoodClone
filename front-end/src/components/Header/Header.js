@@ -60,7 +60,7 @@ const Navbar = () => {
                 <li className="active">
                     <a href="/">Đồ ăn</a>
                 </li>
-                <li>
+                {/* <li>
                     <a href="/">Thực phẩm</a>
                 </li>
                 <li>
@@ -68,7 +68,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <a href="/">Thuốc</a>
-                </li>
+                </li> */}
             </ul>
         </div>
     );
