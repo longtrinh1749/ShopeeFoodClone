@@ -1,0 +1,13 @@
+.small-text{
+    font-size: small;
+}
+.order-shop-name{
+    font-size: 12px;
+    font-weight: bolder;
+    
+}
+.order-shop-address{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import Signup from "./pages/signup/Signup";
 import UpdateAccount from "pages/update-account/UpdateAccount";
 import Shop from "./pages/shop/shop";
-
+import OrderHistory from "pages/order-history/OrderHistory";
 function App() {
   const [user, setUser] = useState({
     username: '',
@@ -32,6 +32,7 @@ function App() {
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
             <Route path="profile" element={<UpdateAccount user = {user}/>} /> 
+            <Route path="order-history" element={<OrderHistory/>} /> 
             <Route path="shop/:shopUrl" element = {<Shop/>} />
         </Routes>
       </BrowserRouter>

@@ -26,7 +26,7 @@ const Signup = (props) => {
             email: email,
             phone: phone,
         };
-        console.log(registerInfo);
+        // console.log(registerInfo);
         if (
             name === "" ||
             gender === "" ||
@@ -41,6 +41,7 @@ const Signup = (props) => {
             document.getElementsByClassName("alert-danger")[0].style.display =
                 "block";
         } else {
+            console.log("sending info")
             axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/v1/public/register`, registerInfo)
           .then( (response)=>{
             console.log(response);
@@ -96,7 +97,7 @@ const Signup = (props) => {
                             ></input>
                         </div>
                         <div className="input-group">
-                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <i className="fa fa-users" aria-hidden="true"></i>
                             <select id="role" defaultValue="" autoComplete="off">
                                 <option value="" disabled hidden>Vai trò</option>
                                 <option value="SELLER">Người mua</option>

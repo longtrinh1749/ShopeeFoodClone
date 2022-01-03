@@ -2,16 +2,6 @@ import "./updateAccount.css";
 import axios from "axios";
 const UpdateAccount = (props) => {
     // get user info from DB and set to front 
-//     address: "1 Tan Mai Hoang Mai Ha Noi"
-// avatarImgUrl: null
-// city: "Ha Noi"
-// district: "Hoang Mai"
-// email: "chimeara@gmail.com"
-// gender: "male"
-// name: "Trinh Long"
-// phone: "0859103016"
-// user: null
-// userId: 51
 function updateUI(name, gender, email, phone, city, district, address){
         document.getElementById('name').value = name;
             document.getElementById('gender').value =gender;
