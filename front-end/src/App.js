@@ -15,7 +15,8 @@ function App() {
   const [user, setUser] = useState({
     username: '',
     headerKey: '',
-    id: ''
+    id: '',
+    role:''
   });
   return (
     <>

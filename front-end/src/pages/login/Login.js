@@ -14,12 +14,13 @@ const Login = (props) => {
         console.log(process.env.REACT_APP_SERVER_ADDRESS)
         axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8400/auth`, authenInfo)
           .then( (response)=>{
-            console.log(response.data.token);
+            console.log(response.data);
             document.getElementsByClassName("alert-danger")[0].style.display = "none";
             props.setUser({
                 username: username,
                 headerKey: response.data.token,
-                id : ''
+                id : '',
+                role: response.data.role
             });
             let config = {
                 headers : {
@@ -33,7 +34,8 @@ const Login = (props) => {
                     props.setUser({
                         username: username,
                         headerKey: response.data.token,
-                        id : res.data.data.userId
+                        id : res.data.data.userId,
+                        role: response.data.role
                     });
                 })
             // phân luồng người dùng ở đây
