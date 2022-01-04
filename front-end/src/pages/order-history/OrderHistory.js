@@ -6,7 +6,7 @@ const OrderHistory = (props) => {
   const [ordersInfo, setordersInfo] = useState([]);
 
     useEffect(() => {
-      if ( props.user.role == "USER")
+      if ( props.user.role === "USER")
       axios
     .get(
       `${process.env.REACT_APP_SERVER_ADDRESS}:8600/api/v1/public/order/customer/${props.user.id}`
@@ -44,9 +44,9 @@ const OrderHistory = (props) => {
             <div className="history-table-cell">Nhân viên</div>
             <div className="history-table-cell">Tổng tiền</div>
             <div className="history-table-cell">Trạng thái</div>
-            <div className="history-table-cell">Chi tiết</div>
+            <div className="history-table-cell">Hành động</div>
           </div>
-          {ordersInfo.map((order, index) =>(<Order key={index} index={index} order={order}></Order>) )} 
+          {ordersInfo.map((order, index) =>(<Order key={index} index={index} order={order} role ={props.user.role}></Order>) )} 
         </div>
       </div>
     </div>
