@@ -35,7 +35,7 @@ const ConfirmedOrder = ({shipperId}) => {
                 </tr>
             </thead>
             <tbody>
-                <ConfirmedOrderList orderList={orderList} shipperId={shipperId} />
+                <ConfirmedOrderList orderList={orderList} shipperId={shipperId}/>
             </tbody>
 
         </table>
