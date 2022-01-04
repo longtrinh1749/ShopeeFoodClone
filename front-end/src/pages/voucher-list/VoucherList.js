@@ -4,16 +4,19 @@ import axios from "axios";
 import Voucher from './sub-component/Voucher';
 const VoucherList = (props) =>{
     const [vouchersInfo, setvouchersInfo] = useState([]);
+    let formattedRole = 'user';
+    console.log(props.user.role)
     useEffect(() => {
         let params = {
-            applyType: 'user',
+            applyType: props.user.role,
             applyToId: props.user.id
         }
         axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8600/api/v1/public/voucher/applied`, {
             params
         }).then((res)=>{
             console.log(res.data.data)
-            setvouchersInfo(res.data.data)
+            if ( res.data.data == 'voucher not found not existed') setvouchersInfo([]);
+            else setvouchersInfo(res.data.data)
         });
       }, []);
     return (

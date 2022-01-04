@@ -12,7 +12,7 @@ const OrderHistory = (props) => {
     .then((res) => {
       console.log(res.data.data);
       if ( res.data.data === 'order not found not existed') setordersInfo([])
-      setordersInfo(res.data.data)
+      else setordersInfo(res.data.data)
     });
     }, []);
   return (
