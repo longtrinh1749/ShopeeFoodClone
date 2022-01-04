@@ -332,7 +332,7 @@ const Shop = (props) => {
                                             </Row>
                                             <Row className='info-order-row'>
                                                 <Col className='info-order-left'>Mã khuyến mãi</Col>
-                                                <Col className='info-order-right'><b>-{numberWithCommas(applyVoucher.discount)}đ</b></Col>
+                                                <Col className='info-order-right'><b>-{applyVoucher.discount}đ</b></Col>
                                             </Row>
                                         </Row>
                                         <Row className='discount-code'>
