@@ -185,7 +185,7 @@ const Shop = (props) => {
                             <Row className="rating"><span className="rating-number">50+</span>đánh giá trên ShopeeFood</Row>
                             <Row className="status-restaurant">
                                 <Col md={2} className="opentime">Mở Cửa</Col>
-                                <Col className="time"><i class="far fa-clock"></i>06:00 - 22:00</Col>
+                                <Col className="time"><i className="far fa-clock"></i>06:00 - 22:00</Col>
                             </Row>
                             <Row className="cost-restaurant"><i class="fas fa-dollar-sign"></i>{shop.priceRange}</Row>
 

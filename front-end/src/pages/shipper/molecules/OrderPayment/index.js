@@ -39,7 +39,7 @@ const OrderPayment = () => {
             <div className="order_payment-note">
                 <div className="note-title">Ghi chú</div>
                 <div className="note">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
 

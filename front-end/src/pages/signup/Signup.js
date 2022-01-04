@@ -100,9 +100,9 @@ const Signup = (props) => {
                         <i className="fa fa-users" aria-hidden="true"></i>
                             <select id="role" defaultValue="" autoComplete="off">
                                 <option value="" disabled hidden>Vai trò</option>
-                                <option value="SELLER">Người mua</option>
-                                <option value="DRIVER">Người bán</option>
-                                <option value="USER">Shipper</option>
+                                <option value="USER">Người mua</option>
+                                <option value="SELLER">Người bán</option>
+                                <option value="DRIVER">Shipper</option>
                             </select>
                         </div>
                         <div className="input-group">

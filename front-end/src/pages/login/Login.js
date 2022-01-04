@@ -39,7 +39,19 @@ const Login = (props) => {
                     });
                 })
             // phân luồng người dùng ở đây
-            navigate('/home');
+            switch(response.data.role) {
+                case "USER": 
+                    navigate("/home");
+                    break;
+                case "SELLER":
+                    navigate("/owner");
+                    break;
+                case "DRIVER":
+                    navigate("/shipper");
+                    break;
+                default:
+                    console.log(response.data.role)
+            }
           })
           .catch(function (error) {
               console.log(error)

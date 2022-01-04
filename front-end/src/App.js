@@ -6,12 +6,14 @@ import Footer from "./components/Footer/Footer";
 import Search from "./pages/search/Search";
 import Login from "./pages/login/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Signup from "./pages/signup/Signup";
 import UpdateAccount from "pages/update-account/UpdateAccount";
 import Shop from "./pages/shop/shop";
 import OrderHistory from "pages/order-history/OrderHistory";
 import VoucherList from "pages/voucher-list/VoucherList";
+import Shipper from "pages/shipper/Shipper";
+import Owner from "pages/owner";
 function App() {
   const [user, setUser] = useState({
     username: '',
@@ -34,10 +36,19 @@ function App() {
             <Route path="signup" element = {<Signup/>} />
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
+<<<<<<< HEAD
             <Route path="profile" element={<UpdateAccount user = {user}/>} /> 
             <Route path="order-history" element={<OrderHistory user= {user}/>} /> 
             <Route path="shop/:shopUrl" element = {<Shop user = {user}/>} />
             <Route path="voucher" element={<VoucherList user = {user}/>} /> 
+=======
+            <Route path="profile" element={<UpdateAccount user = {user}/>} />
+            <Route path="order-history" element={<OrderHistory user= {user}/>} />
+            <Route path="shop/:shopUrl" element = {<Shop/>} />
+            <Route path="voucher" element={<VoucherList user = {user}/>} />
+            <Route path="shipper" element={<Shipper shipperId={user.id}/>} />
+            <Route path="owner" element={<Owner user= {user}/>} />
+>>>>>>> cff559847c6cc6424256ab6fe95d22a3ecf01474
         </Routes>
       </BrowserRouter>
       <Footer />
