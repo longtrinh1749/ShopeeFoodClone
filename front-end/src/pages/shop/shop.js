@@ -3,10 +3,13 @@ import { Container, Row, Col, Breadcrumb, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import Modal from 'react-bootstrap/Modal';
+import { useNavigate } from 'react-router-dom';
 import ItemShop from '../../components/ItemShop/ItemShop';
 
 
 const Shop = (props) => {
+    const navigate = useNavigate();
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -33,7 +36,8 @@ const Shop = (props) => {
             discount: 0,
         }
     ]);
-
+    const tmpSection = "";
+    
     useEffect(() => {
         setApplyVoucher({voucherCode: "", discount: 0});
         getShopData();
@@ -57,7 +61,7 @@ const Shop = (props) => {
         axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/section/shop?shopId=` + shopId)
             .then((response) => {
                 setSections(response.data.data);
-                if (response.data.data == null) {
+                if (response.data.data == "section not found not existed") {
                     setSections([]);
                 }
             })
@@ -70,6 +74,9 @@ const Shop = (props) => {
         axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/item/shop?shopId=` + shopId)
             .then((response) => {
                 setShopItems(response.data.data);
+                if (response.data.data == "Category not found not existed") {
+                    setShopItems([]);
+                }
             })
             .catch(function (error) {
                 console.log(error)
@@ -124,7 +131,6 @@ const Shop = (props) => {
     function placeOrder() {
         handleOrderClose();
         let saleFormList = [];
-        console.log(cartItems)
         cartItems.forEach((cartItem) => {
             saleFormList.push({itemId: cartItem.itemId, quantity: 1})
         });
@@ -148,6 +154,8 @@ const Shop = (props) => {
             .catch(function (error) {
                 console.log(error)
             });
+
+        navigate("/order-history");
     }
 
     function plusClick() {
@@ -162,6 +170,12 @@ const Shop = (props) => {
         //     setCartItems(tmpArray);
         // }
         // document.getElementsByClassName('number-order').innerHTML = parseInt(document.getElementsByClassName('number-order').innerHTML) - 1;
+    }
+
+    function numberWithCommas(x) {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
     }
     return (
         <div>
@@ -231,21 +245,21 @@ const Shop = (props) => {
                                                     </Row>
                                                     <Row className='note-order'>
                                                         <input type="text" id="txtNote" placeholder="Thêm ghi chú..." />
-                                                        <span class="price-order">{cartItem.price}</span>
+                                                        <span class="price-order">{numberWithCommas(cartItem.price)}</span>
                                                     </Row>
                                                 </Row>
                                             ))}
                                         </Row>
                                         <Row className="row-bill-restaurant">
                                             <Col>Cộng</Col>
-                                            <Col className="price">{totalPrice}đ</Col>
+                                            <Col className="price">{numberWithCommas(totalPrice)}đ</Col>
                                         </Row>
                                         <Row className="row-bill-restaurant input-promocode">
                                             <p><span>(*)</span>Nhập mã khuyến mãi ở bước hoàn tất</p>
                                         </Row>
                                         <Row className="row-bill-restaurant">
                                             <Col>Tổng Cộng</Col>
-                                            <Col className="total-price">{totalPrice}đ</Col>
+                                            <Col className="total-price">{numberWithCommas(totalPrice)}đ</Col>
                                         </Row>
                                         <Button className="btn btn-red" onClick={openOrderModal}>Đặt trước</Button>
                                     </Col>
@@ -306,18 +320,18 @@ const Shop = (props) => {
                                                 <Row key={index} className='order-item'>
                                                     <Col md={1} className='order-item-number'>{1}</Col>
                                                     <Col md={9} className='order-item-info'>{cartItems.itemName}</Col>
-                                                    <Col className='order-item-price'>{cartItems.price}đ</Col>
+                                                    <Col className='order-item-price'>{numberWithCommas(cartItems.price)}đ</Col>
                                                 </Row>
                                             ))}
                                         </Row>
                                         <Row className='info-order'>
                                             <Row className='info-order-row'>
                                                 <Col className='info-order-left'>Tổng cộng <b>{cartItems.length}</b> phần</Col>
-                                                <Col className='info-order-right'><b>{totalPrice}đ</b></Col>
+                                                <Col className='info-order-right'><b>{numberWithCommas(totalPrice)}đ</b></Col>
                                             </Row>
                                             <Row className='info-order-row'>
                                                 <Col className='info-order-left'>Mã khuyến mãi</Col>
-                                                <Col className='info-order-right'><b>-{applyVoucher.discount}đ</b></Col>
+                                                <Col className='info-order-right'><b>-{numberWithCommas(applyVoucher.discount)}đ</b></Col>
                                             </Row>
                                         </Row>
                                         <Row className='discount-code'>
@@ -333,7 +347,7 @@ const Shop = (props) => {
                                         </Row>
                                         <Row className='final-price'>
                                             <Col className='final-price-left'>Tổng cộng <b>{cartItems.length}</b> phần</Col>
-                                            <Col className='final-price-right'><b>{totalPrice - applyVoucher.discount}</b></Col>
+                                            <Col className='final-price-right'><b>{numberWithCommas(totalPrice - applyVoucher.discount)}</b></Col>
                                         </Row>
                                         <Row className='payment-method'>
                                             <Col md={10} className='payment-method-left'><span className="text">Tiền Mặt</span></Col>
@@ -377,8 +391,8 @@ const Shop = (props) => {
                                 <Row key={index} index={index} className='modal-order-discount-row'>
                                     <Col md={1} className='modal-order-discount-icon'></Col>
                                     <Col className='modal-order-discount-code'>{voucher.voucherCode}</Col>
-                                    <Col className='modal-order-discount-price'>Giảm giá: <span className='price'>{voucher.discount}đ</span></Col>
-                                    <Col className='modal-order-discount-minprice'>Đặt tối thiểu: <span className='price'>{voucher.limitPrice}đ</span></Col>
+                                    <Col className='modal-order-discount-price'>Giảm giá: <span className='price'>{numberWithCommas(voucher.discount)}đ</span></Col>
+                                    <Col className='modal-order-discount-minprice'>Đặt tối thiểu: <span className='price'>{numberWithCommas(voucher.limitPrice)}đ</span></Col>
                                     <Col className='modal-order-discount-apply'>
                                         <button onClick={() => applyDiscountCode(index)}>Áp dụng</button>
                                     </Col>

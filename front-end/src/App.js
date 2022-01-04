@@ -36,19 +36,10 @@ function App() {
             <Route path="signup" element = {<Signup/>} />
             <Route path="danh-sach/:categoryId" element={<Search/>} />
             <Route path="danh-sach" element={<Search/>} />
-<<<<<<< HEAD
             <Route path="profile" element={<UpdateAccount user = {user}/>} /> 
             <Route path="order-history" element={<OrderHistory user= {user}/>} /> 
             <Route path="shop/:shopUrl" element = {<Shop user = {user}/>} />
             <Route path="voucher" element={<VoucherList user = {user}/>} /> 
-=======
-            <Route path="profile" element={<UpdateAccount user = {user}/>} />
-            <Route path="order-history" element={<OrderHistory user= {user}/>} />
-            <Route path="shop/:shopUrl" element = {<Shop/>} />
-            <Route path="voucher" element={<VoucherList user = {user}/>} />
-            <Route path="shipper" element={<Shipper shipperId={user.id}/>} />
-            <Route path="owner" element={<Owner user= {user}/>} />
->>>>>>> cff559847c6cc6424256ab6fe95d22a3ecf01474
         </Routes>
       </BrowserRouter>
       <Footer />

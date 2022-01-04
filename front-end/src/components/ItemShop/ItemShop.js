@@ -6,6 +6,13 @@ const ItemShop = ( props ) => {
         props.setCartItems([...props.cartItems, props.item]);
         props.setTotalPrice(props.totalPrice + props.item.price);
     }
+
+    function numberWithCommas(x) {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
+    }
+
     return (
         <div>
             <Container className="item-shop">
@@ -17,8 +24,8 @@ const ItemShop = ( props ) => {
                         <Row className="item-shop-itemname">{props.item.itemName}</Row>
                     </Col>
                     <Col className="item-shop-price">
-                        <Row className="old-price">{props.item.price}đ</Row>
-                        <Row className="new-price">{props.item.price}đ</Row>
+                        <Row className="old-price">{numberWithCommas(props.item.price)}đ</Row>
+                        <Row className="new-price">{numberWithCommas(props.item.price)}đ</Row>
                     </Col>
                     <Col md={1} className="item-shop-add-btn">
                         <span className="btn-add-to-cart" onClick={addToCart}>+</span>
