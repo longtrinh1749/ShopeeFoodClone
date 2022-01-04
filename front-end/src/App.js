@@ -36,7 +36,7 @@ function App() {
             <Route path="danh-sach" element={<Search/>} />
             <Route path="profile" element={<UpdateAccount user = {user}/>} /> 
             <Route path="order-history" element={<OrderHistory user= {user}/>} /> 
-            <Route path="shop/:shopUrl" element = {<Shop/>} />
+            <Route path="shop/:shopUrl" element = {<Shop user = {user}/>} />
             <Route path="voucher" element={<VoucherList user = {user}/>} /> 
         </Routes>
       </BrowserRouter>
