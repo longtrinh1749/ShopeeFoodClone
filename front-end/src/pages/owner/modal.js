@@ -96,6 +96,7 @@ const OwnerModal = ({ type }) => {
                     data,
                     cbSuccess: (res) => {
                         alert("Thêm mới thành công");
+                        window.location.reload();
                     },
                 });
             } else {
@@ -122,6 +123,7 @@ const OwnerModal = ({ type }) => {
                     data,
                     cbSuccess: (res) => {
                         alert("Chinh sửa thành công");
+                        window.location.reload();
                     },
                 });
             }
