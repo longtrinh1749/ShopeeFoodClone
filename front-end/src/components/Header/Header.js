@@ -157,9 +157,7 @@ const User = (props) => {
                         nhật tài khoản
                     </a>
                 </li>
-                <li>
                     <hr className="dropdown-divider" />
-                </li>
                 <li>
                     <a className="dropdown-item" href="/" onClick={logout}>
                         <i className="fa fa-power-off" aria-hidden="true"></i>

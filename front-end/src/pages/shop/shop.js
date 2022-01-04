@@ -44,7 +44,7 @@ const Shop = (props) => {
         getShopSection();
         getShopItemData();
         getUserInfo();
-    }, []);
+    }, [props.user]);
 
     function getShopData() {
         axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/shop/` + shopId)
@@ -60,10 +60,15 @@ const Shop = (props) => {
     function getShopSection() {
         axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/section/shop?shopId=` + shopId)
             .then((response) => {
+                if ( response.data.data.result !== 'not found')
                 setSections(response.data.data);
+<<<<<<< HEAD
                 if (response.data.data == "section not found not existed") {
                     setSections([]);
                 }
+=======
+                console.log(response)
+>>>>>>> 22c1a6b556d1b45cd6548bfe4f3c694cf2ad7a74
             })
             .catch(function (error) {
                 console.log(error)

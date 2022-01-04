@@ -4,7 +4,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 const OrderHistory = (props) => {
   const [ordersInfo, setordersInfo] = useState([]);
+
     useEffect(() => {
+      if ( props.user.role === "USER")
       axios
     .get(
       `${process.env.REACT_APP_SERVER_ADDRESS}:8600/api/v1/public/order/customer/${props.user.id}`
@@ -14,7 +16,16 @@ const OrderHistory = (props) => {
       if ( res.data.data === 'order not found not existed') setordersInfo([])
       else setordersInfo(res.data.data)
     });
-    }, []);
+      else axios
+      .get(
+        `${process.env.REACT_APP_SERVER_ADDRESS}:8600/api/v1/public/order/shop/${props.user.id}`
+      )
+      .then((res) => {
+        console.log(res.data.data);
+        if ( res.data.data === 'order not found not existed') setordersInfo([])
+        else setordersInfo(res.data.data)
+      });
+    }, [props.user.role]);
   return (
     <div className="container">
       <h1 className="block-title mb-4 text-center order-hist-title">
@@ -33,9 +44,9 @@ const OrderHistory = (props) => {
             <div className="history-table-cell">Nhân viên</div>
             <div className="history-table-cell">Tổng tiền</div>
             <div className="history-table-cell">Trạng thái</div>
-            <div className="history-table-cell">Chi tiết</div>
+            <div className="history-table-cell">Hành động</div>
           </div>
-          {ordersInfo.map((order, index) =>(<Order key={index} index={index} order={order}></Order>) )} 
+          {ordersInfo.map((order, index) =>(<Order key={index} index={index} order={order} role ={props.user.role}></Order>) )} 
         </div>
       </div>
     </div>

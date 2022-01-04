@@ -22,3 +22,23 @@ li {
  /* .big-col{
      width: 30%;
  } */
+ .detail{
+     color: blue
+ }
+ .detail:hover{
+     cursor: pointer;
+ }
+ .order-action{
+     padding-left: 5px;
+ }
+ .order-action:hover{
+    cursor: pointer;
+ }
+ .confirm{
+     color: green;
+     display: none;
+ }
+ .cancel{
+     color: red;
+     display: none;
+ }

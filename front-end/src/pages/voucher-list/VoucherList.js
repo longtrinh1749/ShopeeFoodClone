@@ -5,11 +5,11 @@ import Voucher from './sub-component/Voucher';
 const VoucherList = (props) =>{
     const [vouchersInfo, setvouchersInfo] = useState([]);
     let formattedRole = 'user';
-    console.log(props.user.role)
+    if (props.user.role === "SELLER") formattedRole = 'shop';
     useEffect(() => {
         let params = {
-            applyType: props.user.role,
-            applyToId: props.user.id
+            applyType: formattedRole,
+            applyToId: props.user.id 
         }
         axios.get(`${process.env.REACT_APP_SERVER_ADDRESS}:8600/api/v1/public/voucher/applied`, {
             params

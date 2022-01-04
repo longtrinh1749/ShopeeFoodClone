@@ -31,10 +31,12 @@ const Login = (props) => {
                 .then((res)=> {
                     console.log(res.data.data.userId)
                     // const userInfo = res.data.data
+                    let userId  = parseInt(res.data.data.userId);
+                    if (response.data.role === "SELLER") userId = userId - 101;
                     props.setUser({
                         username: username,
                         headerKey: response.data.token,
-                        id : res.data.data.userId,
+                        id : userId,
                         role: response.data.role
                     });
                 })
