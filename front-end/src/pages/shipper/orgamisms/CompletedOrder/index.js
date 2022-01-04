@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getListOrderConfirmed } from "redux/actions/shipper";
 
-const CompletedOrder = () => {
+const CompletedOrder = ({shipperId}) => {
     const dispatch = useDispatch();
     const { orderList } = useStore("Shipper", "orderReducer");
     const { execute } = useListOrderAssigned();
@@ -15,7 +15,7 @@ const CompletedOrder = () => {
         execute({
             params : {
                 statusId : 5,
-                shipperId : 70
+                shipperId
             },
             cbSuccess: (res) => {
                 if(isString(res.data)) res.data = [];

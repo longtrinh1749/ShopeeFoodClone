@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { setOrder } from "redux/actions/shipper";
 
-const CompletedOrderList = ({ orderList }) => {
+const CompletedOrderList = ({ orderList, shipperId }) => {
     const dispatch = useDispatch();
     function setInfo(currentOrder) {
         dispatch(setOrder({ order: currentOrder }));

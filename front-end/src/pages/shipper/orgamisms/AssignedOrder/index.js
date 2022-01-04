@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getListOrderConfirmed } from "redux/actions/shipper";
 
-const AssignedOrder = () => {
+const AssignedOrder = ({shipperId}) => {
     const dispatch = useDispatch();
     const { orderList } = useStore("Shipper", "orderReducer");
     const { execute } = useListOrderAssigned();
@@ -17,7 +17,7 @@ const AssignedOrder = () => {
         execute({
             params : {
                 statusId : 3,
-                shipperId : 70
+                shipperId
             },
             cbSuccess: (res) => {
                 if(isString(res.data)) res.data = [];
@@ -38,7 +38,7 @@ const AssignedOrder = () => {
                 </tr>
             </thead>
             <tbody>
-                <AssignedOrderList orderList={orderList} />
+                <AssignedOrderList orderList={orderList} shipperId={shipperId}/>
             </tbody>
         </table>
     );

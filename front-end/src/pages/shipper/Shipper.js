@@ -9,7 +9,7 @@ import CompletedOrder from "./orgamisms/CompletedOrder";
 import ConfirmedOrder from "./orgamisms/ConfirmedOrder";
 import "./style.scss";
 
-const Shipper = () => {
+const Shipper = ({shipperId}) => {
     const dispatch = useDispatch();
     const { reload } = useStore("Shipper", "orderReloadReducer");
     const { tabId } = useStore("Shipper", "orderTabReducer");
@@ -82,7 +82,7 @@ const Shipper = () => {
                         role="tabpanel"
                         aria-labelledby="home-tab"
                     >
-                        {tabId === 1 ? <ConfirmedOrder /> : <></> }
+                        {tabId === 1 ? <ConfirmedOrder shipperId={shipperId}/> : <></> }
                         {/* <ConfirmedOrder /> */}
                     </div>
                     <div
@@ -91,7 +91,7 @@ const Shipper = () => {
                         role="tabpanel"
                         aria-labelledby="profile-tab"
                     >
-                        {tabId === 2 ? <AssignedOrder /> : <></> }
+                        {tabId === 2 ? <AssignedOrder  shipperId={shipperId}/> : <></> }
                     </div>
                     <div
                         className="tab-pane fade"
@@ -99,10 +99,10 @@ const Shipper = () => {
                         role="tabpanel"
                         aria-labelledby="contact-tab"
                     >
-                        {tabId === 3 ? <CompletedOrder /> : <></> }
+                        {tabId === 3 ? <CompletedOrder  shipperId={shipperId}/> : <></> }
                     </div>
                 </div>
-                <OrderModal tabId={tabId}/>
+                <OrderModal tabId={tabId} shipperId={shipperId}/>
                 <OrderModalNotice/>
             </div>
         </div>

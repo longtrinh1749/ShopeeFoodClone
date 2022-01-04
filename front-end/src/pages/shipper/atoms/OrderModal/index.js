@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { getItemAll, reloadData } from "redux/actions/shipper";
 
-export const OrderModal = ({ tabId }) => {
+export const OrderModal = ({ tabId, shipperId }) => {
     const dispatch = useDispatch();
     const { order } = useStore("Shipper", "orderDetailReducer");
     const { itemList } = useStore("Shipper", "itemReducer");
@@ -60,9 +60,10 @@ export const OrderModal = ({ tabId }) => {
         let data = {
             orderId: order?.orderId,
             statusId: status,
-            shipperId: 70,
+            shipperId,
             deliveryAt: newDateObj,
         };
+        // console.log(data);
         executeOrderStatus({
             data,
             cbSuccess: (res) => {},
