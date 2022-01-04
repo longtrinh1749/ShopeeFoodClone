@@ -62,13 +62,9 @@ const Shop = (props) => {
             .then((response) => {
                 if ( response.data.data.result !== 'not found')
                 setSections(response.data.data);
-<<<<<<< HEAD
                 if (response.data.data == "section not found not existed") {
                     setSections([]);
                 }
-=======
-                console.log(response)
->>>>>>> 22c1a6b556d1b45cd6548bfe4f3c694cf2ad7a74
             })
             .catch(function (error) {
                 console.log(error)
