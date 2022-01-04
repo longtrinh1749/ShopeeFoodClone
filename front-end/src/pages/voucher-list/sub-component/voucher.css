@@ -1,0 +1,11 @@
+.code{
+    font-weight: bolder;
+}
+.discount{
+    font-weight: bolder;
+    color: rgb(0, 174, 255);
+}
+.expired{
+    font-weight: bolder;
+    color: rgb(16, 158, 58);
+}

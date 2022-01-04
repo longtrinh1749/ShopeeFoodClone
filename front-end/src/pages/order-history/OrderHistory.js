@@ -2,15 +2,16 @@ import "./orderhistory.css";
 import Order from "./sub-component/Order";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const OrderHistory = () => {
+const OrderHistory = (props) => {
   const [ordersInfo, setordersInfo] = useState([]);
     useEffect(() => {
       axios
     .get(
-      `${process.env.REACT_APP_SERVER_ADDRESS}:8600/api/v1/public/order/customer/7`
+      `${process.env.REACT_APP_SERVER_ADDRESS}:8600/api/v1/public/order/customer/${props.user.id}`
     )
     .then((res) => {
       console.log(res.data.data);
+      if ( res.data.data === 'order not found not existed') setordersInfo([])
       setordersInfo(res.data.data)
     });
     }, []);
