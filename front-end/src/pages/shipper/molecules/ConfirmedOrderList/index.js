@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { reloadData, setOrder } from "redux/actions/shipper";
 import "./style.scss";
 
-const ConfirmedOrderList = ({ orderList }) => {
+const ConfirmedOrderList = ({ orderList, shipperId }) => {
     const dispatch = useDispatch();
 
     function setInfo(currentOrder) {
@@ -20,9 +20,10 @@ const ConfirmedOrderList = ({ orderList }) => {
         let data = {
             orderId: order?.orderId,
             statusId: 3,
-            shipperId: 70,
+            shipperId,
             deliveryAt: newDateObj,
         };
+        // console.log(data);
         executeOrderStatus({
             data,
             cbSuccess: (res) => {},

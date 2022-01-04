@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { reloadData, setOrder } from "redux/actions/shipper";
 // import "./style.scss";
 
-const AssignedOrderList = ({ orderList }) => {
+const AssignedOrderList = ({ orderList, shipperId }) => {
     const dispatch = useDispatch();
     function setInfo(currentOrder) {
         dispatch(setOrder({ order: currentOrder }));
@@ -17,7 +17,7 @@ const AssignedOrderList = ({ orderList }) => {
         let data = {
             orderId: order?.orderId,
             statusId: 5,
-            shipperId: 70,
+            shipperId,
             deliveryAt: newDateObj,
         };
         executeOrderStatus({

@@ -40,7 +40,7 @@ function App() {
             <Route path="order-history" element={<OrderHistory user= {user}/>} />
             <Route path="shop/:shopUrl" element = {<Shop/>} />
             <Route path="voucher" element={<VoucherList user = {user}/>} />
-            <Route path="shipper" element={<Shipper id={user.id}/>} />
+            <Route path="shipper" element={<Shipper shipperId={user.id}/>} />
             <Route path="owner" element={<Owner user= {user}/>} />
         </Routes>
       </BrowserRouter>

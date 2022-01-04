@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { getListOrderConfirmed } from "redux/actions/shipper";
 import "./styles.scss";
 
-const ConfirmedOrder = () => {
+const ConfirmedOrder = ({shipperId}) => {
     const dispatch = useDispatch();
     const { orderList } = useStore("Shipper", "orderReducer");
     const { execute } = useListOrderConfirmed(2)();
@@ -35,7 +35,7 @@ const ConfirmedOrder = () => {
                 </tr>
             </thead>
             <tbody>
-                <ConfirmedOrderList orderList={orderList} />
+                <ConfirmedOrderList orderList={orderList} shipperId={shipperId}/>
             </tbody>
 
         </table>
