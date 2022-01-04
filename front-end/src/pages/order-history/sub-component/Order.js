@@ -50,12 +50,13 @@ const Order = (props) => {
             console.log(res.data.data.salesList);
             console.log(res.data.data);
             setorderDetail(res.data.data)
-            for ( let i =0 ;i < res.data.data.salesList.length; i++){
+            for ( let i = 0 ;i < res.data.data.salesList.length; i++){
                 axios.get(
-                    `${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/item/${res.data.data.salesList[i].salesId.orderId}`
+                    `${process.env.REACT_APP_SERVER_ADDRESS}:8500/api/v1/public/item/${res.data.data.salesList[i].salesId.itemId}`
                 ).then((res)=>{
                     document.getElementById(i).innerHTML = res.data.data.itemName;
                 })
+                // console.log(res.data.data.salesList[i].salesId.itemId);
             }
         });
     }
@@ -83,7 +84,7 @@ const Order = (props) => {
             <div className="history-table-cell">{shipperName}</div>
             <div className="history-table-cell">{props.order.total}</div>
             <div className="history-table-cell">{props.order.status.statusName}</div>
-            <div className="history-table-cell"><a className='detail' onClick={showOrderDetail}>Chi tiết đơn hàng</a></div>
+            <div className="history-table-cell"><a className='detail' onClick={showOrderDetail}>Chi tiết</a></div>
         </div>      
         
         <Modal

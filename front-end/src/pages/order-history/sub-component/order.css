@@ -22,3 +22,9 @@ li {
  /* .big-col{
      width: 30%;
  } */
+ .detail{
+     color: blue
+ }
+ .detail:hover{
+     cursor: pointer;
+ }
