@@ -2,7 +2,31 @@ import { Link } from "react-router-dom";
 import SearchModal from "../SearchModal";
 import "./header.scss";
 import { useNavigate } from 'react-router-dom';
-const Logo = () => {
+const Logo = (props) => {
+    if (props.role === "USER")
+    return (
+        <div className="header_img">
+            <Link to="/">
+                <img src="/images/shopeefoodvn.png" alt="" />
+            </Link>
+        </div>
+    );
+    if (props.role === "SELLER")
+    return (
+        <div className="header_img">
+            <Link to="/owner">
+                <img src="/images/shopeefoodvn.png" alt="" />
+            </Link>
+        </div>
+    );
+    if (props.role === "DRIVER")
+    return (
+        <div className="header_img">
+            <Link to="/shipper">
+                <img src="/images/shopeefoodvn.png" alt="" />
+            </Link>
+        </div>
+    );
     return (
         <div className="header_img">
             <Link to="/">
@@ -163,7 +187,7 @@ const Header = (props) => {
         <>
             <div className="header">
                 <div className="container">
-                    <Logo />
+                    <Logo role={props.user.role}/>
                     {/* <Dropdown /> */}
                     <Navbar />
                     <SearchButton />
