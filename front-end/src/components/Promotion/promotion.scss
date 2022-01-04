@@ -1,0 +1,28 @@
+.promotion-item {
+    background-color: #fbf9d8;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-right: -15px;
+    border: 1px dashed #575757;
+    padding: 2px 15px 0 15px;
+    .promotion-img {
+        margin-left: -5px;
+    }
+    .promotion-content {
+        margin-top: 15px;
+        margin-left: 25px;
+        font-family: Noto Sans,Arial,sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #464646;
+        text-align: left;
+    }
+    .btn-copy-code {
+        width: 130px;
+        margin-left: 9px;
+    }
+    .btn-copy-code:hover {
+        cursor: pointer;
+    }
+}

@@ -5,6 +5,7 @@ import axios from "axios";
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
 import ItemShop from '../../components/ItemShop/ItemShop';
+import Promotion from 'components/Promotion/promotion';
 
 
 const Shop = (props) => {
@@ -122,11 +123,13 @@ const Shop = (props) => {
     }
 
     function applyDiscountCode(index) {
-        handleDiscountClose();
-        setApplyVoucher({
-            voucherCode: vouchers[index].voucherCode,
-            discount: vouchers[index].discount | 0,
-        });
+        if (totalPrice > vouchers[index].limitPrice) {
+            handleDiscountClose();
+            setApplyVoucher({
+                voucherCode: vouchers[index].voucherCode,
+                discount: vouchers[index].discount | 0,
+            });
+        }
     }
 
     function placeOrder() {
@@ -145,7 +148,7 @@ const Shop = (props) => {
             note: document.getElementsByClassName('note')[0].innerHTML,
             shippingFees: 0,
             discount: applyVoucher.discount,
-            total: totalPrice,
+            total: totalPrice - applyVoucher.discount,
             saleFormList: saleFormList,
         }
         axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}:8600//api/v1/public/order/upload`, newOrder)
@@ -222,13 +225,15 @@ const Shop = (props) => {
                                     </Col>
                                     <Col md={7} className="menu-restaurant-detail">
                                         <Row className="promotion-order">
+                                            {vouchers.map((voucher, index) => (
+                                                <Promotion key={index} item={voucher} />
+                                            ))}
                                         </Row>
                                         <Row className="search-items">
                                             <img src="" alt="" />
                                             <input placeholder="Tìm Món"></input>
                                         </Row>
                                         <Row className="menu-restaurant-list">
-                                            <Row className='title-menu'>MÓN ĐANG GIẢM</Row>
                                             {shopItems.map((shopItem, index) => (
                                                 <ItemShop key={index} item={shopItem} cartItems={cartItems} setCartItems={setCartItems} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />
                                             ))}
